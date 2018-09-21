@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+  <head>
+    <link rel="stylesheet" href="twoVoiceCounterpoint/style.css">
+    <script src="https://code.angularjs.org/1.1.3/angular.js"></script>
+      <script src='http://www.midijs.net/lib/midi.js'></script>
+    <script src="app.js"></script>
+  </head>
+
+  <body>
+    <div id="d">
+<!--       <h1>Model Two-Voice Counterpoint</h1>
+ -->  
+      <br>
+      <canvas width="700" height="700" id="canvas" drawing></canvas>
+      <br>
+      <br>
+      <div>
+        <button ng-click="makeMusic()">
+         Make music!
+        </button>
+      </div>
+      <br>
+    </div>
+
+  </body>
+</html>

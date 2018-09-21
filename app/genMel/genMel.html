@@ -1,0 +1,269 @@
+
+<H1 class="title">Generative Melodies.</H1>
+<br>
+
+<p> What makes music sound "good" is simply a set of rules built up inside our brains based off of the music we have heard before in our lives. Rules such as "Chords are usually two stacked thirds" or "The V chord goes to the I chord" or "ti goes to do". These are rules that you learn in music theory classes that allow you to realize why in a particular instance your expectations are met, and rules are followed, or your expectations, and the rules, are broken. This program's aim is to allow you to edit the rules and see what the effect on music might be. Which rules should be the most important? which ones should be forgotten about? Should "harmonic content" be defined differently? Leaps and jumps used in different frequencies? You decide. </p>
+<p>
+Want to know more about how this works? Click <a href="#!/genMelPaper">here!</a>
+</p>
+
+<div class="myCustomTable">
+  <table class="table table-striped">
+    <tr>
+        <th>Definitions</th>
+        <th>Value</th>
+      </tr>
+      <tr>
+        <td>Scale</td>
+        <td>
+          <input type="checkbox" ng-model="data.SCALE_0">C 
+          <input type="checkbox" ng-model="data.SCALE_1">C# 
+          <input type="checkbox" ng-model="data.SCALE_2">D 
+          <input type="checkbox" ng-model="data.SCALE_3">D# 
+          <input type="checkbox" ng-model="data.SCALE_4">E 
+          <input type="checkbox" ng-model="data.SCALE_5">F 
+          <input type="checkbox" ng-model="data.SCALE_6">F# 
+          <input type="checkbox" ng-model="data.SCALE_7">G 
+          <input type="checkbox" ng-model="data.SCALE_8">G# 
+          <input type="checkbox" ng-model="data.SCALE_9">A 
+          <input type="checkbox" ng-model="data.SCALE_10">A# 
+          <input type="checkbox" ng-model="data.SCALE_11">B 
+      </tr>
+      <tr>
+        <td>Measure 1 Chord</td>
+        <td>
+          <input type="checkbox" ng-model="data.M1_CHORD_0">C 
+          <input type="checkbox" ng-model="data.M1_CHORD_1">C# 
+          <input type="checkbox" ng-model="data.M1_CHORD_2">D 
+          <input type="checkbox" ng-model="data.M1_CHORD_3">D# 
+          <input type="checkbox" ng-model="data.M1_CHORD_4">E 
+          <input type="checkbox" ng-model="data.M1_CHORD_5">F 
+          <input type="checkbox" ng-model="data.M1_CHORD_6">F# 
+          <input type="checkbox" ng-model="data.M1_CHORD_7">G 
+          <input type="checkbox" ng-model="data.M1_CHORD_8">G# 
+          <input type="checkbox" ng-model="data.M1_CHORD_9">A 
+          <input type="checkbox" ng-model="data.M1_CHORD_10">A# 
+          <input type="checkbox" ng-model="data.M1_CHORD_11">B 
+      </tr>
+      <tr>
+        <td>Measure 2 Chord</td>
+        <td>
+          <input type="checkbox" ng-model="data.M2_CHORD_0">C 
+          <input type="checkbox" ng-model="data.M2_CHORD_1">C# 
+          <input type="checkbox" ng-model="data.M2_CHORD_2">D 
+          <input type="checkbox" ng-model="data.M2_CHORD_3">D# 
+          <input type="checkbox" ng-model="data.M2_CHORD_4">E 
+          <input type="checkbox" ng-model="data.M2_CHORD_5">F 
+          <input type="checkbox" ng-model="data.M2_CHORD_6">F# 
+          <input type="checkbox" ng-model="data.M2_CHORD_7">G 
+          <input type="checkbox" ng-model="data.M2_CHORD_8">G# 
+          <input type="checkbox" ng-model="data.M2_CHORD_9">A 
+          <input type="checkbox" ng-model="data.M2_CHORD_10">A# 
+          <input type="checkbox" ng-model="data.M2_CHORD_11">B 
+      </tr>
+      <tr>
+        <td>Measure 3 Chord</td>
+        <td>
+          <input type="checkbox" ng-model="data.M3_CHORD_0">C 
+          <input type="checkbox" ng-model="data.M3_CHORD_1">C# 
+          <input type="checkbox" ng-model="data.M3_CHORD_2">D 
+          <input type="checkbox" ng-model="data.M3_CHORD_3">D# 
+          <input type="checkbox" ng-model="data.M3_CHORD_4">E 
+          <input type="checkbox" ng-model="data.M3_CHORD_5">F 
+          <input type="checkbox" ng-model="data.M3_CHORD_6">F# 
+          <input type="checkbox" ng-model="data.M3_CHORD_7">G 
+          <input type="checkbox" ng-model="data.M3_CHORD_8">G# 
+          <input type="checkbox" ng-model="data.M3_CHORD_9">A 
+          <input type="checkbox" ng-model="data.M3_CHORD_10">A# 
+          <input type="checkbox" ng-model="data.M3_CHORD_11">B 
+      </tr>
+      <tr>
+        <td>Measure 4 Chord</td>
+        <td>
+          <input type="checkbox" ng-model="data.M4_CHORD_0">C 
+          <input type="checkbox" ng-model="data.M4_CHORD_1">C# 
+          <input type="checkbox" ng-model="data.M4_CHORD_2">D 
+          <input type="checkbox" ng-model="data.M4_CHORD_3">D# 
+          <input type="checkbox" ng-model="data.M4_CHORD_4">E 
+          <input type="checkbox" ng-model="data.M4_CHORD_5">F 
+          <input type="checkbox" ng-model="data.M4_CHORD_6">F# 
+          <input type="checkbox" ng-model="data.M4_CHORD_7">G 
+          <input type="checkbox" ng-model="data.M4_CHORD_8">G# 
+          <input type="checkbox" ng-model="data.M4_CHORD_9">A 
+          <input type="checkbox" ng-model="data.M4_CHORD_10">A# 
+          <input type="checkbox" ng-model="data.M4_CHORD_11">B 
+      </tr>
+      <tr>
+        <td>First Note</td>
+        <td>
+          <form>
+            <label class="radio-inline"><input type="radio" ng-model="data.firstNote" value="0">C</label>
+            <label class="radio-inline"><input type="radio" ng-model="data.firstNote" value="1">C#</label>
+            <label class="radio-inline"><input type="radio" ng-model="data.firstNote" value="2">D</label>
+            <label class="radio-inline"><input type="radio" ng-model="data.firstNote" value="3">D#</label>
+            <label class="radio-inline"><input type="radio" ng-model="data.firstNote" value="4">E</label>
+            <label class="radio-inline"><input type="radio" ng-model="data.firstNote" value="5">F</label>
+            <label class="radio-inline"><input type="radio" ng-model="data.firstNote" value="6">F#</label>
+            <label class="radio-inline"><input type="radio" ng-model="data.firstNote" value="7">G</label>
+            <label class="radio-inline"><input type="radio" ng-model="data.firstNote" value="8">G#</label>
+            <label class="radio-inline"><input type="radio" ng-model="data.firstNote" value="9">A</label>
+            <label class="radio-inline"><input type="radio" ng-model="data.firstNote" value="10">A#</label>
+            <label class="radio-inline"><input type="radio" ng-model="data.firstNote" value="11">B</label>
+        </form>
+      </tr>
+      <td>Last Note</td>
+        <td>
+          <form>
+            <label class="radio-inline"><input type="radio" ng-model="data.lastNote" value="0">C</label>
+            <label class="radio-inline"><input type="radio" ng-model="data.lastNote" value="1">C#</label>
+            <label class="radio-inline"><input type="radio" ng-model="data.lastNote" value="2">D</label>
+            <label class="radio-inline"><input type="radio" ng-model="data.lastNote" value="3">D#</label>
+            <label class="radio-inline"><input type="radio" ng-model="data.lastNote" value="4">E</label>
+            <label class="radio-inline"><input type="radio" ng-model="data.lastNote" value="5">F</label>
+            <label class="radio-inline"><input type="radio" ng-model="data.lastNote" value="6">F#</label>
+            <label class="radio-inline"><input type="radio" ng-model="data.lastNote" value="7">G</label>
+            <label class="radio-inline"><input type="radio" ng-model="data.lastNote" value="8">G#</label>
+            <label class="radio-inline"><input type="radio" ng-model="data.lastNote" value="9">A</label>
+            <label class="radio-inline"><input type="radio" ng-model="data.lastNote" value="10">A#</label>
+            <label class="radio-inline"><input type="radio" ng-model="data.lastNote" value="11">B</label>
+        </form>
+      </tr>
+      <tr>
+        <td>Lowest note</td>
+        <td><input type="number" name="input" min="0" max="126" ng-model="data.lowestNote" required> (note: {{toString(data.lowestNote)}} )</td>
+      </tr>
+      <tr>
+        <td>Highest note</td>
+        <td><input type="number" name="input" min="0" max="126" ng-model="data.highestNote" required> (note: {{toString(data.highestNote)}} ) </td>
+      </tr>
+
+      <tr>
+        <th>Rule</th>
+        <th>Value</th>
+      </tr>
+      <tr>
+        <td>First Note Accuracy</td>
+        <td><input type="number" name="input" min="0" max="4000" ng-model="data.RANK_STARTDO" required></td>
+        
+      </tr>
+      <thead>
+    </thead>
+      <tr>
+        <td>Last Note Accuracy</td>
+        <td><input type="number" name="input" min="0" max="4000" ng-model="data.RANK_ENDDO" required></td>
+        
+      </tr>
+      <tr>
+        <td>Stepwise to last note</td>
+        <td><input type="number" name="input" min="0" max="4000" ng-model="data.RANK_SECOND_TO_LAST" required></td>
+        
+      </tr>
+      <tr>
+        <td>Harmonic Accuracy on strong beats</td>
+        <td><input type="number" name="input" min="0" max="4000" ng-model="data.RANK_CHORD_TONE_STRONG" required></td>
+        
+      </tr>
+      <tr>
+        <td>Harmonic Accuracy in general</td>
+        <td><input type="number" name="input" min="0" max="4000" ng-model="data.RANK_CHORD_TONE_GEN" required></td>
+        
+      </tr>
+      <tr>
+        <td>Diatonic Accuracy</td>
+        <td><input type="number" name="input" min="0" max="4000" ng-model="data.RANK_DIATONIC_EVER" required></td>
+        
+      </tr>
+      <tr>
+        <td>Stepwise motion</td>
+        <td><input type="number" name="input" min="0" max="4000" ng-model="data.RANK_STEPWISE" required></td>
+        
+      </tr>
+      <tr>
+        <td>Chordal Leap</td>
+        <td><input type="number" name="input" min="0" max="4000" ng-model="data.RANK_CHORDAL_LEAP" required></td>
+        
+      </tr>
+      <tr>
+        <td>Small Leap</td>
+        <td><input type="number" name="input" min="-4000" max="0" ng-model="data.RANK_LEAP_PUNISH_R1" required></td>
+        
+      </tr>
+      <tr>
+        <td>Medium Leap</td>
+        <td><input type="number" name="input" min="-4000" max="0" ng-model="data.RANK_LEAP_PUNISH_R2" required></td>
+        
+      </tr>
+      <tr>
+        <td>Large Leap</td>
+        <td><input type="number" name="input" min="-4000" max="0" ng-model="data.RANK_LEAP_PUNISH_R3" required></td>
+        
+      </tr>
+      <tr>
+        <td>Huge Leap</td>
+        <td><input type="number" name="input" min="-4000" max="0" ng-model="data.RANK_LEAP_PUNISH_R4" required></td>
+        
+      </tr>
+      <tr>
+        <td>Tritone Leap</td>
+        <td><input type="number" name="input" min="-4000" max="0" ng-model="data.RANK_LEAP_PUNISH_TRI" required></td>
+        
+      </tr>
+       <tr>
+        <th>Rhythmic Rules</th>
+        <th>Value</th>
+      </tr>
+      <tr>
+        <td>Note changes on the beats</td>
+        <td><input type="number" name="input" min="0" max="4000" ng-model="data.RANK_CHANGE_ON_STRONG" required></td>
+        
+      </tr>
+      <tr>
+        <td>Note changes from previous beat</td>
+        <td><input type="number" name="input" min="0" max="4000" ng-model="data.RANK_CHANGE_FROM_PREV_STRONG" required></td>
+        
+      </tr>
+      <tr>
+        <td>Quarter note</td>
+        <td><input type="number" name="input" min="0" max="4000" ng-model="data.RANK_QUARTER_NOTE_REWARD" required></td>
+        
+      </tr>
+      <tr>
+        <td>Two eighth notes</td>
+        <td><input type="number" name="input" min="0" max="4000" ng-model="data.RANK_DOUBLE_EIGHT_REWARD" required></td>
+        
+      </tr>
+      <tr>
+        <td>Out of range</td>
+        <td><input type="number" name="input" min="-4000" max="0" ng-model="data.RANK_RANGE_REWARD" required></td>
+      </tr>
+          <thead>
+      <tr>
+        <th>Settings</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Dataset Size</td>
+        <td><input type="number" name="input" min="0" max="2000" ng-model="data.DATASET_SIZE" required></td>
+        
+      </tr>
+      <tr>
+        <td>Iterations</td>
+        <td><input type="number" name="input" min="0" max="4000" ng-model="data.ITERATIONS" required></td>
+        
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+<div>
+<center>
+<div>
+  <div class="btn-group">
+    <button type = "button" class = "btn btn-primary" ng-click="goMel()" >{{buttonMessage}} </button>
+  </div>
+  &nbsp &nbsp <i class="fa fa-circle-o-notch fa-spin" ng-show="isLoading" style="font-size:24px"></i>
+<div>
+</center>
+

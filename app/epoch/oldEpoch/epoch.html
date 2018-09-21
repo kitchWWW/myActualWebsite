@@ -1,0 +1,86 @@
+
+
+<H1><center>Epoch Music.</center></H1>
+<br>
+<p> This is a placeholder form! It does not actually do anything. Pressing "make music" at the bottom of the page will take you to an example of previous music produced by this program. </p>
+<p>Get started. Lots of music is waiting. </p>
+
+    <div class="panel panel-default" ng-repeat="value in instruments">
+		<div class="panel-heading">
+			<h3 class="panel-title">Insturment {{$index +1}} ({{value.name}})</h3>
+		</div>
+  <div class="panel-body">
+ 		<div class="row" style="padding-right:10px;padding-left:10px" >
+	 			<div class="row">
+	 				<div class="col-sm-6">
+			 			<label>Insturment: </label>
+					 	<input class="form-control" type="text" name="input" ng-model="value.name" required>
+					  	<label>Staff: </label><select class="form-control" name="singleSelect" ng-model="value.staff">
+					      <option value="treble">treble</option>
+					      <option value="bass">bass</option>
+					      <option value="alto">alto</option>
+					      <option value="tenor">tenor</option>
+					      <option value="percussion">percussion</option>
+					      <option value="treble_8">treble 8vb</option>
+					      <option value="treble^8">treble 8va</option>
+					    </select>
+
+					</div>	
+			 		<div class="col-sm-6">
+			 			<div class="btn-group pull-right" role="group">
+							<button type="button" class = "btn btn-default" ng-click="add($index)">
+					      		<span class="glyphicon glyphicon-plus"></span>
+					    	</button>
+					    	<button type="button" class = "btn btn-default" ng-click="up($index)">
+					      		<span class="glyphicon glyphicon-arrow-up"></span>
+					    	</button>
+					    	<button type="button" class = "btn btn-default" ng-click="down($index)">
+					      		<span class="glyphicon glyphicon-arrow-down"></span>
+					    	</button>
+					    	<button type="button" class = "btn btn-default" ng-click="remove($index)" ng-disabled="instruments.length==2">
+					      		<span class="glyphicon glyphicon-trash"></span>
+					    	</button>
+						</div>
+			 		</div>
+				</div>
+				<div class="row">
+				  <div class="col-sm-6">
+				  	<br>
+					<div ng-repeat="note in value.notes">
+					 	<label> Note {{$index +1}}: </label>
+				 		<input type="number" name="input" min="0" max="127" ng-model="note" required>
+				 		{{toString(note)}}
+			 		</div>
+			 		tremolo to sustain notes? <input class="checkbox-inline" type="checkbox" ng-model="value.tremolo">
+				  	<br>
+				  	crescendo sustained notes? <input class="checkbox-inline" type="checkbox" ng-model="value.crescendo">
+				 
+				  </div>
+				  <div class="col-sm-6"> 
+				  
+				  </div>
+				</div>
+	 		</div>
+      	</div>
+      </div>
+
+<button type = "button" class = "btn btn-primary" ng-click="go()" >Make Music</button>
+
+ <button type = "button" class = "btn btn-default" ng-click="upload()" >Restore settings from File</button>
+
+
+ <div class="btn-group dropup">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Try an example ensemble <span class="glyphicon glyphicon-chevron-up"></span>
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" ng-click="fill(0)">String Quartet</a>
+    <br>
+    <a class="dropdown-item" ng-click="fill(1)">Percussion Ensemble</a>
+    <br>
+    <a class="dropdown-item" ng-click="fill(2)">Modern Ensemble 1</a>
+    <br>
+    <a class="dropdown-item" ng-click="fill(3)">Modern Ensemble 2</a>
+  </div>
+</div>
+

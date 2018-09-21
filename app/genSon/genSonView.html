@@ -1,0 +1,16 @@
+<h1 class="title">Your Sonata.</h1>
+<br>
+<button type = "button" class = "btn btn-default" ng-click="toggle()" >
+  <span class="glyphicon glyphicon-{{buttonImg}}"></span>
+</button>
+<button type = "button" class = "btn btn-default" ng-click="back()" >
+  <span class="glyphicon glyphicon-edit"></span> Back To Edit
+</button>
+<br>
+
+<br>
+
+<object data="engines/SonataGenerator-master/out/{{genSonNumber}}/PianoSonataScore.pdf" type="application/pdf" width="100%" height="800px"> 
+  <p>It appears you don't have a PDF plugin for this browser.
+   No biggie...</p>  
+ </object>

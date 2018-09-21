@@ -1,0 +1,70 @@
+<H1 class = "title">Baby's First Concerto</H1>
+<br>
+
+<p>
+This piece does not beat around the bush: Cutting straight to a tension filled melody and exploring timbral possibilities, this concerto for instrumentalist and keyboard accompaniment is an approachable and simultaneously rewarding piece. Written in open form, this concerto is easily adapted to a variety of instruments, fitting the form, duration, and collaborators available to the soloist at hand.
+</p>
+<object width="560" height="315" data="https://www.youtube.com/embed/2CGzG4bwV4Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></object>
+<br>
+<br>
+Presets:
+<br>
+<button type = "button" class = "btn" ng-click="preset(0)" >Guitar + Vibraphone </button>
+<button type = "button" class = "btn" ng-click="preset(1)" >Violin + Piano </button>
+<br><br>
+<div class="myCustomTable">
+  <table class="table table-striped">
+    <tr>
+      <th>Options</th>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <td>Most expressive pitch:</td>
+      <td>
+        <input type="number" name="input" min="0" max="127" ng-model="data.favoritePitch" required>
+        {{toString(data.favoritePitch)}}
+      </td> 
+    </tr>
+    <tr>
+      <td>Ways to play that pitch:</td>
+      <td>
+        <div ng-repeat="item in data.waysToPlay"><input type="text" ng-model="item.way"></div>
+        <button type = "button" ng-disabled="data.waysToPlay.length==30" class = "btn btn-dark" ng-click="add()" > + </button>
+        <button type = "button" ng-disabled="data.waysToPlay.length==1" class = "btn btn-dark" ng-click="minus()" > - </button>
+      </td>
+    </tr>
+    <tr>
+      <td>Clef:</td>
+      <td>
+        <select class="form-control" name="singleSelect" ng-model="data.clefToUse">
+          <option value="treble">treble</option>
+          <option value="bass">bass</option>
+          <option value="alto">alto</option>
+          <option value="tenor">tenor</option>
+          <option value="treble_8">treble 8vb</option>
+          <option value="treble^8">treble 8va</option>
+        </select> </td>
+
+    </tr>
+    <tr>
+      <td>Range of accompanyment:</td>
+      <td>
+        <input type="number" name="input" min="0" max="127" ng-model="data.highestAccomp" required>
+        {{toString(data.highestAccomp)}}
+        <br>
+        <input type="number" name="input" min="0" max="127" ng-model="data.lowestAccomp" required>
+        {{toString(data.lowestAccomp)}} </td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<center>
+  <div>
+  <div class="btn-group">
+    <button type = "button" class = "btn btn-primary" ng-click="goCon()" >{{buttonMessage}} </button>
+  </div>
+  &nbsp &nbsp <i class="fa fa-circle-o-notch fa-spin" ng-show="isLoading" style="font-size:24px"></i>
+  <div>
+</center>

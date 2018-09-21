@@ -1,0 +1,85 @@
+
+
+<H1 class="title">Genetic Algorithms Applied to <br>Melodic Material.</H1>
+<br>
+<H2>Purpose</H2>
+<p>
+The purpose of this project was to provide a proof of concept in applying the principles of genetic algorithms to melodic content. By utilizing a ranking method that can be tailored by the user, this Java application creates a dataset and models its growth ("evolution") over a period of time. While this sort of work has been worked has been attempted before, the parameters usually fail to describe many desirable aspects of music, resulting in melodies that seems consistently a little "off". This program makes no claim at fully encapsulating every aspect of the tonal system, but does look at several aspects, most notably implied harmonies, that others have overlooked.
+</p>
+<h2>Algorithm Overview</h2>
+<p>
+This project follows a rather standard genetic algorithm programing archetype:
+<ul>
+	<li>Initialization of the Dataset</li>
+	<li>Iteration Loop
+		<ul>
+			<li>Rank</li>
+			<li>Breed and discard</li>
+			<li>Mutate</li>
+		</ul>
+	</li>
+	<li>Output</li>
+</ul>
+Through repeating the steps in the iteration loop several hundred or thousand times, the program trains the melodies in it's dataset to match the rules outlined in the rank function.
+</p>
+
+<h2>Initialization
+</h2>
+<p>
+The dataset is initialized to the size specified in the user input to be comprised of melodies defined by entirely random integers. An example of what one of these starting dataset looks and sounds like is given below.
+
+<center>
+<img src="res/initMelody.png" height="50%" width="50%">
+<br>
+<br>
+<button type = "button" class = "btn btn-default" ng-click="toggle()" >
+	<span class="glyphicon glyphicon-{{buttonImg}}"></span>
+</button>
+</center>
+</p>
+
+<h2>Iteration Loop</h2>
+<p>
+The contents of this loop is repeated a number of times as specified by the user. This could be anywhere from 30 to 40 iterations, to over 1000. In practice, the average melody fitness greatly increases in the first hundred iterations, and in later stages of the cycle, rarely improves noticeably after 300.
+<center>
+<img src="res/stats.png" height="50%" width="50%">
+</center>
+
+</p>
+
+<h3>Rank Function</h3>
+
+The dataset is then sorted on a comparison of each melody's rank, or fitness. This is determined by the ranking function defined by the user and can morph the melody into almost any variety of ascetics. By rewarding musical features such as step-wise motion, adherence to the diatonic scale, and outlining harmonic material, melodies with such features can percolate to the upper half of the dataset, so that in later iterations, they can be preserved and mutated for further beneficial or detrimental evolutions.
+
+<h3>"Breeding Melodies"</h3>
+
+Melodies are then bred such that the two most fit melodies are paired, the third and fourth most fit are matched, etc. The breeding process happens such that a common "swap point" is identified within the melody. This is a position where the notes used by either melody are within 4 half steps of each other. Then, the original melodies A and B are spliced such that two more melodies are produced, one with the first half of A and latter half of B, and one with the opposite melodic parts. This avoids having melodies with rather unfortunate large jumps introduced by the breeding process. The two original melodies, along with the two spliced melodies, are then added back to the dataset. The bottom half of the dataset is discarded after every iteration.
+
+<h3>Mutation</h3>
+
+Mutations are introduced after the breeding process in every iteration. There are three types of mutations: new, combine, and bump. New note mutations introduce a completely new random pitch to the melody in a given 16th note location. Combine mutations takes the value of one 16th note location and applies it to the subsequent location, thus extending the length of that particular note by a 16th note length. Bump takes a 16th note and pushes it by either 1 or 2 half steps in either direction. These mutations all happen with a frequency of .1% on any given 16th note.
+
+<h2>Output</h2>
+
+After all iterations are completed, the highest-ranking melody is then output to a 
+<a target="_blank"href="http://lilypond.org/">
+lilypond
+</a>
+file, and statistics about the run's average fitness is output to a log. The lilypond file is then compiled to produce the image and midi file you see on the results page.
+
+<h2> Potential Future Uses</h2>
+<p>
+The melodies generated here follow the tonal system. It is quite possible with this technology to, with relatively minimal edits, create a Mozartesque piano movement (melody with Alberti base) or, with additional ranking systems, a fugue. The latter of these projects has already been undertaken by some <a target="_blank" href="http://www.cs.cornell.edu/boom/2001sp/Milkie/"> Cornell </a> students, but with startlingly little regard to harmonic implications. Milkie's work was the original jumping off point of this project, and its output inspired one of the most important aspects of this current ranking process, the harmonic and diatonic definitions, which is a cornerstone of this program's functionality.
+</p>
+<p>
+As evident through your interaction here, this particular example is proud to be the first such function on the web to allow any interested musician to interact with the ranking system, and in doing so, pass the creative possibilities of this work on to the general public. Now suddenly, there is opportunity for truly non-human music to enter the work of composers everywhere, utilizing melodies shaped to their particular pitch-collections and rhythmic inclinations.
+</p>
+
+
+
+
+
+
+
+
+

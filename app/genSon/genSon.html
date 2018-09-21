@@ -1,0 +1,60 @@
+
+
+<H1 class = "title">Fresh Sonatas!</H1>
+<br>
+
+<p> 
+Mozart wrote a ton of sonatas. We can too.
+<p>
+Want to know more about how this works? Click <a href="#!/genSonPaper">here!</a>
+</p>
+<div class="myCustomTable">
+  <table class="table table-striped">
+    <tr>
+        <th>Options</th>
+        <th>Value</th>
+      </tr>
+      
+      <tr>
+        <td>Key</td>
+        <td>
+          <select class="selectpicker" name="keyselector" ng-model="data.KEY">
+            <option value="60">C major</option>
+            <option value="55">G major</option>
+            <option value="50">D major</option>
+            <option value="57">A major</option>
+            <option value="52">E major</option>
+            <option value="59">B major</option>
+            <option value="54">F# major</option>
+            <option value="53">F major</option>
+            <option value="58">Bb major</option>
+            <option value="51">Eb major</option>
+            <option value="56">Ab major</option>
+            <option value="49">Db major</option>
+          </select>
+      </tr>
+
+
+      <tr>
+        <td>Generate Analysis?</td>
+        <td>
+          <div class="radio">
+            <label><input name="ana" type="radio" ng-model="data.analyze" value='1' name="optradio">Yes</label>
+          </div>
+          <div class="radio">
+            <label><input name="ana" type="radio" ng-model="data.analyze" value='2' name="optradio">No</label>
+          </div>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+<center>
+<div>
+  <div class="btn-group">
+    <button type = "button" class = "btn btn-primary" ng-click="goSon()" >{{buttonMessage}} </button>
+  </div>
+  &nbsp &nbsp <i class="fa fa-circle-o-notch fa-spin" ng-show="isLoading" style="font-size:24px"></i>
+<div>
+</center>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Brian Ellis</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="webApp.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://npmcdn.com/react@15.3.0/dist/react-with-addons.min.js"></script>
+  <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.min.js"></script>
+  
+  <script src='https://kitchwww.github.io/midi/midi.js'></script>
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110168033-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-110168033-1');
+  </script>
+
+
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+<div class="wrapper">
+  <header class="header">
+    <a class="nav-link active" href="#!/home" role="tab" data-toggle="tab">Brian Ellis</a></header>
+  <aside class="sidebar">
+    <div class="sideGrid">
+      <div class="sideGridImage">
+        <center>
+          <img class="img-circle" src="res/brian.jpg">
+        </center>  
+      </div>
+      <div class="sideGridText">
+        <a href="#!/about"  data-toggle="tab">biography</a>
+        <br>
+        <a href="#!/music" data-toggle="tab">choice art</a>
+        <br>
+        <a class="nav-link" href="#!/contact" role="tab" data-toggle="tab">contact</a>
+      </div>
+    </div>
+  </aside>
+  <aside class="filler">
+    &nbsp;
+  </aside>
+  <article class="content">
+    <div style="position: relative" ng-view></div>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <nav class="navbar navbar-default navbar-static-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"> &nbsp Brian Ellis </a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#!/home">Home</a></li>        
+
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Computer Music</a>
+          <ul class="dropdown-menu">
+            <li><a href="#!/genMel">Generative Melodies</a></li>
+            <li><a href="#!/genSon">Fresh Sonatas</a></li>
+            <li><a href="#!/twoVoices">Counterpoint Visualization</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Compositions</a>
+          <ul class="dropdown-menu">
+            <li><a href="#!/reflections">Reflections</a></li>
+            <li><a href="#!/epoch">Epoch Music</a></li>
+            <li><a href="#!/songCycle">Song Cycle</a></li>
+          </ul>
+        </li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a target="_blank" href="http://www.github.com/kitchwww">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+</nav> -->
+
+
+<!-- <br>
+<br>
+<br>
+<div class="footer">
+  <i>Thanks in advance for doing cool things</i>
+</div>
+
+</div> -->
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="webApp.js"></script>
+  <script src="simplePages/minimalismGuitar.js"></script>
+  <script src="simplePages/fleet.js"></script>
+  <script src="simplePages/planing.js"></script>
+  <script src="simplePages/unset.js"></script>
+  <script src="pages/about.js"></script>
+  <script src="pages/home.js"></script>
+  <script src="pages/music.js"></script>
+  <script src="pages/programs.js"></script>
+  <script src="pages/contact.js"></script>
+  <script src="epoch/epoch.js"></script>
+  <script src="departure/departure.js"></script>
+  <script src="epoch/epochView.js"></script>
+  <script src="genMel/genMel.js"></script>
+  <script src="genMel/genMelView.js"></script>
+  <script src="genMel/genMelPaper.js"></script>
+  <script src="genMel/genMelPsy.js"></script>
+  <script src="genSon/genSon.js"></script>
+  <script src="genSon/genSonView.js"></script>
+  <script src="genSon/genSonPaper.js"></script>
+  <script src="babyfirst/babyfirst.js"></script>
+  <script src="babyfirst/babyfirstView.js"></script>
+  <script src="songCycle/songCycle.js"></script>
+  <script src="twoVoices/twoVoices.js"></script>
+  <script src="songsAndInterludes/songsAndInterludes.js"></script>
+  <script src="reflections/reflections.js"></script>
+  <script src="smallMusic/smallMusic.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>

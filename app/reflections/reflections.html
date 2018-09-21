@@ -1,0 +1,73 @@
+<h1 class="title">Reflections</h1>
+<div class="pagePieceDate">2017</div>
+<div class="pagePieceInsturmentation">Solist</div>
+<br>
+A short work for solo instrumentalist. Composed in collaboration with a simple algorithm, <i>Reflections</i> falls in a unique position between structured improvisation, "standard" (deterministic) music, and stochastic processes. Any instrumentalist with an interest in performing the piece should fill out the table below and generate a new, unique score fitted to their instrument. In an ideal setting, a new score should be used for each performance, but due to the technical demands of the piece, it is understood that this is not always feasible. A sample score is available below.
+<br/>
+<br/>
+<br/>
+<div class="myCustomTable">
+   <table class="table table-striped">
+      <tr>
+         <td>Staff</td>
+         <td>
+            <select class="selectpicker" name="keyselector" ng-model="data.STAFF">
+               <option value="treble">treble</option>
+               <option value="bass">bass</option>
+               <option value="alto">alto</option>
+               <option value="tenor">tenor</option>
+               <option value="treble_8">octave treble</option>
+            </select>
+         <td> &nbsp</td>
+      </tr>
+      <tr>
+         <td>Highest Pitch</td>
+         <td>
+            <div>
+               <input class="form-control" type="number" ng-model="data.HIGH" value="42" id="example-number-input">
+            </div>
+         </td>
+         <td> (note: {{toString(data.HIGH)}})</td>
+      </tr>
+      <tr>
+         <td>Middle Register Pitch</td>
+         <td>
+            <div>
+               <input class="form-control" type="number" ng-model="data.MID" value="42" id="example-number-input">
+            </div>
+         </td>
+         <td> (note: {{toString(data.MID)}})</td>
+      </tr>
+      <tr>
+         <td>Lowest Pitch</td>
+         <td>
+            <div>
+               <input class="form-control" type="number" ng-model="data.LOW" value="42" id="example-number-input">
+            </div>
+         </td>
+         <td> (note: {{toString(data.LOW)}})</td>
+      </tr>
+      </tbody>
+   </table>
+</div>
+<center>
+   <div>
+      <div class="btn-group">
+         <button type = "button" class = "btn btn-primary"  ng-disabled="data.HIGH<data.LOW+12" ng-click="goSon()" >{{buttonMessage}} </button>
+      </div>
+      &nbsp &nbsp <i class="fa fa-circle-o-notch fa-spin" ng-show="isLoading" style="font-size:24px"></i>
+   </div>
+</center>
+<br/>
+<br/>
+<br/>
+
+<object data="res/reflections_example_score.pdf" type="application/pdf" width="100%" height="500px">
+   <p>It appears you don't have a PDF plugin for this browser.
+      No biggie...
+   </p>
+</object>
+
+
+<br/>
+<br/>
