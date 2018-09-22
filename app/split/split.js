@@ -1,15 +1,15 @@
 'use strict';
 
-angular.module('myApp.babyfirst', ['ngRoute'])
+angular.module('myApp.split', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/babyfirst/:preBuilt?', {
-    templateUrl: 'babyfirst/babyfirst.html',
-    controller: 'babyfirstCtrl'
+  $routeProvider.when('/split/:preBuilt?', {
+    templateUrl: 'split/split.html',
+    controller: 'splitCtrl'
   });
 }])
 
-.controller('babyfirstCtrl', [ '$scope','$location','$http','$routeParams','$rootScope',
+.controller('splitCtrl', [ '$scope','$location','$http','$routeParams','$rootScope',
   function($scope,$location,$http,$routeParams,$rootScope) {
 
   if(Boolean($routeParams.preBuilt) && ($rootScope.data != null)){
@@ -73,7 +73,7 @@ angular.module('myApp.babyfirst', ['ngRoute'])
           url: '/goConcerto',
           data: $scope.data
         }).then(function successCallback(response) {
-            $location.url('/babyfirstView/'+response.data);            
+            $location.url('/splitView/'+response.data);            
           }, function errorCallback(response) {
             console.log(response);
           });
