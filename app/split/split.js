@@ -24,7 +24,7 @@ angular.module('myApp.split', ['ngRoute'])
   }
   
   $scope.isLoading = false;
-  $scope.buttonMessage = "Make A Concerto!"
+  $scope.buttonMessage = "Make a duet!"
 
   $scope.preset = function(index){
     if(index == 0){
@@ -45,7 +45,7 @@ angular.module('myApp.split', ['ngRoute'])
       $scope.data.favoritePitch = 76;
       $scope.data.clefToUse = 'treble'
       $scope.data.lowestAccomp = 21;
-      $scope.data.highestAccomp = 84;
+      $scope.data.highestAccomp = 108;
       $scope.data.waysToPlay = [
         {way:'Sul E, natural'},
         {way:'Sul E, harmonic'},
@@ -62,7 +62,7 @@ angular.module('myApp.split', ['ngRoute'])
         var d = new Date();
         var n = d.getTime();
         var obj = {};
-        $scope.buttonMessage = "Loading Concerto..."
+        $scope.buttonMessage = "Loading Duet..."
         $scope.isLoading = true;
         $scope.data.TIMESTAMP = n;
         $rootScope.data = {};
