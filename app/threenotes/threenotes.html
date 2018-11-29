@@ -1,0 +1,60 @@
+<h1 class="title">Three Notes</h1>
+<div class="pagePieceDate">2018</div>
+<div class="pagePieceInsturmentation">Solist</div>
+<br/>
+A musical offering. Left intentionally open, musical material is to be filled by a performer or group of performers. Type of sustain, dynamics, shaping, instrumentation, and all other musical decisions are left open to showcase the performers and their unique musical abilities. Total duration is left up to the discretion of the programming, and can be altered to fit most desired lengths. Suggested duration might be between two minutes and half an hour.
+<br/><br/>
+A note on octave doublings: They are not advised, and each pitch should appear only in the specified  octave.
+<br/>
+<br/>
+<br/>
+<div class="myCustomTable">
+   <table class="table table-striped">
+    <tr>
+      <td> Option </td>
+      <td> Selection </td>
+    </tr>
+      <tr>
+         <td>Clef:</td>
+            <td>
+              <select class="form-control" name="singleSelect" ng-model="data.clefToUse">
+                <option value="treble">treble</option>
+                <option value="bass">bass</option>
+                <option value="alto">alto</option>
+                <option value="tenor">tenor</option>
+                <option value="treble_8">treble 8vb</option>
+                <option value="treble^8">treble 8va</option>
+              </select> </td>
+      </tr>
+      <tr>
+         <td>Your Name?</td>
+         <td>
+            <div>
+               <input class="form-control" type="string" ng-model="data.NAME" id="example-number-input">
+            </div>
+         </td>
+      </tr>
+      </tbody>
+   </table>
+</div>
+<center>
+   <div>
+      <div class="btn-group">
+         <button type = "button" class = "btn btn-primary"  ng-disabled="data.HIGH<data.LOW+12" ng-click="goSon()" >{{buttonMessage}} </button>
+      </div>
+      &nbsp &nbsp <i class="fa fa-circle-o-notch fa-spin" ng-show="isLoading" style="font-size:24px"></i>
+   </div>
+</center>
+<br/>
+<br/>
+<br/>
+
+<object data="res/threenotes_example_score.pdf" type="application/pdf" width="100%" height="500px">
+   <p>It appears you don't have a PDF plugin for this browser.
+      No biggie...
+   </p>
+</object>
+
+
+<br/>
+<br/>

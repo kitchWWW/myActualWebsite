@@ -28,6 +28,7 @@ angular.module('myApp', [
   'myApp.twoVoices',
   'myApp.songsAndInterludes',
   'myApp.reflections',
+  'myApp.threenotes',
   'myApp.smallMusic',
   'myApp.version'
 ]).
