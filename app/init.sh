@@ -12,6 +12,7 @@ export HOME=/home/ec2-user
 #java
 sudo yum install -y java-11.0.1
 sudo yum remove -y java-1.7.0-openjdk
+sudo yum install -y java-11.0.1-openjdk
 
 #timidity
 cd

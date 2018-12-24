@@ -7,8 +7,59 @@ Exploring the unprepared and constantly unique, <i>Small Music</i> works to expo
 <br/>
 Every performance should be done with a fresh score specifically generated for that performance, which can be created below. Electronics (in MAX/MSP) are available <a target="_blank" href="https://github.com/kitchWWW/SmallMusic/tree/master/MaxComponents" > here.</a>
 <br/>
+
 <br/>
 <center>
+<div class="myCustomTable">
+   <table class="table table-striped">
+    <tr>
+      <td> Option </td>
+      <td> Selection </td>
+    </tr>
+      <tr>
+         <td>Clef:</td>
+            <td>
+              <select class="form-control" name="singleSelect" ng-model="data.clefToUse">
+                <option value="treble">treble</option>
+                <option value="bass">bass</option>
+                <option value="alto">alto</option>
+                <option value="tenor">tenor</option>
+                <option value="treble_8">treble 8vb</option>
+                <option value="treble^8">treble 8va</option>
+              </select> </td>
+      </tr>
+      <tr>
+        <td>Key</td>
+        <td>
+          <select class="selectpicker" name="keyselector" ng-model="data.KEY">
+            <option value="60">C major</option>
+            <option value="55">G major</option>
+            <option value="50">D major</option>
+            <option value="57">A major</option>
+            <option value="52">E major</option>
+            <option value="59">B major</option>
+            <option value="54">F# major</option>
+            <option value="53">F major</option>
+            <option value="58">Bb major</option>
+            <option value="51">Eb major</option>
+            <option value="56">Ab major</option>
+            <option value="49">Db major</option>
+          </select>
+      </tr>
+      <tr>
+         <td>Your Name?</td>
+         <td>
+            <div>
+               <input class="form-control" type="string" ng-model="data.NAME" id="example-number-input">
+            </div>
+         </td>
+      </tr>
+      </tbody>
+   </table>
+</div>
+<br/>
+
+
    <div>
       <div class="btn-group">
          <button type = "button" class = "btn btn-primary"  ng-disabled="data.HIGH<data.LOW+12" ng-click="goSmall()" >{{buttonMessage}} </button>

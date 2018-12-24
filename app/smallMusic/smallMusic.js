@@ -15,7 +15,11 @@ angular.module('myApp.smallMusic', ['ngRoute'])
 
 	$scope.data = {};
 	$scope.data.TIMESTAMP;
-	$scope.isLoading = false;
+	$scope.data.isLoading = false;
+  $scope.data.KEY = "50";
+  $scope.data.NAME = "(for dedication)";
+  $scope.data.clefToUse = "treble";
+
 
   $scope.buttonMessage = "Generate Score"
 

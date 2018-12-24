@@ -286,7 +286,10 @@ http.createServer(function(request, response) {
         var data = JSON.parse(requestBody);
         console.log(data)
         const runCode = runSpawn('./runSmallMusic.sh',[
-          data.TIMESTAMP
+          data.TIMESTAMP,
+          data.KEY,
+          data.clefToUse,
+          data.NAME
           ]);
         runCode.stdout.on('data', function (data) {
           serverLog('stdout: ' + data.toString());
