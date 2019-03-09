@@ -30,6 +30,8 @@ angular.module('myApp', [
   'myApp.reflections',
   'myApp.threenotes',
   'myApp.smallMusic',
+  'myApp.softMusic',
+  'myApp.softMusicView',
   'myApp.version'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {

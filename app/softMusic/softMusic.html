@@ -1,0 +1,96 @@
+<h1 class="title">Soft Music</h1>
+<div class="pagePieceDate">2019</div>
+<div class="pagePieceInsturmentation">Ensemble of Voices</div>
+<br/>
+hello
+<br/>
+<br/>
+Every performance should be done with a fresh score specifically generated for that performance, which can be created below.
+<br/>
+
+<br/>
+<center>
+<div class="myCustomTable">
+   <table class="table table-striped">
+    <tr>
+      <td> Option </td>
+      <td> Selection </td>
+    </tr>
+
+      <tr>
+        <td>Duration</td>
+        <td>
+          <select class="selectpicker" name="keyselector" ng-model="data.DURATION">
+            <option value="-2">Shortest</option>
+            <option value="-1">Short</option>
+            <option value="0">Medium</option>
+            <option value="1">Long</option>
+            <option value="2">Longest</option>
+          </select>
+      </tr>
+      <tr>
+         <td>Number of Voices <i>(between 2 and 40)</i></td>
+         <td>
+            <div>
+               <input class="form-control" type="number" min="2" max="40" ng-model="data.NOVOICES" id="example-number-input">
+            </div>
+         </td>
+      </tr>
+      <tr>
+         <td>Random seed? <i>(leave blank if none)</i></td>
+         <td>
+            <div>
+               <input class="form-control" type="string" ng-model="data.SEED" id="example-number-input">
+            </div>
+         </td>
+      </tr>
+      </tbody>
+   </table>
+</div>
+<br/>
+
+
+   <div>
+      <div class="btn-group">
+         <button type = "button" class = "btn btn-primary"  ng-disabled="data.HIGH<data.LOW+12" ng-click="gosoft()" >{{buttonMessage}} </button>
+      </div>
+      &nbsp &nbsp <i class="fa fa-circle-o-notch fa-spin" ng-show="isLoading" style="font-size:24px"></i>
+   </div>
+</center>
+<br/>
+
+Also you should practice it once or twice before you just jump in. A practice tape with explanations and all possible parts you could hear can be found here:
+<br>
+
+<audio controls>
+<source src="res/SoftMusicPractice.mp3" type="audio/mp3">
+Your browser does not support the audio element.
+</audio>
+
+<!-- 
+A <i> sample </i> score and performance are below.
+<br>
+<br>
+<center>
+<audio controls>
+  <source src="res/smallMusic.mp3" type="audio/mp3">
+Your browser does not support the audio element.
+</audio>
+</center>
+<br>
+
+<object data="res/smallMusic.pdf" type="application/pdf" width="100%" height="500px">
+   <p>It appears you don't have a PDF plugin for this browser.
+      No biggie...
+   </p>
+</object>
+
+<br>
+<br>
+<br>
+World premiere: May 7th, 2018.
+<br>
+<object width="560" height="315" data="https://www.youtube.com/embed/IPDe_UPFTL4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></object>
+ -->
+<br/>
+<br/>

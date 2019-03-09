@@ -1,0 +1,24 @@
+<h1 class="title">Soft Music.</h1>
+<br>
+Here is your soft music!
+<br><br>
+<table>
+	<tr ng-repeat="x in numbers">
+		<td>
+			Part {{x+1}}.
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td>
+			<audio controls>
+			<source src="engines/SoftMusic-master/out/{{genSonNumber}}/part_no_{{x+1}}.wav" type="audio/wav">
+			Your browser does not support the audio element.
+			</audio>
+		</td>
+	</tr>
+</table>
+
+<br>
+Short Score:
+<br>
+<object width="300" height="300" type="text/plain" data="/engines/SoftMusic-master/out/{{genSonNumber}}/short_score.txt" border="0" >
+</object>
