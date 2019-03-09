@@ -16,9 +16,11 @@ angular.module('myApp.threenotes', ['ngRoute'])
   if(Boolean($routeParams.preBuilt) && ($rootScope.data != null)){
     $scope.data = $rootScope.data;
   }else{
+
     $scope.data = {};
     $scope.data.clefToUse = 'treble'
     $scope.data.NAME = 'Brian';
+    $scope.data.SEED = '';
     $scope.data.TIMESTAMP;
   }
 
@@ -26,12 +28,19 @@ angular.module('myApp.threenotes', ['ngRoute'])
   $scope.buttonMessage = "Generate Score"
 
   $scope.goSon = function(){
+
         var d = new Date();
         var n = d.getTime();
         var obj = {};
         $scope.buttonMessage = "Generating Score..."
         $scope.isLoading = true;
-        $scope.data.TIMESTAMP = n;
+
+        if($scope.data.SEED == ''){
+          $scope.data.TIMESTAMP = n;
+        }else{
+          $scope.data.TIMESTAMP = $scope.data.SEED+"---"+n;
+        }
+
         $rootScope.data = {};
         $rootScope.data = $scope.data;
         console.log($rootScope.data);

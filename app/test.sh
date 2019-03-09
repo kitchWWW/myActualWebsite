@@ -6,7 +6,7 @@ java -version
 lilypond -version
 convert -version
 
-cd engines/SmallMusic-master
-sh z_only_comp.sh
+# cd engines/SmallMusic-master
+# sh z_only_comp.sh
 
 echo 'Done with the test script!'
