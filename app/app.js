@@ -28,7 +28,7 @@ function serverLog(data){
 
 
 
-http.createServer(function(request, response) {
+var server = http.createServer(function(request, response) {
   serverLog(request.method);
   serverLog(request.url);
   if(request.method==="GET"){
@@ -529,6 +529,11 @@ http.createServer(function(request, response) {
     }
   }
 
-}).listen(parseInt(port, 10));
+})
+server.listen(parseInt(port, 10));
+server.on('error', function (e) {
+  // Handle your error here
+  console.log(e);
+});
 
 console.log("Server running at\n  => http://localhost:" + port + "/\nCTRL + C to shutdown");
