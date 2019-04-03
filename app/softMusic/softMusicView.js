@@ -11,11 +11,15 @@ angular.module('myApp.softMusicView', ['ngRoute'])
 
 .controller('softMusicViewCtrl', [ '$scope','$location','$routeParams',
     function($scope,$location,$routeParams) {
-
-    $scope.genSonNumber = $routeParams.genSonNumber.split("---")[0]
-    $scope.maxNumb = $routeParams.genSonNumber.split("---")[1]
+    var params = $routeParams.genSonNumber.split("---")
+    if(params.length == 2){
+      $scope.genSonNumber = params[0]
+      $scope.maxNumb = params[1]
+    }else{
+      $scope.genSonNumber = params[0]+'---'+params[1]
+      $scope.maxNumb = params[2]
+    }
     $scope.numbers = Array.from({length: $scope.maxNumb}, (x,i) => i);
-    console.log($scope.numbers)
 
     $scope.back = function(){
       console.log('hi?');

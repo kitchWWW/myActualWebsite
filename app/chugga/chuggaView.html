@@ -1,0 +1,21 @@
+<h1 class="title">sounds of trains.</h1>
+<br>
+<button id = "myButton" type = "button" class = "btn btn-default" ng-click="begin()" >
+  <span class="glyphicon glyphicon-{{buttonIcon}}"></span>&nbsp; {{buttonLable}}
+</button>
+<br>
+
+<br>
+Instructions:
+<br>
+Part #{{partNo+1}}
+<br>
+Total length: {{totalLength/60 | number : fractionSize}} min
+<br> Current Section: {{section}}
+<br>
+<br><b>{{ratio}}&nbsp;</b>
+<br>{{directions}}
+<br><i>{{volume}}</i>
+<br>
+<br>
+<div>Status: {{isRunning}}</div>

@@ -1,6 +1,6 @@
 <h1 class="title">Soft Music.</h1>
 <br>
-Here is your soft music!
+Here is your soft music! If not everything has loaded yet, wait a few seconds and hit refresh. For larger ensembles or longer pieces, it may take up to 30 seconds to generate the audio files.
 <br><br>
 <table>
 	<tr ng-repeat="x in numbers">
@@ -10,7 +10,7 @@ Here is your soft music!
 		<td>&nbsp;&nbsp;</td>
 		<td>
 			<audio controls>
-			<source src="engines/SoftMusic-master/out/{{genSonNumber}}/part_no_{{x+1}}.wav" type="audio/wav">
+			<source src="engines/SoftMusic-master/out/{{genSonNumber}}/part_no_{{x+1}}.mp3" type="audio/mp3">
 			Your browser does not support the audio element.
 			</audio>
 		</td>

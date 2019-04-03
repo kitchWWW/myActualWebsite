@@ -42,10 +42,10 @@ angular.module('myApp.softMusic', ['ngRoute'])
           url: '/goSoftMusic',
           data: $scope.data
         }).then(function successCallback(response) {
-            $location.url('/softMusicView/'+response.data);            
           }, function errorCallback(response) {
             console.log(response);
           });
+        $location.url('/softMusicView/'+$scope.data.TIMESTAMP+'---'+$scope.data.NOVOICES);
     }
 
 }]);

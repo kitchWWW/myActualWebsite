@@ -32,6 +32,8 @@ angular.module('myApp', [
   'myApp.smallMusic',
   'myApp.softMusic',
   'myApp.softMusicView',
+  'myApp.chugga',
+  'myApp.chuggaView',
   'myApp.version'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {

@@ -34,7 +34,13 @@ var server = http.createServer(function(request, response) {
   if(request.method==="GET"){
     var uri = url.parse(request.url).pathname
       , filename = path.join(process.cwd(), uri);
-
+    if(request.url == "/thesis"){
+      response.writeHead(302, {
+        'Location': 'http://brianellis.us/Ellis_Thesis.pdf'
+      });
+      response.end();
+      return;
+    }
     if(request.url == "/sonata"){
       response.writeHead(302, {
         'Location': '/#!/genSon'
