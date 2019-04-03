@@ -3,9 +3,10 @@
 
   <head>
     <script src="https://code.angularjs.org/1.1.3/angular.js"></script>
-      <script src='http://www.midijs.net/lib/midi.js'></script>
-    <script src="app.js"></script>
-      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <script src='http://brianellis.us/midi/midi.js'></script>
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
@@ -23,7 +24,7 @@
       <br>
       <div>
         <div class="btn-group" role="group" aria-label="Basic example">
-          <button ng-click="makeMusic()" type="button" class="btn btn-primary">Play Counterpoint</button>
+          <button id="myPlayButtonWow" ng-click="makeMusic()" type="button" class="btn btn-primary">Play Counterpoint</button>
           <button ng-click="remove()" type="button" class="btn btn-secondary">Remove Last</button>
           <button ng-click="clear()" type="button" class="btn btn-secondary">Clear</button>
            <div class="btn-group" role="group">

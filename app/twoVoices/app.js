@@ -15,7 +15,6 @@ app.directive("drawing", [ '$http', function($http){
         MIDIjs.stop();
       });
 
-
       drawBoard();
 
       
@@ -111,6 +110,7 @@ app.directive("drawing", [ '$http', function($http){
       }
 
       scope.makeMusic = function(){
+        MIDIjs.initAll()
         console.log(xargs);
         console.log(yargs);
         var d = new Date();
@@ -125,6 +125,7 @@ app.directive("drawing", [ '$http', function($http){
           url: '/goVoices',
           data: scope.data
         }).then(function successCallback(response) {
+          console.log("playing?")
           MIDIjs.play('/engines/twoVoices-master/out/'+response.data+'/twoVoicesScore.midi');
           }, function errorCallback(response) {
             console.log(response);

@@ -39,6 +39,7 @@ angular.module('myApp.genSonView', ['ngRoute'])
         MIDIjs.stop();
         $scope.buttonImg = 'play';
       }else{
+        MIDIjs.initAll()
         MIDIjs.play('engines/SonataGenerator-master/out/'+$scope.genSonNumber+'/PianoSonataScore.midi');
         $scope.buttonImg = 'stop';
       }
