@@ -12,6 +12,7 @@ angular.module('myApp', [
   'myApp.fleet',
   'myApp.planing',
   'myApp.unset',
+  'myApp.thesis',
   'myApp.epoch',
   'myApp.epochView',
   'myApp.departure',

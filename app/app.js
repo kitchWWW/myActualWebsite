@@ -36,7 +36,7 @@ var server = http.createServer(function(request, response) {
       , filename = path.join(process.cwd(), uri);
     if(request.url == "/thesis"){
       response.writeHead(302, {
-        'Location': 'http://brianellis.us/Ellis_Thesis.pdf'
+        'Location': '/#!/thesis'
       });
       response.end();
       return;
