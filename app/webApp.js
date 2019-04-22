@@ -20,6 +20,7 @@ angular.module('myApp', [
   'myApp.genMelView',
   'myApp.genMelPaper',
   'myApp.genSon',
+  'myApp.pan',
   'myApp.genSonView',
   'myApp.genSonPaper',
   'myApp.split',

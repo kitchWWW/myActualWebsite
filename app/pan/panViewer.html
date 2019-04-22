@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ensemble Music</title>
+
+
+  </head>
+  <body>
+  <div class="everything">
+    <div class="center">
+
+<div class="img-sheet-music-wrapper">
+<img class="img-sheet-music" src="SteelPan/out/{{timestamp}}/{{img_src}}.pdf.png">
+</div>
+<table width = '100%'>
+  <tr>
+    <td>
+      <div class="myDynamic">
+        {{dynamic_value}}
+      </div>
+</td>
+<td>
+     <div class="myCountdown">
+      {{countdown_value}}
+      </div>
+    </td>
+    </tr>
+    </table>
+
+    <br>
+
+    <div id="exitExperience" style="display: none">
+    <br>
+    </div>
+
+      <br>
+    Part No. {{my_part}}
+    <br>
+    Piece No. {{timestamp}}
+
+    <br>
+    Created by <a href="http://www.brianellissound.com" target="_blank">Brian Ellis</a>
+    <div style="font-style: italic;" id="lastUpdated"></div>
+</div>
+
+  </body>
+
+  <link href="panViewer.css" rel="stylesheet">
+  <script src="NoSleep.js"></script>
+<script src="panViewer.js"></script>
+
+</html>

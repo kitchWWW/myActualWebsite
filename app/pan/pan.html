@@ -1,0 +1,40 @@
+
+
+<H1 class = "title">Ensemble Music</H1>
+<div class="pagePieceDate">2019</div>
+<div class="pagePieceInsturmentation">variable ensemble</div>
+
+<br>
+
+<p> 
+  wowowwow we playing some music so cool.
+</p>
+<div class="myCustomTable">
+  <table class="table table-striped">
+    <tr>
+        <th>Options</th>
+        <th>Value</th>
+      </tr>
+      <tr>
+        <td>Generate Analysis?</td>
+        <td>
+          <div class="radio">
+            <label><input name="ana" type="radio" ng-model="data.analyze" value='1' name="optradio">Yes</label>
+          </div>
+          <div class="radio">
+            <label><input name="ana" type="radio" ng-model="data.analyze" value='2' name="optradio">No</label>
+          </div>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+<center>
+<div>
+  <div class="btn-group">
+    <button type = "button" class = "btn btn-primary" ng-click="goSon()" >{{buttonMessage}} </button>
+  </div>
+  &nbsp &nbsp <i class="fa fa-circle-o-notch fa-spin" ng-show="isLoading" style="font-size:24px"></i>
+<div>
+</center>
