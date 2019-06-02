@@ -9,6 +9,6 @@ tagline = ""
 \clef treble	\numericTimeSignature
 	\time 4/4
 	\bar ".|:"
-d4 d4 d4 d4
+d'4 d'4 d'4 d'4
 	\bar ":|."
 }}}

@@ -17,6 +17,18 @@
   <div class="everything">
     <div class="center">
 
+
+<div ng-show="showStartScore">
+
+<button ng-click="start()" ng-init="count=0" style="  background-color: #AAAAAA; font-size:40px;">Click here to begin!</button>
+
+</div>
+
+
+
+<div ng-show="showScore">
+
+
 <div class="img-sheet-music-wrapper">
 <img class="img-sheet-music" src="SteelPan/out/{{timestamp}}/{{img_src}}.pdf.png">
 </div>
@@ -32,24 +44,32 @@
       {{countdown_value}}
       </div>
     </td>
-    </tr>
-    </table>
+  </tr>
+</table>
 
-    <br>
-
-    <div id="exitExperience" style="display: none">
-    <br>
-    </div>
-
-      <br>
-    Part No. {{my_part}}
-    <br>
-    Piece No. {{timestamp}}
-
-    <br>
-    Created by <a href="http://www.brianellissound.com" target="_blank">Brian Ellis</a>
-    <div style="font-style: italic;" id="lastUpdated"></div>
+<br/>
+<div class="myNext">
+NEXT:
 </div>
+<div class="img-sheet-music-wrapper">
+<img class="img-sheet-music" src="SteelPan/out/{{timestamp}}/{{img_src_next}}.pdf.png">
+</div>
+<div id="exitExperience" style="display: none">
+<br/>
+</div>
+
+  <br/>
+Part No. {{my_part}}
+<br/>
+Piece No. {{timestamp}}
+<br>
+Created by <a href="http://www.brianellissound.com" target="_blank">Brian Ellis</a>
+<div style="font-style: italic;" id="lastUpdated"></div>
+
+</div>
+</div>
+</div>
+
 
   </body>
 

@@ -9,6 +9,6 @@ tagline = ""
 \clef bass	\numericTimeSignature
 	\time 4/4
 	\bar ".|:"
-<d, d>1:32
+<e, e>1:32
 	\bar ":|."
 }}}

@@ -33,6 +33,13 @@ color: black;
 
 }
 
+.myNext {
+font-style: bold;
+font-size: 30px;
+color: black;
+
+}
+
 
 .img-sheet-music {
     border-radius: 10%;
@@ -40,7 +47,7 @@ color: black;
 }
 
 .img-sheet-music-wrapper{
-  height: 200px;
+  height: 250px;
 }
 
 body {

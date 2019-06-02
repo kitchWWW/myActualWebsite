@@ -34,62 +34,30 @@ var server = http.createServer(function(request, response) {
   if(request.method==="GET"){
     var uri = url.parse(request.url).pathname
       , filename = path.join(process.cwd(), uri);
-    if(request.url == "/thesis"){
-      response.writeHead(302, {
-        'Location': '/#!/thesis'
-      });
-      response.end();
-      return;
-    }
-    if(request.url == "/sonata"){
-      response.writeHead(302, {
-        'Location': '/#!/genSon'
-      });
-      response.end();
-      return;
-    }
-    if(request.url == "/reflections"){
-      response.writeHead(302, {
-        'Location': '/#!/reflections'
-      });
-      response.end();
-      return;
-    }
-    if(request.url == "/smallMusic"){
-      response.writeHead(302, {
-        'Location': '/#!/smallMusic'
-      });
-      response.end();
-      return;
-    }
-    if(request.url == "/softmusic"){
-      response.writeHead(302, {
-        'Location': '/#!/softMusic'
-      });
-      response.end();
-      return;
-    }
-    if(request.url == "/threeNotes"){
-      response.writeHead(302, {
-        'Location': '/#!/threenotes'
-      });
-      response.end();
-      return;
-    }
-    if(request.url == "/threenotes"){
-      response.writeHead(302, {
-        'Location': '/#!/threenotes'
-      });
-      response.end();
-      return;
-    }
-    if(request.url == "/melody"){
-      response.writeHead(302, {
-        'Location': '/#!/genMel'
-      });
-      response.end();
-      return;
-    }
+
+    var mappings = {}
+    mappings['thesis'] = 'thesis'
+    mappings['sonata'] = 'genSon'
+    mappings['reflections'] = 'reflections'
+    mappings['smallMusic'] = 'smallMusic'
+    mappings['softmusic'] = 'softMusic'
+    mappings['threeNotes'] = 'threenotes'
+    mappings['melody'] = 'genMel'
+    mappings['askingforit'] = 'asking'
+
+    serverLog(mappings)
+    serverLog(request.url.toUpperCase())
+    for (var raw in mappings) {
+    	serverLog(raw)
+    	if(request.url.toUpperCase() == '/'+raw.toUpperCase()){
+	    	response.writeHead(302, {
+		        'Location': '/#!/'+mappings[raw]
+		      });
+		      response.end();
+		      return;
+	  }
+	}
+
     fs.exists(filename, function(exists) {
       if(!exists) {
         response.writeHead(404, {"Content-Type": "text/plain"});

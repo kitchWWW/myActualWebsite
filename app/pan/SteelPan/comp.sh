@@ -5,14 +5,13 @@ mkdir out/1234
 python build.py 1234 hello
 cd out/1234
 
-for i in *.ly; do lilypond $i; done
+for i in *.ly; do lilypond $i ; done
 
-for i in *.pdf; do convert           \
+for i in *.pdf; do time convert           \
    -verbose       \
-   -density 550   \
+   -density 350   \
     $i      \
-   -quality 200   \
+   -quality 100   \
    -flatten       \
-   -sharpen 0x1.0 \
    -trim          \
     $i.png; done

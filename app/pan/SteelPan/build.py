@@ -96,11 +96,11 @@ measureValues['2_2_s_lead'] = measureValues['2_0_s_lead']
 measureValues['2_3_s_lead'] = measureValues['2_0_s_lead']
 measureValues['2_4_s_lead'] = measureValues['2_0_s_lead']
 
-measureValues['2_0_n_mid'] = "[4]4 [4]4 [4]4 [4]4"
-measureValues['2_1_n_mid'] = "[4]8 [6]8 [4]4 [4]4 [4]4"
-measureValues['2_2_n_mid'] = "[4]4 [4]8 [6]8 [4]4 [4]4"
-measureValues['2_3_n_mid'] = "[4]4 [4]4 [4]8 [6]8 [4]4"
-measureValues['2_4_n_mid'] = "[4]4 [4]4 [4]4 [4]8 [6]8"
+measureValues['2_0_n_mid'] = "[4]'4 [4]'4 [4]'4 [4]'4"
+measureValues['2_1_n_mid'] = "[4]'8 [6]'8 [4]'4 [4]'4 [4]'4"
+measureValues['2_2_n_mid'] = "[4]'4 [4]'8 [6]'8 [4]'4 [4]'4"
+measureValues['2_3_n_mid'] = "[4]'4 [4]'4 [4]'8 [6]'8 [4]'4"
+measureValues['2_4_n_mid'] = "[4]'4 [4]'4 [4]'4 [4]'8 [6]'8"
 
 measureValues['2_0_s_mid'] = "[4]8 [6]8 [4]8 [6]8 [4]8 [6]8 [4]8 [6]8 "
 measureValues['2_1_s_mid'] = measureValues['2_0_s_mid']
@@ -128,6 +128,7 @@ measureValues['3_4_n_bass'] = "r4 [1],8 [1],8  r4 [6],,8 [6],,8 "
 
 
 measureValues['tacet'] = 'r1^"Tacet" '
+measureValues['fade_out'] = 's1^"Fade out"'
 
 
 # measureValues['3_0_n_lead'] = "   "
@@ -155,6 +156,7 @@ def partCheck(parts):
 		if s != allSums[0]:
 			print("WHOA ERROR ERROR ERROR ERROR")
 			return
+	print(allSums)
 	print("--> all good!")
 
 
@@ -179,14 +181,24 @@ def addRollChordScene(rootNote,TOTAL_FADE_IN_TIME,TOTAL_PLAY_TIME,versionPrefix,
 
 	# now we orchestrate a smooth-ish fade in
 	random.shuffle(others)
-	entryTimes = random.sample(range(1,TOTAL_FADE_IN_TIME), len(others)-2)
+	entryTimes = []
+	for z in range(len(others)-2):
+		entryTimes.append(random.randint(3,TOTAL_FADE_IN_TIME-3))
+
 	entryTimes.append(0)
 	entryTimes.append(TOTAL_FADE_IN_TIME)
 	random.shuffle(entryTimes)
 	for p in range(len(parts)):
 		if p == soloist:
-			b = Bit(TOTAL_FADE_IN_TIME,FADE_OUT,'',0)
+			b = Bit(3,FADE_OUT,'',0)
 			parts[p].part.append(b)
+
+			b = Bit(TOTAL_FADE_IN_TIME - 3,
+				versionPrefixs[p]+"_s_"+parts[p].insturment+genId(),
+				'fade in',
+				rootNote)
+			parts[p].part.append(b)
+
 		else:
 			entryIndex = p
 			if entryIndex > soloist:
@@ -211,7 +223,7 @@ def addRollChordScene(rootNote,TOTAL_FADE_IN_TIME,TOTAL_PLAY_TIME,versionPrefix,
 				entryIndex -= 1
 			parts[p].part.append(Bit(TOTAL_PLAY_TIME,
 				versionPrefixs[p]+'_n_'+parts[p].insturment+genId(),
-				'medium',
+				'mezzo piano',
 				rootNote))
 	
 
@@ -219,7 +231,7 @@ def addRollChordScene(rootNote,TOTAL_FADE_IN_TIME,TOTAL_PLAY_TIME,versionPrefix,
 
 ######### START BUILDING THE PIECE
 
-timestamp = '1234' #sys.argv[1]
+timestamp = sys.argv[1]
 dedication = 'Brian' # sys.argv[2]
 BEGINNING_WAIT = 10
 
@@ -230,12 +242,12 @@ CONTINUE = 'continue'
 FADE_OUT = 'fade_out'
 TACET = 'tacet'
 
-howManyOfEach = [BASS,BASS,MID,MID,LEAD,LEAD]
+howManyOfEach = [LEAD, LEAD, LEAD, MID, MID, BASS,BASS]
 
 parts = []
 for p in howManyOfEach:
 	pl = Player(p)
-	pl.part.append(Bit(10,TACET,'silent',0))
+	pl.part.append(Bit(6,TACET,'silent',0))
 	parts.append(pl)
 
 
@@ -243,21 +255,32 @@ print(parts)
 partCheck(parts)
 
 
-addRollChordScene(1,15,20,['1_1'],False)
-addRollChordScene(0,10,30,['1_1'],True)
+addRollChordScene(2,10,5,['1_1'],False)
+addRollChordScene(0,8,10,['1_1'],True)
 
-addRollChordScene(4,30,10,['2_0'],False)
-addRollChordScene(2,40,10,['2_1','2_2'],False)
-addRollChordScene(2,40,10,['2_1','2_2'],False)
-addRollChordScene(0,40,10,['2_2','2_3'],True)
-addRollChordScene(2,40,10,['2_3','2_4'],False)
-addRollChordScene(0,40,10,['2_1','2_2','2_3','2_4'],True)
-addRollChordScene(4,30,40,['2_0'],True)
+addRollChordScene(4,8,10,['2_0'],False)
+addRollChordScene(4,10,5,['2_1','2_2'],False)
+addRollChordScene(2,10,5,['2_1','2_2'],False)
+addRollChordScene(2,10,5,['2_2','2_3'],True)
+addRollChordScene(0,10,2,['2_3','2_4'],False)
+addRollChordScene(6,15,5,['2_1','2_2','2_3','2_4'],True)
+addRollChordScene(4,10,4,['2_0'],True)
 
-addRollChordScene(0,10,20,['3_1'],False)
-addRollChordScene(0,10,30,['3_2'],False)
-addRollChordScene(0,10,30,['3_3'],False)
-addRollChordScene(0,10,30,['3_4'],False)
+addRollChordScene(0,15,4,['1_1'],True)
+
+addRollChordScene(5,8,5,['3_1'],False)
+addRollChordScene(4,8,5,['3_2'],False)
+addRollChordScene(3,8,5,['3_3'],False)
+addRollChordScene(2,8,5,['3_4'],False)
+
+addRollChordScene(0,10,5,['1_1'],True)
+addRollChordScene(3,15,3,['1_1'],False)
+addRollChordScene(0,10,5,['1_1'],False)
+
+for p in parts:
+	p.part.append(Bit(5,TACET,'silent',0))
+
+
 
 
 print(parts)
@@ -290,9 +313,6 @@ partCheck(parts)
 
 for p in parts:
 	for b in p.part:
-		if b.instruction in [FADE_OUT]:
-			continue
-		print b
 		fd = open("portion.ly")
 		outfd = open("out/"+str(timestamp)+'/'+b.instruction+".ly",'w')
 		for l in fd:
@@ -303,7 +323,7 @@ for p in parts:
 				elif 'clef' in l:
 					l = '\\clef '+p.clef
 				else:
-					if '_' in b.instruction:
+					if '_' in b.instruction and b.instruction not in [FADE_OUT]:
 						actualInstruction = '_'.join(b.instruction.split("_")[:-1])
 					else:
 						actualInstruction = b.instruction

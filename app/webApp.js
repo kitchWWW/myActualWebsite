@@ -10,6 +10,7 @@ angular.module('myApp', [
   'myApp.contact',
   'myApp.minimalismGuitar',
   'myApp.fleet',
+  'myApp.asking',
   'myApp.planing',
   'myApp.unset',
   'myApp.thesis',
