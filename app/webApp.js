@@ -11,6 +11,7 @@ angular.module('myApp', [
   'myApp.minimalismGuitar',
   'myApp.fleet',
   'myApp.asking',
+  'myApp.wch',
   'myApp.planing',
   'myApp.unset',
   'myApp.thesis',
