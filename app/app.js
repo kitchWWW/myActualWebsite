@@ -45,6 +45,7 @@ var server = http.createServer(function(request, response) {
     mappings['alabama'] = 'alabama'
     mappings['melody'] = 'genMel'
     mappings['battery'] = 'battery'
+    mappings['batterylow'] = 'battery'
     mappings['askingforit'] = 'asking'
     mappings['megsong'] = 'megsong'
 
