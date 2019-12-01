@@ -42,14 +42,19 @@ var server = http.createServer(function(request, response) {
     mappings['smallMusic'] = 'smallMusic'
     mappings['softmusic'] = 'softMusic'
     mappings['threeNotes'] = 'threenotes'
+    mappings['alabama'] = 'alabama'
     mappings['melody'] = 'genMel'
+    mappings['battery'] = 'battery'
+    mappings['batterylow'] = 'battery'
     mappings['askingforit'] = 'asking'
+    mappings['megsong'] = 'megsong'
 
     serverLog(mappings)
     serverLog(request.url.toUpperCase())
+    possibleSegment = request.url.toUpperCase().split("?")[0]
     for (var raw in mappings) {
     	serverLog(raw)
-    	if(request.url.toUpperCase() == '/'+raw.toUpperCase()){
+    	if(possibleSegment == '/'+raw.toUpperCase()) {
 	    	response.writeHead(302, {
 		        'Location': '/#!/'+mappings[raw]
 		      });
@@ -192,6 +197,44 @@ var server = http.createServer(function(request, response) {
           data.TIMESTAMP,
           data.clefToUse,
           data.NAME,
+          ]);
+        runCode.stdout.on('data', function (data) {
+          serverLog('stdout: ' + data.toString());
+        });
+        runCode.stderr.on('data', function (data) {
+          serverLog('stderr: ' + data.toString());
+        });
+        runCode.on('close', (code) => {
+          console.log(`child process exited with code ${code}`);
+          response.writeHead(200, {"Content-Type": "text/plain"});
+          response.write(''+data.TIMESTAMP);
+          serverLog(`child process exited with code ${code}`);
+          response.end();
+        });
+        runCode.on('error', (err) => {
+          serverLog(err);
+          console.log('what is going on');
+          console.log(err);
+        });
+      });
+    }else if(request.url ==="/gobattery"){
+       console.log('Request Battery recieved.');
+        var requestBody = '';
+        request.on('data', function(data) {
+          requestBody += data;
+          if(requestBody.length > 1e7) {
+            response.writeHead(413, 'Request Entity Too Large', {'Content-Type': 'text/html'});
+            response.end('<!doctype html><html><head><title>413</title></head><body>413: Request Entity Too Large</body></html>');
+          }
+        });
+        request.on('end', function() {
+        var data = JSON.parse(requestBody);
+        console.log(data)
+        const runCode = runSpawn('./runBattery.sh',[
+          data.TIMESTAMP,
+          data.LOW,
+          data.HIGH,
+          data.LONG,
           ]);
         runCode.stdout.on('data', function (data) {
           serverLog('stdout: ' + data.toString());
