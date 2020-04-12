@@ -4,7 +4,7 @@ angular.module('myApp.departure', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/departure', {
-    templateUrl: 'departure/departure.html',
+    templateUrl: 'simplePages/departure.html',
     controller: 'departureCtrl'
   });
 }])

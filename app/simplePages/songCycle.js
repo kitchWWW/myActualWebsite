@@ -4,7 +4,7 @@ angular.module('myApp.songCycle', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/songCycle', {
-    templateUrl: 'songCycle/songCycle.html',
+    templateUrl: 'simplePages/songCycle.html',
     controller: 'songCycleCtrl'
   });
 }])

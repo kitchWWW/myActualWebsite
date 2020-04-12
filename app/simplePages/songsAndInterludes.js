@@ -4,7 +4,7 @@ angular.module('myApp.songsAndInterludes', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/songsAndInterludes', {
-    templateUrl: 'songsAndInterludes/songsAndInterludes.html',
+    templateUrl: 'simplePages/songsAndInterludes.html',
     controller: 'songsAndInterludesCtrl'
   });
 }])

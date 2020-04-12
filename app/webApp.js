@@ -7,6 +7,7 @@ angular.module('myApp', [
   'myApp.battery',
   'myApp.megsong',
   'myApp.alabama',
+  'myApp.earTraining',
   'myApp.home',
   'myApp.music',
   'myApp.programs',
