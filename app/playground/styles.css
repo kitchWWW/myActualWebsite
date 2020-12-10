@@ -1,0 +1,33 @@
+body {
+    transition: background 30s; /* .5s how long transitions shoould take */
+    font-family: monospace;
+}
+
+textarea {
+	font-family: monospace;
+  resize: none;
+border-radius: 5px;
+}
+
+h1 { font-weight:normal; 
+  text-align: center;
+}
+p {
+	font-weight:normal;
+}
+a {
+    text-decoration: none;
+    transition: background 1s;
+}
+
+.wholeThing {
+    margin-left: auto;
+    margin-right: auto;
+
+  text-align: left;
+  max-width: 400px;
+}
+
+#leftAlign {
+  text-align: right;
+}

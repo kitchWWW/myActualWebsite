@@ -20,8 +20,198 @@ var answer1 = "hofjajfieaw"
 var answer2 = "fdsfewawea"
 var email ="the peep's email"
 
-postData("/playgroundEmailSubmit",{
-  "answer1":answer1,
-  "answer2":answer2,
-  "senderEmail":email
-})
+var question1 = Math.random() > .5 ? "What is keeping you where you are?" : "Why are you choosing to stay?"
+var question2 = Math.random() > .5 ? "Why are you nervous about it? (you know, the thing you are nervous about)" : "What is something happening in the next seven days you are excited about?"
+
+
+function random_bg_color() {
+    var x = Math.floor(200 + (Math.random() * 56));
+    var y = Math.floor(200 + (Math.random() * 56));
+    var z = Math.floor(200 + (Math.random() * 56));
+    var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+    console.log(bgColor);
+    document.body.style.backgroundColor = bgColor;
+    }
+
+random_bg_color();
+setInterval(function(){ random_bg_color(); }, 30000);
+
+
+var superi = 0;
+var i = 0;
+var txt = [
+  'Thank you for taking part in this shared experience with us.',
+  "These answers will be used by Brian Ellis and the Playground Ensemble in the Mixed Reality Web Installation 'stay; home', and may be seen by others experiencing the installation.",
+  'Thank you for for being here, and wishing you all the best.',
+  'brian'
+  ]
+var speed = 25; /* The speed/duration of the effect in milliseconds */
+var firstWait = 300
+
+function typeWriterIntro() {
+  if(superi < txt.length){
+    if (i < txt[superi].length) {
+      document.getElementById("demo"+superi).innerHTML += txt[superi].charAt(i);
+      i++;
+    }else{
+      i = 0;
+      superi++;
+    }    
+    setTimeout(typeWriterIntro, speed);
+  }else{
+    document.getElementById("continue").style.display = "block";
+  }
+}
+
+setTimeout(typeWriterIntro, firstWait)
+
+
+
+function typeWriterFirstQ() {
+  if(superi < txt.length){
+    if (i < txt[superi].length) {
+      document.getElementById("firstQ"+superi).innerHTML += txt[superi].charAt(i);
+      i++;
+    }else{
+      i = 0;
+      superi++;
+    }    
+    setTimeout(typeWriterFirstQ, speed);
+  }else{
+    document.getElementById("delayFirstQ").style.display = "block";
+  }
+}
+
+firstContinue = function() {
+    document.getElementById("intro").style.display = "none";
+    document.getElementById("firstQ").style.display = "block";
+    superi = 0;
+    i = 0;
+    txt = [
+      question1,
+      ]
+   setTimeout(typeWriterFirstQ, firstWait)
+     return false;
+}
+
+
+
+
+
+function typeWriterSecondQ() {
+  if(superi < txt.length){
+    if (i < txt[superi].length) {
+      document.getElementById("secondQ"+superi).innerHTML += txt[superi].charAt(i);
+      i++;
+    }else{
+      i = 0;
+      superi++;
+    }    
+    setTimeout(typeWriterSecondQ, speed);
+  }else{
+    document.getElementById("delaySecondQ").style.display = "block";
+  }
+}
+
+secondContinue = function() {
+    document.getElementById("firstQ").style.display = "none";
+    document.getElementById("secondQ").style.display = "block";
+    superi = 0;
+    i = 0;
+    txt = [
+      question2,
+      ]
+      setTimeout(typeWriterSecondQ, firstWait)
+     return false;
+}
+
+
+
+
+function typeWriterEmail() {
+  if(superi < txt.length){
+    if (i < txt[superi].length) {
+      document.getElementById("emailQ"+superi).innerHTML += txt[superi].charAt(i);
+      i++;
+    }else{
+      i = 0;
+      superi++;
+    }    
+    setTimeout(typeWriterEmail, speed);
+  }else{
+    document.getElementById("delayEmail").style.display = "block";
+  }
+}
+
+emailContinue = function() {
+    document.getElementById("secondQ").style.display = "none";
+    document.getElementById("emailQ").style.display = "block";
+    superi = 0;
+    i = 0;
+    txt = [
+      "Thank you for trusting us with your words.",
+      "If you would like to know when we release the full installation, leave us your email and we'll send a note your way when it is ready."
+      ]
+     // Your code here
+     setTimeout(typeWriterEmail, firstWait)
+     return false;
+}
+
+
+
+function typeWriterFinal() {
+  if(superi < txt.length){
+    if (i < txt[superi].length) {
+      document.getElementById("finalS"+superi).innerHTML += txt[superi].charAt(i);
+      i++;
+    }else{
+      i = 0;
+      superi++;
+    }    
+    setTimeout(typeWriterFinal, speed);
+  }else{
+    // pass
+  }
+}
+
+finalContinue = function() {
+    document.getElementById("emailQ").style.display = "none";
+    document.getElementById("finalScreen").style.display = "block";
+
+    // do the emailing stuff
+    var answer1 = document.getElementById("paragraph_text1").value;
+    var answer2 = document.getElementById("paragraph_text2").value;
+    var answer3 = document.getElementById("paragraph_text3").value;
+
+    postData("/playgroundEmailSubmit",{
+      "question1":question1,
+      "question2":question2,
+      "answer1":answer1,
+      "answer2":answer2,
+      "senderEmail":answer3
+    })
+
+
+    superi = 0;
+    i = 0;
+    txt = [
+      "for being here",
+      "&",
+      "and for being you"
+      ]
+     // Your code here
+    setTimeout(typeWriterFinal, firstWait*2)
+    return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+

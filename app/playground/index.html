@@ -1,7 +1,72 @@
 <html>
-<script src="playground/index.js"></script>
+  <link rel="stylesheet" href="playground/styles.css">
 <body>
-<h1>
-	Welcome!
+	<div class="wholeThing">
+		<br>
+		<br>
+		<div id="intro" style="display:block">
+			<h1>Welcome!</h1>
+			<br>
+			<p id="demo0"></p>
+			<p id="demo1"></p>
+			<p id="demo2"></p>
+			<div id="leftAlign">
+				<p id="demo3"></p>
+				<br>
+				<a id="continue" href="" onclick="return firstContinue();" style="display:none">continue -&gt;</a>
+			</div>
+		</div>
+		<div id="firstQ" style="display:none">
+			<h1>place</h1>
+			<br>
+			<p id="firstQ0"></p>
+			<div id="delayFirstQ" style="display:none">
+				<textarea id="paragraph_text1" cols="50" rows="10"></textarea>
+				<div id="leftAlign">
+					<br>
+					<a id="firstQContinue" href="" onclick="return secondContinue();">release answer into the wind -&gt;</a>
+				</div>
+			</div>
+		</div>
+		<div id="secondQ" style="display:none">
+			<h1>self</h1>
+			<br>
+			<p id="secondQ0"></p>
+			<div id="delaySecondQ" style="display:none">
+				<textarea id="paragraph_text2" cols="50" rows="10"></textarea>
+				<div id="leftAlign">
+					<br>
+					<a id="secondQContinue" href="" onclick="return emailContinue();"> cast note into the well -&gt;</a>
+				</div>
+			</div>
+		</div>
+		<div id="emailQ" style="display:none">
+			<h1>continuation</h1>
+			<br>
+			<p id="emailQ0"></p>
+			<p id="emailQ1"></p>
+			<p id="emailQ2"></p>
+			<br>
+			<div id="delayEmail" style="display:none">
+				<textarea id="paragraph_text3" cols="50" rows="1"></textarea>
+				<div id="leftAlign">
+					<br>
+					<a id="firstQContinue" href="" onclick="return finalContinue();">throw the paper airplane -&gt;</a>
+				</div>
+			</div>
+		</div>
+		<div id="finalScreen" style="display:none">
+			<h1>thanks</h1>
+			<br>
+			<p id="finalS0"></p>
+			<p id="finalS1"></p>
+		</div>
+	</div>
+
+
 </h1>	
 </body>
+<script src="playground/index.js"></script>
+
+</html>
+
