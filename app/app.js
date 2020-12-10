@@ -5,6 +5,7 @@ var http = require("http"),
 port = process.env.PORT || 3000;
 
 const runSpawn = require('child_process').spawn;
+const nodemailer = require('nodemailer');
 
 String.prototype.replaceAll = function(search, replacement) {
 	var target = this;
@@ -239,6 +240,51 @@ var server = http.createServer(function(request, response) {
 					console.log('what is going on');
 					console.log(err);
 				});
+			});
+		} else if (request.url === "/playgroundEmailSubmit") {
+			console.log('Request Three Notes recieved.');
+			var requestBody = '';
+			request.on('data', function(data) {
+				requestBody += data;
+				if (requestBody.length > 1e7) {
+					response.writeHead(413, 'Request Entity Too Large', {
+						'Content-Type': 'text/html'
+					});
+					response.end('<!doctype html><html><head><title>413</title></head><body>413: Request Entity Too Large</body></html>');
+				}
+			});
+
+			request.on('end', function() {
+				var data = JSON.parse(requestBody);
+				console.log(data)
+				fs.readFile('password.txt', 'utf8', function (err,passwordInfo) {
+				  if (err) {
+				    return console.log(err);
+				  }
+				  password = passwordInfo.replace(/\r?\n|\r/g, " ");
+					var transporter = nodemailer.createTransport({
+					  service: 'gmail',
+					  auth: {
+					    user: 'brianellissound@gmail.com',
+					    pass: password
+					  }
+					});
+
+					var mailOptions = {
+					  from: 'brianellissound@gmail.com',
+					  to: 'brian.e2014@gmail.com',
+					  subject: 'Form Submission from Playground Ensemble',
+					  text: 'Hi!\n\n'+JSON.stringify(data)
+					};
+					transporter.sendMail(mailOptions, function(error, info){
+					  if (error) {
+					    console.log(error);
+					  } else {
+					    console.log('Email sent: ' + info.response);
+					  }
+					});
+				});
+
 			});
 		} else if (request.url === "/gobattery") {
 			console.log('Request Battery recieved.');
