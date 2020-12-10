@@ -2,7 +2,9 @@
   "name": "Brian-Ellis-Sound",
   "version": "0.0.1",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "nodemailer": "^6.4.16"
+  },
   "scripts": {
     "start": "sudo node app.js"
   }
