@@ -42,7 +42,7 @@ var i = 0;
 var txt = [
   'Thank you for taking part in this shared experience with us.',
   "These answers will be used by Brian Ellis and the Playground Ensemble in the Mixed Reality Web Installation 'stay; home', and may be seen by others experiencing the installation.",
-  'Thank you for for being here, and wishing you all the best.',
+  'Thank you for being here, and wishing you all the best.',
   'brian'
   ]
 var speed = 25; /* The speed/duration of the effect in milliseconds */
