@@ -25,8 +25,6 @@
   <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.1/seedrandom.min.js"></script>
 
-
-
   
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110168033-1"></script>
@@ -37,9 +35,6 @@
 
     gtag('config', 'UA-110168033-1');
   </script>
-
-
-
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -48,20 +43,19 @@
 
 <div class="wrapper">
   <header class="header">
-    <a class="nav-link active" href="#!/home" role="tab" data-toggle="tab">Brian Ellis</a></header>
+    &nbsp;
+  </header>
   <aside class="sidebar">
     <div class="sideGrid">
       <div class="sideGridImage">
-        <center>
-          <img class="img-circle" src="res/brian.jpg">
-        </center>  
+          <img class="img-circle" src="res/brian3.jpg">
       </div>
       <div class="sideGridText">
-        <a href="#!/about"  data-toggle="tab">biography</a>
+        <a class="sidebarLink" href="#!/about"  data-toggle="tab">biography</a>
         <br>
-        <a href="#!/music" data-toggle="tab">choice art</a>
+        <a class="sidebarLink" href="#!/music" data-toggle="tab">choice art</a>
         <br>
-        <a class="nav-link" href="#!/contact" role="tab" data-toggle="tab">contact</a>
+        <a class="sidebarLink" href="#!/contact" data-toggle="tab">contact</a>
       </div>
     </div>
   </aside>
@@ -70,6 +64,8 @@
   </aside>
   <article class="content">
     <div style="position: relative" ng-view></div>
+    <br><br><br>
+    <br><br><br>
   </article>
 </div>
 
@@ -96,6 +92,7 @@
   <script src="simplePages/zfest.js"></script>
   <script src="simplePages/wch.js"></script>
   <script src="simplePages/planing.js"></script>
+  <script src="simplePages/sightreadchristmas.js"></script>
   <script src="simplePages/unset.js"></script>
   <script src="simplePages/thesis.js"></script>
   <script src="simplePages/songCycle.js"></script>

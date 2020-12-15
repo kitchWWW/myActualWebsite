@@ -49,6 +49,7 @@ var server = http.createServer(function(request, response) {
 		mappings['megsong'] = 'megsong'
 		mappings['ideas'] = 'ideas'
 		mappings['callforscores'] = 'cgle'
+		mappings['christmas'] = 'sightreadchristmas'
 
 		serverLog(mappings)
 		serverLog(request.url.toUpperCase())

@@ -4,9 +4,9 @@
 
 body {
   margin: 10px;
-  font-family: "Charlemagne Std", Garamond, "Times New Roman", Times, serif;
+  font-family: sans-serif;
   /*font-family: 'Open Sans', 'sans-serif';*/
-  background-color: #BFDBF7;
+  background-color: #FCFFFF;
   color: #444;
 }
 
@@ -14,27 +14,35 @@ h1, p {
   margin: 0 0 1em 0;
 }
 
-a {
-  color: #053C5E;
-  text-decoration: none;
-}
-a:link {text-decoration: none;}
-a:visited {text-decoration: none;}
-a:hover {text-decoration: none;}
-a:active {text-decoration: none;}
+a:link {
+  color: #888;
+/*  text-decoration: none;
+*/}
+a:visited {
+  color: #888;
+/*  text-decoration: none;
+*/}
+a:hover {
+  color: #888;
+/*  text-decoration: none;
+*/}
+a:active {
+  color: #888;
+/*  text-decoration: none;
+*/}
 
 /* no grid support? */
 .sidebar {
   width: 19.1489%;
   padding: 300px;
-  background-color: #1F7A8C;
-  color: #053C5E;
+/*  background-color: #1F7A8C;
+*/  color: #053C5E;
   grid-area: sideBarLab;
-
 }
 
 .img-circle {
-    border-radius: 50%;
+    border-radius: 10px;
+    margin-bottom: 20px;
     width: 100px;
     height: 100px;
 }
@@ -50,11 +58,57 @@ a:active {text-decoration: none;}
   grid-area: contentLab;
 }
 
+/*a.sidebarLink: {
+  margin-left: 20px;
+  color: #1F7A8C;
+}
+*/
+
+
+a.sidebarLink:link {
+  color: #1F7A8C;
+/*  text-decoration: none;
+*/}
+a.sidebarLink:visited {
+  color: #1F7A8C;
+/*  text-decoration: none;
+*/}
+a.sidebarLink:hover {
+  color: #1F7A8C;
+/*  text-decoration: none;
+*/}
+a.sidebarLink:active {
+  color: #1F7A8C;
+/*  text-decoration: none;
+*/}
+
+
+a.nav-link:link {
+  color: #1F7A8C;
+/*  text-decoration: none;
+*/}
+a.nav-link:visited {
+  color: #1F7A8C;
+/*  text-decoration: none;
+*/}
+a.nav-link:hover {
+  color: #1F7A8C;
+/*  text-decoration: none;
+*/}
+a.nav-link:active {
+  color: #1F7A8C;
+/*  text-decoration: none;
+*/}
+
+
+
 .sideGridText{
   grid-area: sideGridTextLab;
+  padding-left: 10px;
 }
 .sideGridImage{
   grid-area: sideGridImgLab;
+  text-align: right;
 }
 
 .wrapper {
@@ -110,6 +164,7 @@ a:active {text-decoration: none;}
 
 .title {
   text-align: right;
+  color:#1F7A8C;
 }
 .pagePieceDate, .pagePieceInsturmentation {
     text-align: right;
@@ -126,8 +181,14 @@ a:active {text-decoration: none;}
     margin-left: 2em;
 }
 
+.btn { 
+  font-size: 100%;
+  border: 0px;
+  background-color: #1F7A8C;
+}
 button{
   font-family: 'Open Sans', 'sans-serif';
+  font-size: 150%;
 }
 
 .myCustomTable {
@@ -139,7 +200,7 @@ button{
 }
 
 .wrapper > * {
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 20px;
   font-size: 150%;
   /* needed for the floated layout*/
@@ -151,12 +212,6 @@ button{
   /* needed for the floated layout */
   clear: both;
 }
-
-
-
-
-
-
 
 
 
@@ -174,10 +229,6 @@ button{
     width: 100%;
     height: 100%;
 }
-
-
-
-
 
 
 /* We need to set the widths used on floated items back to auto, and remove the bottom margin as when we have grid we have gaps. */

@@ -27,6 +27,7 @@ angular.module('myApp', [
   'myApp.wch',
   'myApp.planing',
   'myApp.unset',
+  'myApp.sightreadchristmas',
   'myApp.thesis',
   'myApp.nimb',
   'myApp.epoch',
