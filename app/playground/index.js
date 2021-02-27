@@ -19,6 +19,7 @@ async function postData(url = '', data = {}) {
 var answer1 = "hofjajfieaw"
 var answer2 = "fdsfewawea"
 var email ="the peep's email"
+var audio;
 
 var question1 = Math.random() > .5 ? "What is keeping you where you are?" : "Why are you choosing to stay?"
 var question2 = Math.random() > .5 ? "Why are you nervous about it? (you know, the thing you are nervous about)" : "What is something happening in the next seven days you are excited about?"
@@ -41,7 +42,7 @@ var superi = 0;
 var i = 0;
 var txt = [
   'Thank you for taking part in this shared experience with us.',
-  "These answers will be used by Brian Ellis and the Playground Ensemble in the Mixed Reality Web Installation 'stay; home', and may be seen by others experiencing the installation.",
+  "We're going to ask you a few questions, if you'd be ok with it. These answers will be used by Brian Ellis and the Playground Ensemble in the Mixed Reality Web Installation 'stay; ho(me)', and may be seen by others experiencing the installation.",
   'Thank you for being here, and wishing you all the best.',
   'brian'
   ]
@@ -83,6 +84,11 @@ function typeWriterFirstQ() {
 }
 
 firstContinue = function() {
+
+    audio = new Audio('http://res.brianellissound.com/PlaygroundPrelude2.mp3');
+    audio.play();
+    audio.volume = .2;
+    
     document.getElementById("intro").style.display = "none";
     document.getElementById("firstQ").style.display = "block";
     superi = 0;
@@ -150,7 +156,7 @@ emailContinue = function() {
     i = 0;
     txt = [
       "Thank you for trusting us with your words.",
-      "If you would like to know when we release the full installation, leave us your email and we'll send a note your way when it is ready."
+      "Click below to enter the installation."
       ]
      // Your code here
      setTimeout(typeWriterEmail, firstWait)
@@ -174,21 +180,31 @@ function typeWriterFinal() {
   }
 }
 
+function fadeOutAudio(){
+  audio.volume = .99*audio.volume
+  if(audio.volume < .004){
+    audio.pause()
+  }
+  setTimeout(fadeOutAudio,10)
+}
+
 finalContinue = function() {
     document.getElementById("emailQ").style.display = "none";
     document.getElementById("finalScreen").style.display = "block";
 
+    setTimeout(fadeOutAudio,8000)
+
     // do the emailing stuff
     var answer1 = document.getElementById("paragraph_text1").value;
     var answer2 = document.getElementById("paragraph_text2").value;
-    var answer3 = document.getElementById("paragraph_text3").value;
+    // var answer3 = document.getElementById("paragraph_text3").value;
 
     postData("/playgroundEmailSubmit",{
       "question1":question1,
       "question2":question2,
       "answer1":answer1,
       "answer2":answer2,
-      "senderEmail":answer3
+      // "senderEmail":answer3
     })
 
 
@@ -201,7 +217,7 @@ finalContinue = function() {
       ]
      // Your code here
     setTimeout(typeWriterFinal, firstWait*2)
-    return false;
+    return true;
 }
 
 
