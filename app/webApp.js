@@ -4,6 +4,7 @@
 angular.module('myApp', [
   'ngRoute',
   'myApp.about',
+  'myApp.playground',
   'myApp.battery',
   'myApp.megsong',
   'myApp.alabama',
