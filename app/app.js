@@ -458,6 +458,49 @@ var server = http.createServer(function(request, response) {
 					console.log(err);
 				});
 			});
+		} else if (request.url === "/goldenArrowsSubmit") {
+			console.log('golden update recieved.');
+			var requestBody = '';
+			request.on('data', function(data) {
+				requestBody += data;
+				if (requestBody.length > 1e7) {
+					response.writeHead(413, 'Request Entity Too Large', {
+						'Content-Type': 'text/html'
+					});
+					response.end('<!doctype html><html><head><title>413</title></head><body>413: Request Entity Too Large</body></html>');
+				}
+			});
+
+			request.on('end', function() {
+				var data = JSON.parse(requestBody);
+				console.log(data)
+				fs.appendFileSync('goldenArrows/responses.txt', '**********||||||||||**********\n'+data['feels']+"\n");
+				// const runCode = runSpawn('./runSoftMusic.sh', [
+				// 	data.TIMESTAMP,
+				// 	data.DURATION,
+				// 	data.NOVOICES
+				// ]);
+				// runCode.stdout.on('data', function(data) {
+				// 	serverLog('stdout: ' + data.toString());
+				// });
+				// runCode.stderr.on('data', function(data) {
+				// 	serverLog('stderr: ' + data.toString());
+				// });
+				// runCode.on('close', (code) => {
+				// 	console.log(`child process exited with code ${code}`);
+				// 	response.writeHead(200, {
+				// 		"Content-Type": "text/plain"
+				// 	});
+				// 	response.write('' + data.TIMESTAMP + '---' + data.NOVOICES);
+				// 	serverLog(`child process exited with code ${code}`);
+				// 	response.end();
+				// });
+				// runCode.on('error', (err) => {
+				// 	serverLog(err);
+				// 	console.log('what is going on');
+				// 	console.log(err);
+				// });
+			});
 		} else if (request.url === "/goVoices") {
 			console.log('Request Voices recieved.');
 			var requestBody = '';

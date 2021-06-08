@@ -4,6 +4,8 @@
 angular.module('myApp', [
   'ngRoute',
   'myApp.about',
+  'myApp.thisyear',
+  'myApp.paperandpen',
   'myApp.playground',
   'myApp.battery',
   'myApp.megsong',
@@ -23,6 +25,7 @@ angular.module('myApp', [
   'myApp.zfest',
   'myApp.contact',
   'myApp.ideas',
+  'myApp.whisper',
   'myApp.minimalismGuitar',
   'myApp.fleet',
   'myApp.asking',
