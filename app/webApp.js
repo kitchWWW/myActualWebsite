@@ -1,5 +1,9 @@
 'use strict';
 
+if (location.protocol !== "http:") {
+  location.protocol = "http:";
+}
+
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
   'ngRoute',
@@ -16,13 +20,20 @@ angular.module('myApp', [
   'myApp.cgle',
   'myApp.covid',
   'myApp.sansduoone',
+  'myApp.sansduotwo',
+  'myApp.sansduothree',
   'myApp.shared',
   'myApp.earTraining',
   'myApp.home',
   'myApp.music',
   'myApp.programs',
+  'myApp.series1nft',
   'myApp.eeg',
+  'myApp.extrapolations',
+  'myApp.ambientdulcimer',
   'myApp.zfest',
+  'myApp.mgc',
+  'myApp.youtuber',
   'myApp.contact',
   'myApp.ideas',
   'myApp.whisper',
@@ -32,13 +43,17 @@ angular.module('myApp', [
   'myApp.wch',
   'myApp.planing',
   'myApp.unset',
+  'myApp.someonesmoon',
   'myApp.sightreadchristmas',
+  'myApp.emeraldfuturespostlude',
+  'myApp.sometitlesarewords',
   'myApp.thesis',
   'myApp.nimb',
   'myApp.epoch',
   'myApp.breaking',
   'myApp.epochView',
   'myApp.departure',
+  'myApp.tubeisyou',
   'myApp.wildthings',
   'myApp.genMel',
   'myApp.genMelView',

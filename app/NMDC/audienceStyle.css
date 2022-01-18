@@ -1,0 +1,58 @@
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: white;
+   text-align: center;
+}
+body{
+    margin: 0;
+    background-color: #040533;
+  font-family: Garamond, serif;
+  color: white;
+
+}
+.allContent{
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    text-align: center;
+}
+
+.innerContent{
+    font-size: 20px;
+    background-color: #152044;
+    width: 330px;
+    border-radius: 20px;
+    margin-top: 20px;
+    text-align: left;
+    padding: 20px;
+    font-family: 'EB Garamond', serif;
+}
+
+input {
+    width: 80%;
+}
+
+.buttonStuff{
+    text-align: center;
+}
+
+button {
+  background-color: #305075; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+  font-size: 16px;
+font-family: 'EB Garamond', serif;
+}
+
+input[type="text"]
+{
+    font-size:16px;
+}

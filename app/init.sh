@@ -15,7 +15,7 @@ sudo yum remove -y java-1.7.0-openjdk
 
 #timidity
 cd
-sudo wget https://sourceforge.net/projects/timidity/files/TiMidity%2B%2B/TiMidity%2B%2B-2.13.0/TiMidity%2B%2B-2.13.0.tar.gz/download
+sudo wget https://sourceforge.net/projects/timidity/files/TiMidity%2B%2B/TiMidity%2B%2B-2.13.0/TiMidity%2B%2B-2.13.0.tar.gz/download --no-check-certificate
 sudo tar -xf download
 cd TiMidity++-2.13.0
 sudo ./configure

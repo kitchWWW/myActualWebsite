@@ -15,6 +15,17 @@ String.prototype.replaceAll = function(search, replacement) {
 fs.writeFile("server.log", "Starting Log...", function(err) {});
 
 const testSpawn = require('child_process').spawn;
+
+
+// const initCode = testSpawn('sudo ./init.sh');
+// initCode.stdout.on('data', function(data) {
+// 	serverLog('init stdout: ' + data.toString());
+// });
+// initCode.stderr.on('data', function(data) {
+// 	serverLog('init stderr: ' + data.toString());
+// });
+
+
 const testCode = testSpawn('./test.sh');
 testCode.stdout.on('data', function(data) {
 	serverLog('Test stdout: ' + data.toString());
@@ -23,11 +34,15 @@ testCode.stderr.on('data', function(data) {
 	serverLog('Test stderr: ' + data.toString());
 });
 
+
+
 function serverLog(data) {
 	console.log("***" + Date.now() + " " + data);
 }
 
 var server = http.createServer(function(request, response) {
+	serverLog("... starting request!")
+	serverLog(request);
 	serverLog(request.method);
 	serverLog(request.url);
 	if (request.method === "GET") {
@@ -43,6 +58,7 @@ var server = http.createServer(function(request, response) {
 		mappings['threeNotes'] = 'threenotes'
 		mappings['alabama'] = 'alabama'
 		mappings['melody'] = 'genMel'
+		mappings['series1nft'] = 'series1nft'
 		mappings['battery'] = 'battery'
 		mappings['batterylow'] = 'battery'
 		mappings['askingforit'] = 'asking'
@@ -264,25 +280,25 @@ var server = http.createServer(function(request, response) {
 				  }
 				  password = passwordInfo.replace(/\r?\n|\r/g, " ");
 					var transporter = nodemailer.createTransport({
-					  service: 'gmail',
-					  auth: {
-					    user: 'brianellissound@gmail.com',
-					    pass: password
-					  }
+						service: 'gmail',
+							auth: {
+					                user: 'brianellissound@gmail.com',
+					                pass: password
+					        }
 					});
 
 					var mailOptions = {
-					  from: 'brianellissound@gmail.com',
-					  to: 'brian.e2014@gmail.com',
-					  subject: 'Form Submission from Playground Ensemble',
-					  text: 'Hi!\n\n'+JSON.stringify(data)
+					        from: 'brianellissound@gmail.com',
+					        to: 'brian.e2014@gmail.com',
+					        subject: 'Form Submission from Playground Ensemble',
+					        text: 'Hi!\n\n'+JSON.stringify(data)
 					};
 					transporter.sendMail(mailOptions, function(error, info){
-					  if (error) {
-					    console.log(error);
-					  } else {
-					    console.log('Email sent: ' + info.response);
-					  }
+					        if (error) {
+					                console.log(error);
+					        } else {
+					                console.log('Email sent: ' + info.response);
+					        }
 					});
 				});
 
@@ -458,7 +474,7 @@ var server = http.createServer(function(request, response) {
 					console.log(err);
 				});
 			});
-		} else if (request.url === "/goldenArrowsSubmit") {
+		} else if (request.url === "/NMDCAudienceSumbit") {
 			console.log('golden update recieved.');
 			var requestBody = '';
 			request.on('data', function(data) {
@@ -474,32 +490,60 @@ var server = http.createServer(function(request, response) {
 			request.on('end', function() {
 				var data = JSON.parse(requestBody);
 				console.log(data)
-				fs.appendFileSync('goldenArrows/responses.txt', '**********||||||||||**********\n'+data['feels']+"\n");
-				// const runCode = runSpawn('./runSoftMusic.sh', [
-				// 	data.TIMESTAMP,
-				// 	data.DURATION,
-				// 	data.NOVOICES
-				// ]);
-				// runCode.stdout.on('data', function(data) {
-				// 	serverLog('stdout: ' + data.toString());
-				// });
-				// runCode.stderr.on('data', function(data) {
-				// 	serverLog('stderr: ' + data.toString());
-				// });
-				// runCode.on('close', (code) => {
-				// 	console.log(`child process exited with code ${code}`);
-				// 	response.writeHead(200, {
-				// 		"Content-Type": "text/plain"
-				// 	});
-				// 	response.write('' + data.TIMESTAMP + '---' + data.NOVOICES);
-				// 	serverLog(`child process exited with code ${code}`);
-				// 	response.end();
-				// });
-				// runCode.on('error', (err) => {
-				// 	serverLog(err);
-				// 	console.log('what is going on');
-				// 	console.log(err);
-				// });
+				fs.appendFileSync('NMDC/allThoughts.txt', "\n"+data['feels']);
+				response.writeHead(200, {
+						"Content-Type": "text/plain"
+					});
+					response.write('got it!');
+					response.end();
+			});
+		} else if (request.url === "/someonesMoonPost") {
+			console.log('someones moon update recieved.');
+			var requestBody = '';
+			request.on('data', function(data) {
+				requestBody += data;
+				if (requestBody.length > 1e7) {
+					response.writeHead(413, 'Request Entity Too Large', {
+						'Content-Type': 'text/html'
+					});
+					response.end('<!doctype html><html><head><title>413</title></head><body>413: Request Entity Too Large</body></html>');
+				}
+			});
+			request.on('end', function() {
+				var data = JSON.parse(requestBody);
+				console.log(data)
+				let rawdata = fs.readFileSync('SomeonesMoon/responses.json');
+				let responses = JSON.parse(rawdata);
+				console.log(responses);
+				responses[data['uniqueID']] = data;
+				fs.writeFileSync('SomeonesMoon/responses.json', JSON.stringify(responses));
+				response.writeHead(200, {
+						"Content-Type": "text/plain"
+					});
+					response.write('got it!');
+					response.end();
+			});
+		} else if (request.url === "/NMDCAdminUpload") {
+			console.log('NMDC Admin update recieved.');
+			var requestBody = '';
+			request.on('data', function(data) {
+				requestBody += data;
+				if (requestBody.length > 1e7) {
+					response.writeHead(413, 'Request Entity Too Large', {
+						'Content-Type': 'text/html'
+					});
+					response.end('<!doctype html><html><head><title>413</title></head><body>413: Request Entity Too Large</body></html>');
+				}
+			});
+			request.on('end', function() {
+				var data = requestBody;
+				console.log(data)
+				fs.writeFileSync('NMDC/allThoughts.txt', data);
+				response.writeHead(200, {
+						"Content-Type": "text/plain"
+					});
+					response.write('got it!');
+					response.end();
 			});
 		} else if (request.url === "/goVoices") {
 			console.log('Request Voices recieved.');
