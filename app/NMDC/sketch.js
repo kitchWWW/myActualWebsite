@@ -109,6 +109,27 @@ function setup() {
   }
 }
 
+let isFadingToBlack = false
+let isFadingIn = false
+
+function keyPressed() {
+  console.log("keyCode")
+  console.log(keyCode)
+  if(keyCode == 79){
+    // start applying the fade if we hit F
+    isFadingToBlack = true
+    isFadingIn = false
+  }
+  if(keyCode == 73) // fade in if hit i
+  {
+    isFadingIn = true
+    isFadingToBlack = false
+    isOut = false
+  }
+}
+
+
+
 function mousePressed() {
   if (mouseX > 0 && mouseX < windowWidth && mouseY > 0 && mouseY < windowHeight) {
     let fs = fullscreen();
@@ -161,11 +182,18 @@ var newPointCounter = 0
 
 var drawDebug = false
 
+var fadeCounter = 0
+var isOut = false
+
 function draw() {
   //gravTargetPoints = [[windowWidth / 2, windowHeight / 2]]
   animateCurve()
   timeDelay = deltaTime
   background(0);
+
+  if(isOut){
+    return;
+  }
 
   let soundLevel = amplitude.getLevel();
   if(drawDebug){
@@ -199,6 +227,24 @@ function draw() {
     if (gravPoints[i].timeTillDeath < 0) {
       gravPoints.splice(i, 1)
       i--;
+    }
+  }
+
+  if(isFadingToBlack) {
+    fadeCounter+=1
+    fill(0,0,0,fadeCounter);
+    rect(0,0,width,height);
+    if(fadeCounter == 255){
+      isOut = true
+      isFadingToBlack = false
+    }
+  }
+  if(isFadingIn) {
+    fadeCounter-=1
+    fill(0,0,0,fadeCounter);
+    rect(0,0,width,height);
+    if(fadeCounter == 0){
+      isFadingIn = false
     }
   }
 }

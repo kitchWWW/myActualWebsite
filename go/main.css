@@ -1,0 +1,29 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-color: #bbf0f3;
+	background-image: linear-gradient(315deg, #bbf0f3 0%, #f6d285 74%);
+}
+
+
+.section{
+	border: solid #FFFFFF;
+	border-width: 2px;
+	padding: 10px;
+	color: white;
+	text-align: center;
+	max-width: 300px;
+	margin: 10px;
+	background-color: #00000022;
+}
+.titleLink{
+	
+}
+.subtitleLink{
+	
+}
