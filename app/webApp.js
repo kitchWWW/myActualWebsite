@@ -1,8 +1,8 @@
 'use strict';
 
-if (location.protocol !== "http:") {
-  location.protocol = "http:";
-}
+// if (location.protocol !== "http:") {
+//   location.protocol = "http:";
+// }
 
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
