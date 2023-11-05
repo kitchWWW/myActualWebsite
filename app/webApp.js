@@ -79,10 +79,24 @@ angular.module('myApp', [
   'myApp.softMusicView',
   'myApp.chugga',
   'myApp.chuggaView',
-  'myApp.version'
-]).
-config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
+  'myApp.version',
+  // DO NOT CHANGE THIS COMMENT: New stuff goes here
+   'myApp.ten',
+   'myApp.WeGrowTogether',
+   'myApp.bmcde',
+   'myApp.musicThatSoundsGood',
+   'myApp.thereandbackam',
+   'myApp.contactlite',
+   'myApp.uglycry',
+   'myApp.cyberworm',
+   'myApp.menu',
+   'myApp.spliceworkshop',
+  'myApp.fishSchool',
+
+]).config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
 
-  $routeProvider.otherwise({redirectTo: '/home'});
+  $routeProvider.otherwise({
+    redirectTo: '/home'
+  });
 }]);
