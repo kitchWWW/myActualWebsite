@@ -604,3 +604,21 @@ angular.module('myApp.ten', ['ngRoute'])
   }])
   .controller('tenCtrl', [function() {}]);
 	
+angular.module('myApp.groundwindow', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/groundwindow', {
+      templateUrl: 'simplePages/groundwindow.html',
+      controller: 'groundwindowCtrl'
+    });
+  }])
+  .controller('groundwindowCtrl', [function() {}]);
+	
+angular.module('myApp.inprogress', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/inprogress', {
+      templateUrl: 'simplePages/inprogress.html',
+      controller: 'inprogressCtrl'
+    });
+  }])
+  .controller('inprogressCtrl', [function() {}]);
+	

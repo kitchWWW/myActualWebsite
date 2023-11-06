@@ -104,6 +104,23 @@ a.nav-link:active {
 /*  text-decoration: none;
 */}
 
+a.not-ready-nav-link:link {
+  color: #444;
+/*  text-decoration: none;
+*/}
+a.not-ready-nav-link:visited {
+  color: #444;
+/*  text-decoration: none;
+*/}
+a.not-ready-nav-link:hover {
+  color: #444;
+/*  text-decoration: none;
+*/}
+a.not-ready-nav-link:active {
+  color: #444;
+/*  text-decoration: none;
+*/}
+
 
 
 .sideGridText{
