@@ -1,15 +1,16 @@
 import os
 
 
+cateogries = ["everything","music","coding","teaching","art","theater"]
 
 data = [
 	['#!/spliceworkshop','SPLICE Workshop','presentation', 2023, True, ["teaching"]],
-	['#!/fishSchool','Fish School','interactive theater', 2023, False, ["music","creative coding","theater"]],
-	['#!/groundwindow','Ground Window','video installation', 2023, False, ["creative coding","visual art"]],
+	['#!/fishSchool','Fish School','interactive theater', 2023, False, ["music","coding","theater"]],
+	['#!/groundwindow','Ground Window','video installation', 2023, False, ["coding","art"]],
 	['#!/menu','MENU','flexible ensemble and video', 2023, True, ["music"]],
-	['#!/cyberworm','Cyberworm','AR puppet', 2023, True, ["creative coding", "theater"]],
-	['#!/uglycry','#UGLYCRY','deep fakes and AR', 2023, False, ["creative coding","theater"]],
-	['#!/contactlite','Contact Lite','percussion quartet', 2023, False, ["music", "creative coding"]],
+	['#!/cyberworm','Cyberworm','AR puppet', 2023, True, ["coding", "theater"]],
+	['#!/uglycry','#UGLYCRY','deep fakes and AR', 2023, False, ["coding","theater"]],
+	['#!/contactlite','Contact Lite','percussion quartet', 2023, False, ["music", "coding"]],
 	['#!/thereandbackam','there and back A.M.','ambient music', 2023, True, ["music"]],
 	['#!/musicThatSoundsGood','Music that sounds good','album', 2023, False, ["music"]],
 	['#!/bmcde', 'Brooklyn Motion Capture Dance Ensemble', ' founder', '2022', False, []],
@@ -78,28 +79,36 @@ data = [
 	['#!/departure', 'Departure', ' composition for classical guitar duet', '2015', True, []],
 ]
 
-prevDate=99999
 
-bitsToPrint = []
-for i in range(len(data)):
-	# print(data[i])
-	if(data[i][3]!=prevDate):
-		prevDate = data[i][3]
-		bitsToPrint.append('<h1 class="title">'+str(data[i][3])+'</h1>')
-	linkAddress = "#!/inprogress"
-	kindOfLink = "not-ready-nav-link"
-	if(data[i][4]):
-		linkAddress = str(data[i][0])
-		kindOfLink = "nav-link"
-	linkRole =' role="tab"'
-	if("#!/" not in linkAddress):
-		linkRole = ""
+for catToGenerate in cateogries:
+	bitsToPrint = []
+	for i in range(len(cateogries)):
+		navLink = "not-ready-nav-link"
+		if(cateogries[i] == catToGenerate):
+			navLink = "nav-link"
+		template = '<span class="pieceTitle"><a class="'+navLink+'" href="#!/'+cateogries[i]+'"  role="tab">'+cateogries[i]+'</a></span>'		
+		bitsToPrint.append(template)
+	prevDate=99999
 
-	bitsToPrint.append('<span class="pieceTitle"><a class="'+kindOfLink+'" href="'+linkAddress+'" '+linkRole+'>'+str(data[i][1])+'</a></span>\n<span class="pieceInsturmentation">/ '+str(data[i][2])+'</span>\n<br>')
-# print(bitsToPrint)
-fd = open("pages/music.html",'w')
-fd.write("\n".join(bitsToPrint))
-fd.close()
+	for i in range(len(data)):
+		# print(data[i])
+		if(data[i][3]!=prevDate):
+			prevDate = data[i][3]
+			bitsToPrint.append('<h1 class="title">'+str(data[i][3])+'</h1>')
+		linkAddress = "#!/inprogress"
+		kindOfLink = "not-ready-nav-link"
+		if(data[i][4]):
+			linkAddress = str(data[i][0])
+			kindOfLink = "nav-link"
+		linkRole =' role="tab"'
+		if("#!/" not in linkAddress):
+			linkRole = ""
+
+		bitsToPrint.append('<span class="pieceTitle"><a class="'+kindOfLink+'" href="'+linkAddress+'" '+linkRole+'>'+str(data[i][1])+'</a></span>\n<span class="pieceInsturmentation">/ '+str(data[i][2])+'</span>\n<br>')
+	# print(bitsToPrint)
+	fd = open("pages/"+catToGenerate+".html",'w')
+	fd.write("\n".join(bitsToPrint))
+	fd.close()
 
 
 
