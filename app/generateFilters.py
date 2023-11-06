@@ -14,7 +14,7 @@ data = [
 	['#!/contactlite','Contact Lite','percussion quartet', 2023, False, ["music", "coding"]],
 	['#!/thereandbackam','there and back A.M.','ambient music', 2023, True, []],
 	['#!/musicThatSoundsGood','Music that sounds good','album', 2023, False, []],
-	['#!/bmcde', 'Brooklyn Motion Capture Dance Ensemble', ' founder', '2022', False, []],
+	['http://brooklynmotioncapture.org/', 'Brooklyn Motion Capture Dance Ensemble', ' founder', '2022', True, []],
 	['#!/WeGrowTogether', 'We Grow Together', ' dancers and audience', '2022', False, ["music"]],
 	['#!/ten', 'Ten Water Events', ' dancer and live electronics', '2022', False, ["music"]],
 	['#!/fromtheshells', 'From the shells...', ' 360 VR Sound Bath', '2022', True, ["music"]],
