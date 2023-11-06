@@ -3,15 +3,15 @@ import os
 
 
 data = [
-	['spliceworkshop','SPLICE Workshop','presentation', 2023, True, ["teaching"]],
-	['fishSchool','Fish School','interactive theater', 2023, False, ["music","creative coding","theater"]],
-	['groundwindow','Ground Window','video installation', 2023, False, ["creative coding","visual art"]],
-	['menu','MENU','flexible ensemble and video', 2023, True, ["music"]],
-	['cyberworm','Cyberworm','AR puppet', 2023, True, ["creative coding", "theater"]],
-	['uglycry','#UGLYCRY','deep fakes and AR', 2023, False, ["creative coding","theater"]],
-	['contactlite','Contact Lite','percussion quartet', 2023, False, ["music", "creative coding"]],
-	['thereandbackam','there and back A.M.','ambient music', 2023, True, ["music"]],
-	['musicThatSoundsGood','Music that sounds good','album', 2023, False, ["music"]],
+	['#!/spliceworkshop','SPLICE Workshop','presentation', 2023, True, ["teaching"]],
+	['#!/fishSchool','Fish School','interactive theater', 2023, False, ["music","creative coding","theater"]],
+	['#!/groundwindow','Ground Window','video installation', 2023, False, ["creative coding","visual art"]],
+	['#!/menu','MENU','flexible ensemble and video', 2023, True, ["music"]],
+	['#!/cyberworm','Cyberworm','AR puppet', 2023, True, ["creative coding", "theater"]],
+	['#!/uglycry','#UGLYCRY','deep fakes and AR', 2023, False, ["creative coding","theater"]],
+	['#!/contactlite','Contact Lite','percussion quartet', 2023, False, ["music", "creative coding"]],
+	['#!/thereandbackam','there and back A.M.','ambient music', 2023, True, ["music"]],
+	['#!/musicThatSoundsGood','Music that sounds good','album', 2023, False, ["music"]],
 	['#!/bmcde', 'Brooklyn Motion Capture Dance Ensemble', ' founder', '2022', True, []],
 	['#!/WeGrowTogether', 'We Grow Together', ' dancers and audience', '2022', True, []],
 	['#!/ten', 'Ten Water Events', ' dancer and live electronics', '2022', True, []],
@@ -82,7 +82,7 @@ prevDate=99999
 
 bitsToPrint = []
 for i in range(len(data)):
-	print(data[i])
+	# print(data[i])
 	if(data[i][3]!=prevDate):
 		prevDate = data[i][3]
 		bitsToPrint.append('<h1 class="title">'+str(data[i][3])+'</h1>')
@@ -95,11 +95,8 @@ for i in range(len(data)):
 	if("#!/" not in linkAddress):
 		linkRole = ""
 
-
 	bitsToPrint.append('<span class="pieceTitle"><a class="'+kindOfLink+'" href="'+linkAddress+'" '+linkRole+'>'+str(data[i][1])+'</a></span>\n<span class="pieceInsturmentation">/ '+str(data[i][2])+'</span>\n<br>')
-
 # print(bitsToPrint)
-
 fd = open("pages/music.html",'w')
 fd.write("\n".join(bitsToPrint))
 fd.close()
