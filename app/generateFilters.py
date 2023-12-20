@@ -96,7 +96,7 @@ for catToGenerateIndex in range(len(cateogries)):
 		if("SKIP" in cateogryNames[i]):
 			continue
 		bitsToPrint.append(template)
-	bitsToPrint.append("<br>")
+	bitsToPrint.append("<br><br>")
 	prevDate=99999
 
 	for i in range(len(data)):
