@@ -5,6 +5,7 @@ cateogries = ["everything","music","coding","teaching","art","theater"]
 cateogryNames = ["everything","music you can play","SKIP","SKIP","SKIP","SKIP"]
 
 data = [
+	['#!/cloudCollage','Cloud Collage','cellphone orchestra', 2023, True, ["music"]],
 	['#!/spliceworkshop','SPLICE Workshop','presentation', 2023, True, ["teaching"]],
 	['#!/fishSchool','Fish School','interactive theater', 2023, False, ["music","coding","theater"]],
 	['#!/groundwindow','Ground Window','video installation', 2023, False, ["coding","art"]],

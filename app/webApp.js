@@ -86,6 +86,7 @@ angular.module('myApp', [
   'myApp.chuggaView',
   'myApp.version',
   // DO NOT CHANGE THIS COMMENT: New stuff goes here
+   'myApp.cloudCollage',
   'myApp.inprogress',
   'myApp.groundwindow',
   'myApp.ten',

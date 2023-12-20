@@ -622,3 +622,12 @@ angular.module('myApp.inprogress', ['ngRoute'])
   }])
   .controller('inprogressCtrl', [function() {}]);
 	
+angular.module('myApp.cloudCollage', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/cloudCollage', {
+      templateUrl: 'simplePages/cloudCollage.html',
+      controller: 'cloudCollageCtrl'
+    });
+  }])
+  .controller('cloudCollageCtrl', [function() {}]);
+	
