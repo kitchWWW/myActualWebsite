@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Starting from Voices Server Call"
-echo $1
+echo $1 $2 $3
 cd engines/twoVoices-master
 mkdir out/$1
 java runner $1 $2 $3
