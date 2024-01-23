@@ -20,8 +20,6 @@ var allVerifiedThoughts = [
 "Kindness",
 "Hope",
 "My grandmother's recipes, and creating new ones for my family",
-"Overcoming our divisions",
-"By understanding we are all alike",
 "love, care, commitment and work"
 ]
 var allThoughts = allVerifiedThoughts
