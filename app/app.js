@@ -2,7 +2,7 @@ var http = require("http"),
 	url = require("url"),
 	path = require("path"),
 	fs = require("fs")
-port = process.env.PORT || 3000;
+port = process.env.PORT || 3004;
 
 const runSpawn = require('child_process').spawn;
 const nodemailer = require('nodemailer');

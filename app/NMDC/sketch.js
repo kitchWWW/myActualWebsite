@@ -17,22 +17,12 @@ function httpGetAsync(theUrl, callback) {
   xmlHttp.send(null);
 }
 var allVerifiedThoughts = [
-"Being kind under all circumstances",
-"A time after now when we can look back to.",
-"Hopefully when I can comfortably be who I am",
-"Something distant that we shape and create",
-"I hope we can connect and be present with each other",
-"Holding hands together with strangers",
+"Kindness",
+"Hope",
+"My grandmother’s recipes, and creating new ones for my family",
 "Overcoming our divisions",
 "By understanding we are all alike",
-"I fear that the pandemic is only the beginning",
-"Reaching out to one another with an open heart",
-"Collaboration, trust, understand, and embrace",
-"A space to listen to one another",
-"Pandemic free",
-"The future is a canvas",
-"Future could be mine to adjust",
-"With love, care, commitment and work"
+"love, care, commitment and work"
 ]
 var allThoughts = allVerifiedThoughts
 function randomWithin(maxDim, margin) { // 5000, .1
