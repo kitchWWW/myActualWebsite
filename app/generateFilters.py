@@ -17,7 +17,7 @@ data = [
 	['#!/musicThatSoundsGood','Music that sounds good','album', 2023, False, []],
 	['http://brooklynmotioncapture.org/', 'Brooklyn Motion Capture Dance Ensemble', ' founder', '2022', True, []],
 	['#!/WeGrowTogether', 'We Grow Together', ' dancers and audience', '2022', True, ["music"]],
-	['#!/ten', 'Ten Water Events', ' dancer and live electronics', '2022', False, ["music"]],
+	['#!/ten', 'Ten Water Events', ' dancer and live electronics', '2022', True, ["music"]],
 	['#!/fromtheshells', 'From the shells...', ' 360 VR Sound Bath', '2022', True, ["music"]],
 	['#!/chinatown', 'Chinatown: Homecoming', ' projection art', '2022', True, []],
 	['#!/technecyborg', 'Techne Cyborg', ' concert series', '2022', True, []],
