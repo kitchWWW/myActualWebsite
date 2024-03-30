@@ -631,3 +631,21 @@ angular.module('myApp.cloudCollage', ['ngRoute'])
   }])
   .controller('cloudCollageCtrl', [function() {}]);
 	
+angular.module('myApp.nebulousEpiphanies', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/nebulousEpiphanies', {
+      templateUrl: 'simplePages/nebulousEpiphanies.html',
+      controller: 'nebulousEpiphaniesCtrl'
+    });
+  }])
+  .controller('nebulousEpiphaniesCtrl', [function() {}]);
+	
+angular.module('myApp.databending', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/databending', {
+      templateUrl: 'simplePages/databending.html',
+      controller: 'databendingCtrl'
+    });
+  }])
+  .controller('databendingCtrl', [function() {}]);
+	

@@ -2,13 +2,17 @@ import os
 
 
 cateogries = ["everything","music","coding","teaching","art","theater"]
-cateogryNames = ["everything","music you can play","SKIP","SKIP","SKIP","SKIP"]
+cateogryNames = ["everything","music","SKIP","SKIP","SKIP","SKIP"]
 
 data = [
+	['#!/nebulousEpiphanies','nebulous epiphanies & mostly truths','flexible ensemble', 2024, True, ["music"]],
+	['https://go.brianellissound.com/databend/index.html','data bending','online utility', 2024, True, ["coding"]],
+	['https://go.brianellissound.com/smallMovementAmplifier/solo/index.html','Small Movement Amplifier','body awareness tool', 2024, True, ["coding"]],
+	['https://audiobox.metademolab.com/maker','Audiobox Maker','online AI DAW', 2023, True, ["false"]],
 	['#!/cloudCollage','Cloud Collage','cellphone orchestra', 2023, True, ["music"]],
 	['#!/spliceworkshop','SPLICE Workshop','presentation', 2023, True, ["teaching"]],
-	['#!/fishSchool','Fish School','interactive theater', 2023, False, ["music","coding","theater"]],
-	['#!/groundwindow','Ground Window','video installation', 2023, False, ["coding","art"]],
+	['#!/fishSchool','Fish School','interactive theater', 2023, True, ["music","coding","theater"]],
+	['#!/groundwindow','Ground Window','video installation', 2023, True, ["coding","art"]],
 	['#!/menu','MENU','flexible ensemble and video', 2023, True, ["music"]],
 	['#!/cyberworm','Cyberworm','AR puppet', 2023, True, ["coding", "theater"]],
 	['https://www.insideoffthewall.com/uglycry','#UGLYCRY','deep fakes and AR', 2023, True, ["coding","theater"]],
@@ -105,7 +109,7 @@ for catToGenerateIndex in range(len(cateogries)):
 		if(catToGenerate == "everything" or catToGenerate in data[i][5]):
 			if(data[i][3]!=prevDate):
 				prevDate = data[i][3]
-				bitsToPrint.append('<h1 class="title">'+str(data[i][3])+'</h1>')
+				bitsToPrint.append('<br><h1 class="title">'+str(data[i][3])+'</h1>')
 			linkAddress = "#!/inprogress"
 			kindOfLink = "not-ready-nav-link"
 			if(data[i][4]):
