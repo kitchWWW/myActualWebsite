@@ -97,7 +97,7 @@ for catToGenerateIndex in range(len(cateogries)):
 		navLink = "not-ready-nav-link"
 		if(cateogries[i] == catToGenerate):
 			navLink = "nav-link"
-		template = '<span class="pieceTitle"><a class="'+navLink+'" href="#!/'+cateogries[i]+'"  role="tab">'+cateogryNames[i]+'</a></span>\n'		
+		template = '<span class="pieceTitle"><a class="'+navLink+'" href="#!/'+cateogries[i]+'" target="_blank" role="tab">'+cateogryNames[i]+'</a></span>\n'		
 		if("SKIP" in cateogryNames[i]):
 			continue
 		bitsToPrint.append(template)
@@ -119,7 +119,7 @@ for catToGenerateIndex in range(len(cateogries)):
 			if("#!/" not in linkAddress):
 				linkRole = ""
 
-			bitsToPrint.append('<span class="pieceTitle"><a class="'+kindOfLink+'" href="'+linkAddress+'" '+linkRole+'>'+str(data[i][1])+'</a></span>\n<span class="pieceInsturmentation">/ '+str(data[i][2])+'</span>\n<br>')
+			bitsToPrint.append('<span class="pieceTitle"><a class="'+kindOfLink+'" href="'+linkAddress+'" target="_blank" '+linkRole+'>'+str(data[i][1])+'</a></span>\n<span class="pieceInsturmentation">/ '+str(data[i][2])+'</span>\n<br>')
 	# print(bitsToPrint)
 	fd = open("pages/"+catToGenerate+".html",'w')
 	fd.write("\n".join(bitsToPrint))
