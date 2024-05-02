@@ -5,6 +5,8 @@ cateogries = ["everything","music","coding","teaching","art","theater"]
 cateogryNames = ["everything","music","SKIP","SKIP","SKIP","SKIP"]
 
 data = [
+	['https://motion-into-midi.com/','motion-into-midi.com','online midi instrument', 2024, True, ["coding"]],
+	['#!/soundmachinesound','Sound; Machine; Sound; Me; Sound','installation', 2024, True, ["music"]],
 	['#!/nebulousEpiphanies','nebulous epiphanies & mostly truths','flexible ensemble', 2024, True, ["music"]],
 	['https://go.brianellissound.com/databend/index.html','data bending','online utility', 2024, True, ["coding"]],
 	['https://go.brianellissound.com/smallMovementAmplifier/solo/index.html','Small Movement Amplifier','body awareness tool', 2024, True, ["coding"]],

@@ -649,3 +649,12 @@ angular.module('myApp.databending', ['ngRoute'])
   }])
   .controller('databendingCtrl', [function() {}]);
 	
+angular.module('myApp.soundmachinesound', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/soundmachinesound', {
+      templateUrl: 'simplePages/soundmachinesound.html',
+      controller: 'soundmachinesoundCtrl'
+    });
+  }])
+  .controller('soundmachinesoundCtrl', [function() {}]);
+	
