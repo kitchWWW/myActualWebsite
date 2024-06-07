@@ -31,7 +31,7 @@ a:hover {
     margin: 40px;
     text-align: center;
     font-size: 2em;
-    background: #eee; -webkit-transition: background-color 1000ms linear;
+    background: #111; -webkit-transition: background-color 1000ms linear;
     -ms-transition: background-color 1000ms linear;
     transition: background-color 1000ms linear;
 } 
