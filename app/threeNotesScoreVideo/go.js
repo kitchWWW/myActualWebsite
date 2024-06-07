@@ -64,11 +64,13 @@ document.getElementById("sound2Name").innerHTML = urlVars["name2"];
 document.getElementById("sound3Name").innerHTML = urlVars["name3"];
 
 
-fetch('./tester.ly')
+fetch(
+
+	// './tester.ly')
 
 	// 'https://www.brianellissound.com/engines/ThreeNotes-master/out/1717798884065/ThreeNotesScore.ly')
 
-	// '/engines/ThreeNotes-master/out/'+urlVars['timestamp']+'/ThreeNotesScore.ly')
+	'/engines/ThreeNotes-master/out/'+urlVars['timestamp']+'/ThreeNotesScore.ly')
   .then(response => response.text())
   .then((data) => {
     var lines = data.split(/\r?\n/)
