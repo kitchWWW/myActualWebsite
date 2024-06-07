@@ -173,9 +173,11 @@ function countDown(numbToShow){
 	}
 }
 
-function startover(){
-
+function fullscreen(){
 	document.getElementById("wholething").requestFullscreen()
+}
+
+function startover(){
 	displayChord("a","b","c",[])
 	if(currentTimeout!="yolo"){
 	  clearTimeout(currentTimeout);		
