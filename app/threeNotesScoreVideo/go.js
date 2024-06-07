@@ -123,7 +123,8 @@ displayChord("a","b","c",[])
 var currentTimeout = "yolo";
 function showChord(chordIndex){
 	if(chordIndex >= cleanchords.length-1){
-		document.getElementById("instructions").innerHTML = "we're done :)"
+		displayChord(note1,note2,note3,[])
+		document.getElementById("instructions").innerHTML = "find silence"
 		return;
 	}
 	var note1 = cleanchords[0][0]
