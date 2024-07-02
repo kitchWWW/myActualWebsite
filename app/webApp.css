@@ -7,7 +7,7 @@ body {
   font-family: sans-serif;
   /*font-family: 'Open Sans', 'sans-serif';*/
   background-color: #FDFDFF;
-  color: #444;
+  color: black;
 }
 
 h1, p {
@@ -19,19 +19,19 @@ h3, p {
 }
 
 a:link {
-  color: #888;
+  color: #1F7A8C;
 /*  text-decoration: none;
 */}
 a:visited {
-  color: #888;
+  color: #1F7A8C;
 /*  text-decoration: none;
 */}
 a:hover {
-  color: #888;
+  color: #1F7A8C;
 /*  text-decoration: none;
 */}
 a:active {
-  color: #888;
+  color: #1F7A8C;
 /*  text-decoration: none;
 */}
 
