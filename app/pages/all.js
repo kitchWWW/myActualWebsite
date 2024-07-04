@@ -55,6 +55,29 @@ angular.module('myApp.programs', ['ngRoute'])
 
 
 
+angular.module('myApp.perform', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/perform', {
+      templateUrl: 'pages/perform.html',
+      controller: 'performCtrl'
+    });
+  }])
+  .controller('performCtrl', [function() {}]);
+
+
+
+
+angular.module('myApp.listen', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/listen', {
+      templateUrl: 'pages/listen.html',
+      controller: 'listenCtrl'
+    });
+  }])
+  .controller('listenCtrl', [function() {}]);
+
+
+
 
 
 

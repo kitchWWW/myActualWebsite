@@ -17,6 +17,8 @@ angular.module('myApp', [
   'myApp.nationwide',
   'myApp.agendas',
   'myApp.m4a',
+  'myApp.listen',
+  'myApp.perform',
   'myApp.cgle',
   'myApp.covid',
   'myApp.sansduoone',
@@ -86,6 +88,8 @@ angular.module('myApp', [
   'myApp.chuggaView',
   'myApp.version',
   // DO NOT CHANGE THIS COMMENT: New stuff goes here
+   'myApp.zinetude',
+   'myApp.attentionMeditation',
    'myApp.soundmachinesound',
    'myApp.databending',
    'myApp.nebulousEpiphanies',

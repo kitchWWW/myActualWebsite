@@ -658,3 +658,21 @@ angular.module('myApp.soundmachinesound', ['ngRoute'])
   }])
   .controller('soundmachinesoundCtrl', [function() {}]);
 	
+angular.module('myApp.attentionMeditation', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/attentionMeditation', {
+      templateUrl: 'simplePages/attentionMeditation.html',
+      controller: 'attentionMeditationCtrl'
+    });
+  }])
+  .controller('attentionMeditationCtrl', [function() {}]);
+	
+angular.module('myApp.zinetude', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/zinetude', {
+      templateUrl: 'simplePages/zinetude.html',
+      controller: 'zinetudeCtrl'
+    });
+  }])
+  .controller('zinetudeCtrl', [function() {}]);
+	
