@@ -5,6 +5,7 @@ cateogries = ["everything","listen", "perform", "music","coding","teaching","art
 cateogryNames = ["everything","listen","things you can perform","SKIP","SKIP","SKIP","SKIP","SKIP"]
 
 data = [
+	['#!/purplegreen','purplegreen','fixed media and disklavier', 2024, True, ["perform","listen"]],
 	['#!/zinetude','zinetude','choose-your-own-adventure flexible ensemble', 2024, True, ["perform"]],
 	['#!/attentionMeditation','Attention Meditation','open instrumentation', 2024, True, ["perform","listen"]],
 	['https://motion-into-midi.com/','motion-into-midi.com','online midi instrument', 2024, True, ["coding"]],
