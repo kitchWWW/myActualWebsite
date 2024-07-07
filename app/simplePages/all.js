@@ -676,3 +676,12 @@ angular.module('myApp.zinetude', ['ngRoute'])
   }])
   .controller('zinetudeCtrl', [function() {}]);
 	
+angular.module('myApp.purplegreen', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/purplegreen', {
+      templateUrl: 'simplePages/purplegreen.html',
+      controller: 'purplegreenCtrl'
+    });
+  }])
+  .controller('purplegreenCtrl', [function() {}]);
+	
