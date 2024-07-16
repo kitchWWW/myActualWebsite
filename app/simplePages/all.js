@@ -685,3 +685,12 @@ angular.module('myApp.purplegreen', ['ngRoute'])
   }])
   .controller('purplegreenCtrl', [function() {}]);
 	
+angular.module('myApp.soundpaddle', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/soundpaddle', {
+      templateUrl: 'simplePages/soundpaddle.html',
+      controller: 'soundpaddleCtrl'
+    });
+  }])
+  .controller('soundpaddleCtrl', [function() {}]);
+	
