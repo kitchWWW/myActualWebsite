@@ -23,11 +23,11 @@ These tracks are meant to be a listening exercise to help people become more acq
     }
     
     let result = [];
-    let nums = Array.from({length: 101}, (v, k) => k); // Array containing numbers from 0 to 100
+    let nums = Array.from({length: 100}, (v, k) => k); // Array containing numbers from 0 to 100
     
     for (let i = 0; i < n; i++) {
         let randomIndex = Math.floor(Math.random() * nums.length);
-        result.push(nums[randomIndex]);
+        result.push(nums[randomIndex]+1);
         nums.splice(randomIndex, 1); // Remove the selected number to ensure uniqueness
     }
     
