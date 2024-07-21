@@ -694,3 +694,12 @@ angular.module('myApp.soundpaddle', ['ngRoute'])
   }])
   .controller('soundpaddleCtrl', [function() {}]);
 	
+angular.module('myApp.listeningExercises1', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/listeningExercises1', {
+      templateUrl: 'simplePages/listeningExercises1.html',
+      controller: 'listeningExercises1Ctrl'
+    });
+  }])
+  .controller('listeningExercises1Ctrl', [function() {}]);
+	

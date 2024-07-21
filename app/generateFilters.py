@@ -6,6 +6,7 @@ cateogryNames = ["everything","listen","things you can perform","SKIP","SKIP","S
 
 data = [
 	['#!/soundpaddle','Gowanus Sound Paddle','sound walk', 2024, True, ["listen"]],
+	['#!/listeningExercises1','Soundscape Listening Exercises','100 fixed media tracks', 2024, True, ["listen"]],
 	['#!/purplegreen','purplegreen','fixed media and disklavier', 2024, True, ["perform","listen"]],
 	['#!/zinetude','zinetude','choose-your-own-adventure flexible ensemble', 2024, True, ["perform"]],
 	['#!/attentionMeditation','Attention Meditation','open instrumentation', 2024, True, ["perform","listen"]],
