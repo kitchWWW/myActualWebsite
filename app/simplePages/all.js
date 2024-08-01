@@ -703,3 +703,12 @@ angular.module('myApp.listeningExercises1', ['ngRoute'])
   }])
   .controller('listeningExercises1Ctrl', [function() {}]);
 	
+angular.module('myApp.theseSpecialHands', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/theseSpecialHands', {
+      templateUrl: 'simplePages/theseSpecialHands.html',
+      controller: 'theseSpecialHandsCtrl'
+    });
+  }])
+  .controller('theseSpecialHandsCtrl', [function() {}]);
+	
