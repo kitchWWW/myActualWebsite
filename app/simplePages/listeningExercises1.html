@@ -9,49 +9,6 @@
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 <br>
-These tracks are meant to be a listening exercise to help people become more acquainted with the soundscapes that surround us every day, wherever we are. One is available on youtube, but for the full variety of the scripts that are possible, listen to any of the files below. <br><br>
-<i>Refresh the page to get different tracks:</i>
-<br><br>
+These tracks are meant to be a listening exercise to help people become more acquainted with the soundscapes that surround us every day, wherever we are. One is available on youtube, but for the full variety of the scripts that are possible, listen on the dedicated website:<br><br>
+<a href="https://go.brianellissound.com/soundscapeListeningExerciseHomepage/index.html" target="_blank">Full site.</a>
 
-<div id="targetDiv"></div>
-
-<script type="text/javascript">
-
-	function randomInt(n) {
-    if (n > 101) {
-        throw new Error("Cannot generate more than 101 unique integers between 0 and 100.");
-    }
-    
-    let result = [];
-    let nums = Array.from({length: 100}, (v, k) => k); // Array containing numbers from 0 to 100
-    
-    for (let i = 0; i < n; i++) {
-        let randomIndex = Math.floor(Math.random() * nums.length);
-        result.push(nums[randomIndex]+1);
-        nums.splice(randomIndex, 1); // Remove the selected number to ensure uniqueness
-    }
-    
-    return result;
-}
-
-	fiveToUse = randomInt(5)
-	const targetDiv = document.getElementById('targetDiv');
-
-	for (let i = 0; i < 5; i++) {
-	    let newDiv = document.createElement('div');
-	    newDiv.innerHTML = "Listening Exercise #"+fiveToUse[i]+": "
-	    // Create a new audio element
-	    let newAudio = document.createElement('audio');
-	    // Set the src of the audio element
-	    newAudio.src = "https://go.brianellissound.com/soundscapeListeningExercises/"+fiveToUse[i]+".mp3";
-		newAudio.controls = 'controls';
-		newAudio.type     = 'audio/mpeg';
-	    // Append the audio element to the new div
-	    // newDiv.appendChild(newAudio);
-	    // Append the new div to the target div
-	    targetDiv.appendChild(newDiv);
-	    targetDiv.appendChild(newAudio);
-	    targetDiv.innerHTML+="<br><br>"
-	}
-
-</script>
