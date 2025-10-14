@@ -5,6 +5,9 @@ cateogries = ["everything","listen", "perform", "music","coding","teaching","art
 cateogryNames = ["everything","listen","things you can perform","SKIP","SKIP","SKIP","SKIP","SKIP"]
 
 data = [
+	['#!/youCanLoseYour','You Can Lose Your Balance','show', 2025, True, ["listen",]],
+	['#!/dill','Dill','string quartet', 2025, True, ["listen","perform"]],
+	['#!/untitled2WithErin','Untitled #2','improvisation with Erin Landers', 2025, True, ["listen",]],
 	['#!/slowwalking','slow walking','ritual', 2024, True, ["listen"]],
 	['#!/clapback','Clap Back','solo percussion and live electronics', 2024, True, ["listen", "perform"]],
 	['#!/goingforward','Going Forward','participatory movement ritual', 2024, False, ["perform"]],
@@ -68,7 +71,7 @@ data = [
 	['#!/zfest', 'Z Festival', ' performance, video editing, composition', '2020', True, ["listen",]],
 	['https://ar-guitar.com', 'AR-Guitar', ' an air guitar', '2020', True, []],
 	['#!/nationwide', 'Nationwide Counterpoint', ' piano septet and voice', '2020', True, ["perform","listen","music"]],
-	['#!/ideas', 'Ideas of Space', ' improvization ritual', '2020', True, ["perform","listen","music"]],
+	['#!/ideas', 'Ideas of Space', ' improvisation ritual', '2020', True, ["perform","listen","music"]],
 	['#!/covid', 'Obligatory COVID-19 Art', ' performance art', '2020', True, ["perform","listen","music"]],
 	['#!/agendas', 'AGENDA(S) Project', ' live improvisation', '2020', True, ["listen",]],
 	['#!/sansduoone', 'SANS; duo', ' first concert', '2020', True, ["listen",]],
@@ -93,7 +96,7 @@ data = [
 	['#!/songCycle', 'Song Cycle', ' composition for violin + typist', '2017', True, ["perform","listen","music"]],
 	['#!/twoVoices', 'Counterpoint Visualization', ' after Tymoczko', '2017', True, ["coding"]],
 	['#!/genSon', 'Fresh Sonatas', ' program to generate short piano piece', '2017', True, ["listen","music","coding"]],
-	['#!/reflections', 'Reflections', ' composition for solist', '2017', True, ["perform","music"]],
+	['#!/reflections', 'Reflections', ' composition for soloist', '2017', True, ["perform","music"]],
 	['#!/epoch', 'Epoch Music', ' composition for small ensemble', '2016', True, ["music","coding"]],
 	['#!/genMel', 'Melody Generator', ' define style and generate melody', '2016', True, ["listen","coding"]],
 	['#!/departure', 'Departure', ' composition for classical guitar duet', '2015', True, ["perform","listen","music"]],

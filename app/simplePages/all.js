@@ -775,3 +775,30 @@ angular.module('myApp.slowwalking', ['ngRoute'])
   }])
   .controller('slowwalkingCtrl', [function() {}]);
 	
+angular.module('myApp.dill', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/dill', {
+      templateUrl: 'simplePages/dill.html',
+      controller: 'dillCtrl'
+    });
+  }])
+  .controller('dillCtrl', [function() {}]);
+	
+angular.module('myApp.youCanLoseYour', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/youCanLoseYour', {
+      templateUrl: 'simplePages/youCanLoseYour.html',
+      controller: 'youCanLoseYourCtrl'
+    });
+  }])
+  .controller('youCanLoseYourCtrl', [function() {}]);
+	
+angular.module('myApp.untitled2WithErin', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/untitled2WithErin', {
+      templateUrl: 'simplePages/untitled2WithErin.html',
+      controller: 'untitled2WithErinCtrl'
+    });
+  }])
+  .controller('untitled2WithErinCtrl', [function() {}]);
+	

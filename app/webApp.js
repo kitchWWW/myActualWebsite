@@ -88,6 +88,9 @@ angular.module('myApp', [
   'myApp.chuggaView',
   'myApp.version',
   // DO NOT CHANGE THIS COMMENT: New stuff goes here
+   'myApp.untitled2WithErin',
+   'myApp.youCanLoseYour',
+   'myApp.dill',
    'myApp.slowwalking',
    'myApp.clapback',
    'myApp.iamsittinginalatentspace',
