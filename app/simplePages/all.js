@@ -712,3 +712,66 @@ angular.module('myApp.theseSpecialHands', ['ngRoute'])
   }])
   .controller('theseSpecialHandsCtrl', [function() {}]);
 	
+angular.module('myApp.differentListening', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/differentListening', {
+      templateUrl: 'simplePages/differentListening.html',
+      controller: 'differentListeningCtrl'
+    });
+  }])
+  .controller('differentListeningCtrl', [function() {}]);
+	
+angular.module('myApp.memoryFieldJournals', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/memoryFieldJournals', {
+      templateUrl: 'simplePages/memoryFieldJournals.html',
+      controller: 'memoryFieldJournalsCtrl'
+    });
+  }])
+  .controller('memoryFieldJournalsCtrl', [function() {}]);
+	
+angular.module('myApp.drawjam', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/drawjam', {
+      templateUrl: 'simplePages/drawjam.html',
+      controller: 'drawjamCtrl'
+    });
+  }])
+  .controller('drawjamCtrl', [function() {}]);
+	
+angular.module('myApp.goingforward', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/goingforward', {
+      templateUrl: 'simplePages/goingforward.html',
+      controller: 'goingforwardCtrl'
+    });
+  }])
+  .controller('goingforwardCtrl', [function() {}]);
+	
+angular.module('myApp.iamsittinginalatentspace', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/iamsittinginalatentspace', {
+      templateUrl: 'simplePages/iamsittinginalatentspace.html',
+      controller: 'iamsittinginalatentspaceCtrl'
+    });
+  }])
+  .controller('iamsittinginalatentspaceCtrl', [function() {}]);
+	
+angular.module('myApp.clapback', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/clapback', {
+      templateUrl: 'simplePages/clapback.html',
+      controller: 'clapbackCtrl'
+    });
+  }])
+  .controller('clapbackCtrl', [function() {}]);
+	
+angular.module('myApp.slowwalking', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/slowwalking', {
+      templateUrl: 'simplePages/slowwalking.html',
+      controller: 'slowwalkingCtrl'
+    });
+  }])
+  .controller('slowwalkingCtrl', [function() {}]);
+	

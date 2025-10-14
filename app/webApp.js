@@ -88,6 +88,13 @@ angular.module('myApp', [
   'myApp.chuggaView',
   'myApp.version',
   // DO NOT CHANGE THIS COMMENT: New stuff goes here
+   'myApp.slowwalking',
+   'myApp.clapback',
+   'myApp.iamsittinginalatentspace',
+   'myApp.goingforward',
+   'myApp.drawjam',
+   'myApp.memoryFieldJournals',
+   'myApp.differentListening',
    'myApp.theseSpecialHands',
    'myApp.listeningExercises1',
    'myApp.soundpaddle',

@@ -5,6 +5,13 @@ cateogries = ["everything","listen", "perform", "music","coding","teaching","art
 cateogryNames = ["everything","listen","things you can perform","SKIP","SKIP","SKIP","SKIP","SKIP"]
 
 data = [
+	['#!/slowwalking','slow walking','ritual', 2024, True, ["listen"]],
+	['#!/clapback','Clap Back','solo percussion and live electronics', 2024, True, ["listen", "perform"]],
+	['#!/goingforward','Going Forward','participatory movement ritual', 2024, False, ["perform"]],
+	['#!/memoryFieldJournals','Memory Field Journals','guided listening exercises', 2024, True, ["listen","perform"]],
+	['#!/drawjam','Draw Jam','participatory graphic scores', 2024, True, ["listen","perform"]],
+	['#!/differentListening','Different Listening','guided listening exercises', 2024, True, ["listen","perform"]],
+	['https://open.spotify.com/album/4lGEvZs3up8viShFDRG9Zf','of Rest and Community','ep', 2024, True, ["listen",]],
 	['#!/soundpaddle','Gowanus Sound Paddle','sound walk', 2024, True, ["listen"]],
 	['#!/theseSpecialHands','These Special Hands','soloist and cellphone orchestra', 2024, True, ["listen", "perform"]],
 	['#!/listeningExercises1','Soundscape Listening Exercises','100 fixed media tracks', 2024, True, ["listen"]],
@@ -26,7 +33,6 @@ data = [
 	['https://www.insideoffthewall.com/uglycry','#UGLYCRY','deep fakes and AR', 2023, True, ["coding","theater"]],
 	['#!/contactlite','Contact Lite','percussion quartet', 2023, True, ["perform","listen","music", "coding"]],
 	['#!/thereandbackam','there and back A.M.','ambient music', 2023, True, ["listen",]],
-	['#!/musicThatSoundsGood','Music that sounds good','album <i>(release Aug 2024)</i>', 2023, False, ["listen",]],
 	['http://brooklynmotioncapture.org/', 'Brooklyn Motion Capture Dance Ensemble', ' founder', '2022', True, []],
 	['#!/WeGrowTogether', 'We Grow Together', ' dancers and audience', '2022', True, ["perform","listen","music"]],
 	['#!/ten', 'Ten Water Events', ' dancer and live electronics', '2022', True, ["perform","listen","music"]],
