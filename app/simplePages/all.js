@@ -802,3 +802,12 @@ angular.module('myApp.untitled2WithErin', ['ngRoute'])
   }])
   .controller('untitled2WithErinCtrl', [function() {}]);
 	
+angular.module('myApp.attentionSonata', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/attentionSonata', {
+      templateUrl: 'simplePages/attentionSonata.html',
+      controller: 'attentionSonataCtrl'
+    });
+  }])
+  .controller('attentionSonataCtrl', [function() {}]);
+	
