@@ -5,6 +5,7 @@ cateogries = ["everything","listen", "perform", "music","coding","teaching","art
 cateogryNames = ["everything","listen","things you can perform","SKIP","SKIP","SKIP","SKIP","SKIP"]
 
 data = [
+	['http://stopwatchpress.com/','Stop. Watch. Press. ','zine collective', 2025, True, []],
 	['#!/youCanLoseYour','You Can Lose Your Balance','show', 2025, True, ["listen",]],
 	['#!/dill','Dill','string quartet', 2025, True, ["listen","perform"]],
 	['#!/untitled2WithErin','Untitled #2','improvisation with Erin Landers', 2025, True, ["listen",]],
