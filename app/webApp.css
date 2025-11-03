@@ -2,11 +2,17 @@
   box-sizing: border-box;
 }
 
+:root {
+  /*--primary-color: #717F8D; */
+  --primary-color: #525c66; 
+  --background-light: #f7f5f2;
+}
+
 body {
   margin: 10px;
   font-family: sans-serif;
   /*font-family: 'Open Sans', 'sans-serif';*/
-  background-color: #FDFDFF;
+  background-color: var(--background-light);
   color: black;
 }
 
@@ -19,19 +25,19 @@ h3, p {
 }
 
 a:link {
-  color: #1F7A8C;
+  color: var(--primary-color);
 /*  text-decoration: none;
 */}
 a:visited {
-  color: #1F7A8C;
+  color: var(--primary-color);
 /*  text-decoration: none;
 */}
 a:hover {
-  color: #1F7A8C;
+  color: var(--primary-color);
 /*  text-decoration: none;
 */}
 a:active {
-  color: #1F7A8C;
+  color: var(--primary-color);
 /*  text-decoration: none;
 */}
 
@@ -39,7 +45,7 @@ a:active {
 .sidebar {
   width: 19.1489%;
   padding: 300px;
-/*  background-color: #1F7A8C;
+/*  background-color: var(--primary-color);
 */  color: #053C5E;
   grid-area: sideBarLab;
 }
@@ -64,43 +70,43 @@ a:active {
 
 /*a.sidebarLink: {
   margin-left: 20px;
-  color: #1F7A8C;
+  color: var(--primary-color);
 }
 */
 
 
 a.sidebarLink:link {
-  color: #1F7A8C;
+  color: var(--primary-color);
 /*  text-decoration: none;
 */}
 a.sidebarLink:visited {
-  color: #1F7A8C;
+  color: var(--primary-color);
 /*  text-decoration: none;
 */}
 a.sidebarLink:hover {
-  color: #1F7A8C;
+  color: var(--primary-color);
 /*  text-decoration: none;
 */}
 a.sidebarLink:active {
-  color: #1F7A8C;
+  color: var(--primary-color);
 /*  text-decoration: none;
 */}
 
 
 a.nav-link:link {
-  color: #1F7A8C;
+  color: var(--primary-color);
 /*  text-decoration: none;
 */}
 a.nav-link:visited {
-  color: #1F7A8C;
+  color: var(--primary-color);
 /*  text-decoration: none;
 */}
 a.nav-link:hover {
-  color: #1F7A8C;
+  color: var(--primary-color);
 /*  text-decoration: none;
 */}
 a.nav-link:active {
-  color: #1F7A8C;
+  color: var(--primary-color);
 /*  text-decoration: none;
 */}
 
@@ -190,7 +196,7 @@ a.not-ready-nav-link:active {
 
 .title {
   text-align: right;
-  color:#1F7A8C;
+  color:var(--primary-color);
 }
 .pagePieceDate, .pagePieceInsturmentation {
     text-align: right;
@@ -210,7 +216,7 @@ a.not-ready-nav-link:active {
 .btn { 
   font-size: 100%;
   border: 0px;
-  background-color: #1F7A8C;
+  background-color: var(--primary-color);
 }
 button{
   font-family: 'Open Sans', 'sans-serif';
