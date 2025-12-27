@@ -856,3 +856,12 @@ angular.module('myApp.takeADeepBreath', ['ngRoute'])
   }])
   .controller('takeADeepBreathCtrl', [function() {}]);
 	
+angular.module('myApp.patienceIsUnderstanding', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/patienceIsUnderstanding', {
+      templateUrl: 'simplePages/patienceIsUnderstanding.html',
+      controller: 'patienceIsUnderstandingCtrl'
+    });
+  }])
+  .controller('patienceIsUnderstandingCtrl', [function() {}]);
+	

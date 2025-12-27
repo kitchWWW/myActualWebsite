@@ -5,12 +5,14 @@ cateogries = ["everything","listen", "perform", "music","coding","teaching","art
 cateogryNames = ["everything","listen","things you can perform","SKIP","SKIP","SKIP","SKIP","SKIP"]
 
 data = [
+	['#!/patienceIsUnderstanding','Patience is Understanding','single', 2025, True, ["listen"]],
 	['https://brianellissound.bandcamp.com/album/waiting-being','waiting // being','two soundscapes', 2025, True, ["listen"]],
+	['#!/youCanLoseYour','You Can Lose Your Balance','show', 2025, True, ["listen",]],
 	['#!/MemoryGlobes','Memory Globe','XR installation', 2025, True, ["listen"]],
 	['#!/CyanotypeScoreCards','Cyanotype Score Cards','graphic score collection', 2025, True, ["perform"]],
 	['#!/takeADeepBreath','take a deep breath...','participatory google doc improv', 2025, True, ["perform"]],
 	['http://stopwatchpress.com/','Stop. Watch. Press. ','zine collective', 2025, True, []],
-	['#!/youCanLoseYour','You Can Lose Your Balance','show', 2025, True, ["listen",]],
+	['https://go.brianellissound.com/gowanus2/index.html','Gowanus Sound Paddle #2','sound walk', 2025, True, ["listen"]],
 	['#!/iamsittinginalatentspace','I am sitting in a latent space','fixed media', 2025, True, ["listen"]],
 	['#!/dill','Dill','string quartet miniature', 2025, True, ["listen","perform"]],
 	['#!/soundCollage','instructions for sound collage','improvisation guide', 2025, True, ["listen","perform"]],
