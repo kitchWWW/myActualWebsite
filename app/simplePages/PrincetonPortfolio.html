@@ -1,20 +1,361 @@
+<script>
+  document.addEventListener("click", function (e) {
+    const btn = e.target.closest(".navLink");
+    if (!btn) return;
+
+    e.preventDefault();
+
+    const id = btn.dataset.target;
+    const el = document.getElementById(id);
+
+    if (!el) {
+      console.warn("No element found with id:", id);
+      return;
+    }
+
+    el.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
+  });
+</script>
+
+<style>
+  /* make buttons look like links */
+  .navLink {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+    color: var(--primary-color);
+  }
+</style>
 
 <h1 class="title">Princeton Application</h1>
 <div class="pagePieceDate">2025</div>
-<div class="pagePieceInsturmentation">a portfolio</div>
-<br/>
+<div class="pagePieceInstrumentation">a portfolio</div>
+<br />
 
-Howdy! Welcome - 3 big things to hit, along with a litany of assorted odds and ends!
+Howdy! 3 big things to hit, along with a litany of assorted odds and ends:
 <ul>
-	<li>You Can Lose Your Balance</li>
-	<li>Contact Lite</li>
-	<li>Contact Lite</li>
+  <li>(6 min) 
+    <button type="button" class="navLink" data-target="youcan">
+      You Can Lose Your Balance
+    </button>
+  </li>
+  <li>(5 min) 
+    <button type="button" class="navLink" data-target="contactlite">
+     Contact Lite
+    </button>
+  </li>
+  <li>(3 min) 
+    <button type="button" class="navLink" data-target="zines">
+      Selection of Zines
+    </button>
+  </li>
+  <li>(1 min) 
+    <button type="button" class="navLink" data-target="other">
+      other stuff!
+    </button>
+  </li>
+</ul>
 
+<br />
+<hr id="youcan" />
+
+<h1 class="title">You Can Lose Your Balance</h1>
+<div class="pagePieceDate">2025</div>
+<div class="pagePieceInstrumentation">a show</div>
+<br />
 
 <div class="container">
-<iframe src="//www.youtube.com/embed/CbT79fQ5Iew" 
-frameborder="0" allowfullscreen class="video"></iframe>
+  <iframe
+    src="https://www.youtube.com/embed/F7wit_TQ--8"
+    frameborder="0"
+    allowfullscreen
+    class="video"
+  ></iframe>
 </div>
-<br>
-A live improvisation broo.
 
+<br />
+June 2025, performed by Brooklyn Motion Capture Dance Ensemble (BMCDE) at Mark Morris
+Dance Center
+<br />
+<br /><b>Suggested Listening:</b>
+<ul>
+	<li>2 min, starting at
+<a
+  href="https://youtu.be/F7wit_TQ--8?si=ZbUF5Z0iP3E6GtaH&t=555"
+  target="_blank"
+  rel="noopener"
+  >9:16</a
+>
+</li>
+<li>2 min, starting at
+<a
+  href="https://youtu.be/F7wit_TQ--8?si=p0E8_iWv6jRksKUO&t=1239"
+  target="_blank"
+  rel="noopener"
+  >20:39</a
+>
+</li>
+<li>2 min jumping around later parts
+</li></ul>
+
+<br />
+“You Can Lose Your Balance” is an evening-length interdisciplinary work for eight performers,
+three technical personnel, and a large audience. Using a suite of live electronics powered by six
+capacitive touch sensors, it examines questions of community, collective action, and
+interconnectedness as the audience forms not only the set of the performance, but also the
+soundscape and connective tissue powering the entire event.
+<br />
+<br />
+It was co-devised by myself and Erin Landers, where I served as Artistic Director, Creative
+Coder, and Composer, and she served as Movement Director. Joe Tennis was heavily involved
+in early workshopping sessions, and Camilla Caldwell ran the live electronics during
+performance.
+<br />
+<br />
+Full cast and crew contributions:
+<br />
+Brian Ellis - Artistic Director, Producer, Composer, Creative Technologist, Dancer, Vocalist
+<br />
+Erin Landers - Movement Director
+<br />
+Joe Tennis - Dancer, Vocalist
+<br />
+Melanie Holm - Dancer, Vocalist
+<br />
+Mirai Shinde - Dancer, Vocalist
+<br />
+Kalun Leung - Dancer, Vocalist, Trombone
+<br />
+Yoshi Weinberg - Dancer, Vocalist, Flute
+<br />
+Imani Kai - Dancer, Vocalist
+<br />
+Elizabeth Chaillé - Dancer, Vocalist
+<br />
+Camilla Caldwell - lighting, sound, live MaxMSP
+<br />
+<br />
+Script:
+<a
+  href="https://go.brianellissound.com/res/You_Can_Lose_Your_Balance_Script_Scenes.pdf"
+  target="_blank"
+  rel="noopener"
+  >pdf</a
+>
+<br />
+<embed
+  src="https://go.brianellissound.com/res/You_Can_Lose_Your_Balance_Script_Scenes.pdf"
+  type="application/pdf"
+  width="100%"
+  height="800px"
+/>
+<br />
+
+<br />
+<hr id="contactlite" />
+
+<h1 class="title">Contact Lite</h1>
+<div class="pagePieceDate">2023</div>
+<div class="pagePieceInstrumentation">interactive chamber music</div>
+<br />
+
+<div class="container">
+  <iframe
+    src="https://www.youtube.com/embed/um_Tlg_S5UM"
+    frameborder="0"
+    allowfullscreen
+    class="video"
+  ></iframe>
+</div>
+<br />
+<br />
+2023, performed by Third Coast Percussion and the Audience at Constellation Chicago
+<br />
+<br />
+<b>Suggested Listening:</b>
+<ul><li>
+<i>(skip)</i> audience instructions <a
+  href="https://youtu.be/um_Tlg_S5UM?si=IJkqVUD-uLRgy20u&t=1"
+  target="_blank"
+  rel="noopener"
+  >0:00</a
+> </li>
+<li>3 minutes at:
+<a
+  href="https://youtu.be/um_Tlg_S5UM?si=IJkqVUD-uLRgy20u&t=942"
+  target="_blank"
+  rel="noopener"
+  >20:24</a
+></li>
+<li>2 minutes at:
+<a
+  href="https://youtu.be/um_Tlg_S5UM?si=IJkqVUD-uLRgy20u&t=1224"
+  target="_blank"
+  rel="noopener"
+  >15:42</a
+></li>
+</ul>
+<br />
+In this work, the audience has been given a QR code to scan which turns their phone into a
+musical instrument that changes both sound and color based on where it is pointed. The
+instructions are then given to the audience via projector, who turn their phones until the color on
+the phone matches the color for your group on the projector.
+<br />
+<br />
+To try out the phone electronics for yourself, scan here:
+<br />
+<img
+  src="https://go.brianellissound.com/res/ContactLiteQRCode.png"
+  alt="Contact Lite QR code"
+  style="max-width: 220px; height: auto; display: block; margin: 10px 0;"
+/>
+<br />
+Be sure to:
+<ul>
+  <li>Turn up your volume (media volume, if on android)</li>
+  <li>Click ON your side volume button, if on iPhone</li>
+  <li>
+    When requested, hit “allow” orientation data, so we can turn your phone into an
+    instrument!
+  </li>
+</ul>
+
+For this project, I was composer and creative technologist, with Third Coast Percussion
+performing the music, providing audio samples I manipulated, and adapting my facilitation script
+to better fit their specific audience.
+<br />
+
+<br />
+Score:
+<a
+  href="https://go.brianellissound.com/res/ContactLite_FullScore_BrianEllis.pdf"
+  target="_blank"
+  rel="noopener"
+  >pdf</a
+>
+<br />
+<embed
+  src="https://go.brianellissound.com/res/ContactLite_FullScore_BrianEllis.pdf"
+  type="application/pdf"
+  width="100%"
+  height="800px"
+/>
+<br />
+<br />
+<hr id="zines" />
+
+<h1 class="title">Selection of Zines</h1>
+<div class="pagePieceDate">2025–2026</div>
+<div class="pagePieceInstrumentation">zines for individual performance</div>
+
+
+
+<br>
+<img src="https://go.brianellissound.com/res/zines/home.jpeg" style="width:100%;">
+<br>
+<br>
+<img src="https://go.brianellissound.com/res/zines/pets.jpeg" style="width:100%;">
+<br>
+<br>
+<img src="https://go.brianellissound.com/res/zines/boredom.jpeg" style="width:100%;">
+<br>
+<br />
+
+There is no recording, as these are pieces for you to read, experience, and understand in your
+own time, at your own pace.
+<br />
+<br />
+
+<b>Listening Meditation for one’s Home</b>
+<br />
+2025, presented by Contemporaneous Ensemble
+<br />
+<br />
+Documentation:
+<a
+  href="https://go.brianellissound.com/res/Listening_Meditation_for_ones_Home_Context.pdf"
+  target="_blank"
+  rel="noopener"
+  >pdf</a
+>
+<br />
+<embed
+  src="https://go.brianellissound.com/res/Listening_Meditation_for_ones_Home_Context.pdf"
+  type="application/pdf"
+  width="100%"
+  height="800px"
+/>
+<br />
+<br />
+
+<b>listening idea for people with pets</b>
+<br />
+2025, presented at Peabody Institute
+<br />
+<br />
+Documentation:
+<a
+  href="https://go.brianellissound.com/res/listening_idea_for_people_with_pets_documentation.pdf"
+  target="_blank"
+  rel="noopener"
+  >pdf</a
+>
+<br />
+<embed
+  src="https://go.brianellissound.com/res/listening_idea_for_people_with_pets_documentation.pdf"
+  type="application/pdf"
+  width="100%"
+  height="800px"
+/>
+<br />
+<br />
+
+<b>IN CASE OF BOREDOM, READ ZINE</b>
+<br />
+2025, release scheduled for Jan. 2026
+<br />
+<br />
+Documentation:
+<a
+  href="https://go.brianellissound.com/res/IN_CASE_OF_BOREDOM_READ_ZINE_documentation.pdf"
+  target="_blank"
+  rel="noopener"
+  >pdf</a
+>
+<br />
+<embed
+  src="https://go.brianellissound.com/res/IN_CASE_OF_BOREDOM_READ_ZINE_documentation.pdf"
+  type="application/pdf"
+  width="100%"
+  height="800px"
+/>
+<br />
+<br />
+
+These zines are part of an evolving visual / time-based media practice I am exploring as part of
+the zine collective I run, STOP. WATCH. PRESS. These works pull themes from Deep Listening,
+Somatic practice, Fluxus, and critiques on Attention Capitalism, and package the ideas in
+accessible and joyous pocket-sized editions.
+<br />
+
+
+<hr id="other" />
+
+<h1 class="title">Other Stuff</h1>
+<br>
+Other highlights from the past year:
+<br><br>
+<ul>
+	<li>an <a href="https://www.brianellissound.com/#!/MemoryGlobes" target="_blank">XR</a> installation</li>
+	<li>Cyanotype <a href="https://brianellissound.com/#!/CyanotypeScoreCards" target="_blank">graphic scores</a></li>
+	<li>an <a href="https://brianellissound.bandcamp.com/album/waiting-being" target="_blank">ep</a> of soundscapes</li>
+	<li><a href="https://go.brianellissound.com/gowanus2/index.html" target="_blank">sound paddle</a> with the Gowanus Dredgers</li>
+	<li>ambient <a href="https://youtu.be/0KbNCZ_ndI4" target="_blank">set</a> with friends</li>
+</ul>
