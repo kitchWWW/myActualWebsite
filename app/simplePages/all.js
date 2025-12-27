@@ -811,3 +811,48 @@ angular.module('myApp.attentionSonata', ['ngRoute'])
   }])
   .controller('attentionSonataCtrl', [function() {}]);
 	
+angular.module('myApp.CyanotypeScoreCards', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/CyanotypeScoreCards', {
+      templateUrl: 'simplePages/CyanotypeScoreCards.html',
+      controller: 'CyanotypeScoreCardsCtrl'
+    });
+  }])
+  .controller('CyanotypeScoreCardsCtrl', [function() {}]);
+	
+angular.module('myApp.MemoryGlobes', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/MemoryGlobes', {
+      templateUrl: 'simplePages/MemoryGlobes.html',
+      controller: 'MemoryGlobesCtrl'
+    });
+  }])
+  .controller('MemoryGlobesCtrl', [function() {}]);
+	
+angular.module('myApp.iamsittinglatent', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/iamsittinglatent', {
+      templateUrl: 'simplePages/iamsittinglatent.html',
+      controller: 'iamsittinglatentCtrl'
+    });
+  }])
+  .controller('iamsittinglatentCtrl', [function() {}]);
+	
+angular.module('myApp.soundCollage', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/soundCollage', {
+      templateUrl: 'simplePages/soundCollage.html',
+      controller: 'soundCollageCtrl'
+    });
+  }])
+  .controller('soundCollageCtrl', [function() {}]);
+	
+angular.module('myApp.takeADeepBreath', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/takeADeepBreath', {
+      templateUrl: 'simplePages/takeADeepBreath.html',
+      controller: 'takeADeepBreathCtrl'
+    });
+  }])
+  .controller('takeADeepBreathCtrl', [function() {}]);
+	

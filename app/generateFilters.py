@@ -5,9 +5,15 @@ cateogries = ["everything","listen", "perform", "music","coding","teaching","art
 cateogryNames = ["everything","listen","things you can perform","SKIP","SKIP","SKIP","SKIP","SKIP"]
 
 data = [
+	['https://brianellissound.bandcamp.com/album/waiting-being','waiting // being','two soundscapes', 2025, True, ["listen"]],
+	['#!/MemoryGlobes','Memory Globe','XR installation', 2025, True, ["listen"]],
+	['#!/CyanotypeScoreCards','Cyanotype Score Cards','graphic score collection', 2025, True, ["perform"]],
+	['#!/takeADeepBreath','take a deep breath...','participatory google doc improv', 2025, True, ["perform"]],
 	['http://stopwatchpress.com/','Stop. Watch. Press. ','zine collective', 2025, True, []],
 	['#!/youCanLoseYour','You Can Lose Your Balance','show', 2025, True, ["listen",]],
-	['#!/dill','Dill','string quartet', 2025, True, ["listen","perform"]],
+	['#!/iamsittinginalatentspace','I am sitting in a latent space','fixed media', 2025, True, ["listen"]],
+	['#!/dill','Dill','string quartet miniature', 2025, True, ["listen","perform"]],
+	['#!/soundCollage','instructions for sound collage','improvisation guide', 2025, True, ["listen","perform"]],
 	['#!/untitled2WithErin','Untitled #2','improvisation with Erin Landers', 2025, True, ["listen",]],
 	['#!/slowwalking','slow walking','ritual', 2024, True, ["listen"]],
 	['#!/clapback','Clap Back','solo percussion and live electronics', 2024, True, ["listen", "perform"]],

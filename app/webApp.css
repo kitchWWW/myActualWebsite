@@ -198,6 +198,13 @@ a.not-ready-nav-link:active {
   text-align: right;
   color:var(--primary-color);
 }
+.subtitle {
+  text-align: right;
+  color:var(--primary-color);
+  margin-top: -30px;
+  font-size: 1.2em;
+  text-decoration: italic;
+}
 .pagePieceDate, .pagePieceInsturmentation {
     text-align: right;
     text-decoration: italic;
