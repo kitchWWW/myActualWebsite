@@ -64,7 +64,13 @@ document.getElementById("sound2Name").innerHTML = urlVars["name2"];
 document.getElementById("sound3Name").innerHTML = urlVars["name3"];
 
 
-fetch('/engines/ThreeNotes-master/out/'+urlVars['timestamp']+'/ThreeNotesScore.ly')
+fetch(
+
+	// './tester.ly')
+
+	// 'https://www.brianellissound.com/engines/ThreeNotes-master/out/1717798884065/ThreeNotesScore.ly')
+
+	'/engines/ThreeNotes-master/out/'+urlVars['timestamp']+'/ThreeNotesScore.ly')
   .then(response => response.text())
   .then((data) => {
     var lines = data.split(/\r?\n/)
@@ -90,25 +96,25 @@ fetch('/engines/ThreeNotes-master/out/'+urlVars['timestamp']+'/ThreeNotesScore.l
 function displayChord(note1,note2,note3,chord){
 	if(chord.includes(note1)){
 		document.getElementById("sound1On").innerHTML = 'on'
-	    document.getElementById("magenta").style.background="#eee";
+	    document.getElementById("magenta").style.background="#77E6B6";
 	}else{
-	    document.getElementById("magenta").style.background="#fff";
+	    document.getElementById("magenta").style.background="#111";
 		document.getElementById("sound1On").innerHTML = 'off'
 	}
 
 	if(chord.includes(note2)){
 		document.getElementById("sound2On").innerHTML = 'on'
-	    document.getElementById("green").style.background="#eee";
+	    document.getElementById("green").style.background="#99A1E6";
 	}else{
-	    document.getElementById("green").style.background="#fff";
+	    document.getElementById("green").style.background="#111";
 		document.getElementById("sound2On").innerHTML = 'off'
 	}
 
 	if(chord.includes(note3)){
 		document.getElementById("sound3On").innerHTML = 'on'
-	    document.getElementById("bluebird").style.background="#eee";
+	    document.getElementById("bluebird").style.background="#D490E6";
 	}else{
-	    document.getElementById("bluebird").style.background="#fff";
+	    document.getElementById("bluebird").style.background="#111";
 		document.getElementById("sound3On").innerHTML = 'off'
 	}
 }
@@ -117,7 +123,8 @@ displayChord("a","b","c",[])
 var currentTimeout = "yolo";
 function showChord(chordIndex){
 	if(chordIndex >= cleanchords.length-1){
-		document.getElementById("instructions").innerHTML = "we're done :)"
+		displayChord(note1,note2,note3,[])
+		document.getElementById("instructions").innerHTML = "find silence"
 		return;
 	}
 	var note1 = cleanchords[0][0]
@@ -164,6 +171,10 @@ function countDown(numbToShow){
 	}if(numbToShow < 0){
 		document.getElementById("instructions").innerHTML = ''
 	}
+}
+
+function fullscreen(){
+	document.getElementById("wholething").requestFullscreen()
 }
 
 function startover(){

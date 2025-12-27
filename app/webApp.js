@@ -1,8 +1,8 @@
 'use strict';
 
-if (location.protocol !== "http:") {
-  location.protocol = "http:";
-}
+// if (location.protocol !== "http:") {
+//   location.protocol = "http:";
+// }
 
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
@@ -17,6 +17,8 @@ angular.module('myApp', [
   'myApp.nationwide',
   'myApp.agendas',
   'myApp.m4a',
+  'myApp.listen',
+  'myApp.perform',
   'myApp.cgle',
   'myApp.covid',
   'myApp.sansduoone',
@@ -28,6 +30,11 @@ angular.module('myApp', [
   'myApp.earTraining',
   'myApp.home',
   'myApp.music',
+  'myApp.coding',
+  'myApp.teaching',
+  'myApp.art',
+  'myApp.theater',
+  'myApp.everything',
   'myApp.programs',
   'myApp.chinatown',
   'myApp.technecyborg',
@@ -79,10 +86,47 @@ angular.module('myApp', [
   'myApp.softMusicView',
   'myApp.chugga',
   'myApp.chuggaView',
-  'myApp.version'
-]).
-config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
+  'myApp.version',
+  // DO NOT CHANGE THIS COMMENT: New stuff goes here
+   'myApp.attentionSonata',
+   'myApp.untitled2WithErin',
+   'myApp.youCanLoseYour',
+   'myApp.dill',
+   'myApp.slowwalking',
+   'myApp.clapback',
+   'myApp.iamsittinginalatentspace',
+   'myApp.goingforward',
+   'myApp.drawjam',
+   'myApp.memoryFieldJournals',
+   'myApp.differentListening',
+   'myApp.theseSpecialHands',
+   'myApp.listeningExercises1',
+   'myApp.soundpaddle',
+   'myApp.purplegreen',
+   'myApp.zinetude',
+   'myApp.attentionMeditation',
+   'myApp.soundmachinesound',
+   'myApp.databending',
+   'myApp.nebulousEpiphanies',
+   'myApp.cloudCollage',
+  'myApp.inprogress',
+  'myApp.groundwindow',
+  'myApp.ten',
+  'myApp.WeGrowTogether',
+  'myApp.bmcde',
+  'myApp.musicThatSoundsGood',
+  'myApp.thereandbackam',
+  'myApp.contactlite',
+  'myApp.uglycry',
+  'myApp.cyberworm',
+  'myApp.menu',
+  'myApp.spliceworkshop',
+  'myApp.fishSchool',
+
+]).config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
 
-  $routeProvider.otherwise({redirectTo: '/home'});
+  $routeProvider.otherwise({
+    redirectTo: '/home'
+  });
 }]);
