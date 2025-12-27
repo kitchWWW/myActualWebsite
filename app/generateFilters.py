@@ -6,7 +6,7 @@ cateogryNames = ["everything","listen","things you can perform","SKIP","SKIP","S
 
 data = [
 	['#!/patienceIsUnderstanding','Patience is Understanding','single', 2025, True, ["listen"]],
-	['https://brianellissound.bandcamp.com/album/waiting-being','waiting // being','two soundscapes', 2025, True, ["listen"]],
+	['https://brianellissound.bandcamp.com/album/waiting-being','waiting // being','soundscapes', 2025, True, ["listen"]],
 	['#!/youCanLoseYour','You Can Lose Your Balance','show', 2025, True, ["listen",]],
 	['#!/MemoryGlobes','Memory Globe','XR installation', 2025, True, ["listen"]],
 	['#!/CyanotypeScoreCards','Cyanotype Score Cards','graphic score collection', 2025, True, ["perform"]],
