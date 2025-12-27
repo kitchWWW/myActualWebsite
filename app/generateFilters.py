@@ -10,6 +10,7 @@ data = [
 	['#!/youCanLoseYour','You Can Lose Your Balance','show', 2025, True, ["listen",]],
 	['#!/MemoryGlobes','Memory Globe','XR installation', 2025, True, ["listen"]],
 	['#!/CyanotypeScoreCards','Cyanotype Score Cards','graphic score collection', 2025, True, ["perform"]],
+	['#!/listeningMeditationHome','Listening Meditation for one’s Home','zine', 2025, True, ["perform"]],
 	['#!/takeADeepBreath','take a deep breath...','participatory google doc improv', 2025, True, ["perform"]],
 	['http://stopwatchpress.com/','Stop. Watch. Press. ','zine collective', 2025, True, []],
 	['https://go.brianellissound.com/gowanus2/index.html','Gowanus Sound Paddle #2','sound walk', 2025, True, ["listen"]],

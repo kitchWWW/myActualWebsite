@@ -865,3 +865,21 @@ angular.module('myApp.patienceIsUnderstanding', ['ngRoute'])
   }])
   .controller('patienceIsUnderstandingCtrl', [function() {}]);
 	
+angular.module('myApp.PrincetonPortfolio', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/PrincetonPortfolio', {
+      templateUrl: 'simplePages/PrincetonPortfolio.html',
+      controller: 'PrincetonPortfolioCtrl'
+    });
+  }])
+  .controller('PrincetonPortfolioCtrl', [function() {}]);
+	
+angular.module('myApp.listeningMeditationHome', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/listeningMeditationHome', {
+      templateUrl: 'simplePages/listeningMeditationHome.html',
+      controller: 'listeningMeditationHomeCtrl'
+    });
+  }])
+  .controller('listeningMeditationHomeCtrl', [function() {}]);
+	
