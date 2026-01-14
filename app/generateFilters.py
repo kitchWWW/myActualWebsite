@@ -5,9 +5,10 @@ cateogries = ["everything","listen", "perform", "music","coding","teaching","art
 cateogryNames = ["everything","listen","things you can perform","SKIP","SKIP","SKIP","SKIP","SKIP"]
 
 data = [
+	['https://typedaw.com/','typeDAW','web-based audio editor', 2026, True, []],
+	['#!/youCanLoseYour','You Can Lose Your Balance','show', 2025, True, ["listen",]],
 	['#!/patienceIsUnderstanding','Patience is Understanding','single', 2025, True, ["listen"]],
 	['https://brianellissound.bandcamp.com/album/waiting-being','waiting // being','soundscapes', 2025, True, ["listen"]],
-	['#!/youCanLoseYour','You Can Lose Your Balance','show', 2025, True, ["listen",]],
 	['#!/MemoryGlobes','Memory Globe','XR installation', 2025, True, ["listen"]],
 	['#!/CyanotypeScoreCards','Cyanotype Score Cards','graphic score collection', 2025, True, ["perform"]],
 	['#!/listeningMeditationHome','Listening Meditation for one’s Home','zine', 2025, True, ["perform"]],
