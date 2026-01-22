@@ -883,3 +883,12 @@ angular.module('myApp.listeningMeditationHome', ['ngRoute'])
   }])
   .controller('listeningMeditationHomeCtrl', [function() {}]);
 	
+angular.module('myApp.AfterClosenessLines', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/AfterClosenessLines', {
+      templateUrl: 'simplePages/AfterClosenessLines.html',
+      controller: 'AfterClosenessLinesCtrl'
+    });
+  }])
+  .controller('AfterClosenessLinesCtrl', [function() {}]);
+	

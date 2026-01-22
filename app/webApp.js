@@ -88,6 +88,7 @@ angular.module('myApp', [
   'myApp.chuggaView',
   'myApp.version',
   // DO NOT CHANGE THIS COMMENT: New stuff goes here
+   'myApp.AfterClosenessLines',
    'myApp.listeningMeditationHome',
    'myApp.PrincetonPortfolio',
    'myApp.patienceIsUnderstanding',
