@@ -19,6 +19,23 @@ if(nameToUse in data):
 	print("python newSimplePage.py newNameYep\n\n")
 	exit()
 
+# Check against redirect alias names
+reservedAliases = ['sonata', 'melody', 'batterylow', 'askingforit', 'callforscores', 'christmas', 'softmusic', 'threeNotes', 'ideasofspace']
+if(nameToUse.lower() in [r.lower() for r in reservedAliases]):
+	print("ERROR!!! '"+nameToUse+"' conflicts with a server redirect alias!\n")
+	exit()
+
+# Check against POST endpoint path segments
+postEndpoints = ['goSonata', 'goConcerto', 'goThreeNotes', 'gobattery', 'goReflections', 'goSmallMusic', 'goSoftMusic', 'goVoices', 'goMelody', 'NMDCAudienceSumbit', 'NMDCAdminUpload', 'playgroundEmailSubmit', 'someonesMoonPost']
+if(nameToUse in postEndpoints):
+	print("ERROR!!! '"+nameToUse+"' conflicts with a server POST endpoint!\n")
+	exit()
+
+# Check against existing directories
+if(os.path.isdir(nameToUse)):
+	print("ERROR!!! '"+nameToUse+"' conflicts with an existing directory!\n")
+	exit()
+
 
 fd = open("simplePages/"+nameToUse+".html",'w')
 fd.write("""

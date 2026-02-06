@@ -133,6 +133,7 @@ angular.module('myApp', [
   'myApp.fishSchool',
 
 ]).config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
+  $locationProvider.html5Mode(true);
   $locationProvider.hashPrefix('!');
 
   $routeProvider.otherwise({

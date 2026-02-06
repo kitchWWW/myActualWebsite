@@ -50,20 +50,12 @@ var server = http.createServer(function(request, response) {
 			filename = path.join(process.cwd(), uri);
 
 		var mappings = {}
-		mappings['thesis'] = 'thesis'
 		mappings['sonata'] = 'genSon'
-		mappings['reflections'] = 'reflections'
-		mappings['smallMusic'] = 'smallMusic'
 		mappings['softmusic'] = 'softMusic'
 		mappings['threeNotes'] = 'threenotes'
-		mappings['alabama'] = 'alabama'
 		mappings['melody'] = 'genMel'
-		mappings['series1nft'] = 'series1nft'
-		mappings['battery'] = 'battery'
 		mappings['batterylow'] = 'battery'
 		mappings['askingforit'] = 'asking'
-		mappings['megsong'] = 'megsong'
-		mappings['ideas'] = 'ideas'
 		mappings['callforscores'] = 'cgle'
 		mappings['christmas'] = 'sightreadchristmas'
 
@@ -74,7 +66,7 @@ var server = http.createServer(function(request, response) {
 			serverLog(raw)
 			if (possibleSegment == '/' + raw.toUpperCase()) {
 				response.writeHead(302, {
-					'Location': '/#!/' + mappings[raw]
+					'Location': '/' + mappings[raw]
 				});
 				response.end();
 				return;
@@ -88,32 +80,21 @@ var server = http.createServer(function(request, response) {
 			return;
 		}
 
-		fs.exists(filename, function(exists) {
-			if (!exists) {
-				response.writeHead(404, {
-					"Content-Type": "text/plain"
-				});
+		// If path has no file extension, it's a client-side route — serve index.html
+		if (!path.extname(uri)) {
+			filename = path.join(process.cwd(), 'index.html');
+		}
+
+		fs.readFile(filename, "binary", function(err, file) {
+			if (err) {
+				response.writeHead(404, {"Content-Type": "text/plain"});
 				response.write("404 Not Found\n");
 				response.end();
 				return;
 			}
-
-			if (fs.statSync(filename).isDirectory()) filename += '/index.html';
-
-			fs.readFile(filename, "binary", function(err, file) {
-				if (err) {
-					response.writeHead(500, {
-						"Content-Type": "text/plain"
-					});
-					response.write(err + "\n");
-					response.end();
-					return;
-				}
-
-				response.writeHead(200);
-				response.write(file, "binary");
-				response.end();
-			});
+			response.writeHead(200);
+			response.write(file, "binary");
+			response.end();
 		});
 	}
 
