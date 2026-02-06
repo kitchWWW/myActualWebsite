@@ -39,6 +39,7 @@ angular.module('myApp.genMelView', ['ngRoute'])
         MIDIjs.stop();
         $scope.buttonImg = 'play';
       }else{
+        MIDIjs.initAll()
         MIDIjs.play('engines/Generative-Music-master/out/'+$scope.genMelNumber+'/melody.midi');
         $scope.buttonImg = 'stop';
       }

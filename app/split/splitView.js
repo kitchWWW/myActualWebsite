@@ -34,6 +34,7 @@ angular.module('myApp.splitView', ['ngRoute'])
         MIDIjs.stop();
         $scope.buttonImg = 'play';
       }else{
+        MIDIjs.initAll()
         MIDIjs.play('engines/babysFirstConcerto-master/out/'+$scope.splitNumber+'/fullOutput.midi');
         $scope.buttonImg = 'stop';
       }

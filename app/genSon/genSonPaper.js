@@ -22,6 +22,7 @@ angular.module('myApp.genSonPaper', ['ngRoute'])
         MIDIjs.stop();
         $scope.buttonImg = 'play';
       }else{
+        MIDIjs.initAll()
         MIDIjs.play('res/sonataTest.midi');
         $scope.buttonImg = 'stop';
       }

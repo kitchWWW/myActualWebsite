@@ -11,6 +11,7 @@ angular.module('myApp.epochView', ['ngRoute'])
 
 .controller('epochViewCtrl', [ '$scope','$routeParams', function($scope,$routeParams) {
 
+    MIDIjs.initAll()
     MIDIjs.play('out/epoch/III.midi');
 
     console.log($routeParams)
@@ -34,6 +35,7 @@ angular.module('myApp.epochView', ['ngRoute'])
         MIDIjs.stop();
         $scope.buttonImg = 'play';
       }else{
+        MIDIjs.initAll()
         MIDIjs.play('engines/Generative-Music-master/out/'+$scope.genMelNumber+'/melody.midi');
         $scope.buttonImg = 'stop';
       }

@@ -22,6 +22,7 @@ angular.module('myApp.genMelPaper', ['ngRoute'])
         MIDIjs.stop();
         $scope.buttonImg = 'play';
       }else{
+        MIDIjs.initAll()
         MIDIjs.play('res/initMelody.midi');
         $scope.buttonImg = 'stop';
       }
