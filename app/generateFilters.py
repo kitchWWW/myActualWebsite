@@ -6,6 +6,7 @@ cateogryNames = ["everything","listen","things you can perform","SKIP","SKIP","S
 
 data = [
 	['https://typedaw.com/','typeDAW','web-based audio editor', 2026, True, []],
+	['https://go.brianellissound.com/sept_30_field_recordings/index.html','sept_30','field_recordings', 2026, True, ["listen"]],
 	['/youCanLoseYour','You Can Lose Your Balance','show', 2025, True, ["listen",]],
 	['/patienceIsUnderstanding','Patience is Understanding','single', 2025, True, ["listen"]],
 	['https://brianellissound.bandcamp.com/album/waiting-being','waiting // being','soundscapes', 2025, True, ["listen"]],
