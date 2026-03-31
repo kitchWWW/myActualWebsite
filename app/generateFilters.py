@@ -6,7 +6,9 @@ cateogryNames = ["everything","listen","things you can perform","SKIP","SKIP","S
 
 data = [
 	['https://typedaw.com/','typeDAW','web-based audio editor', 2026, True, []],
+	['https://go.brianellissound.com/SUPRESSION/index.html','SUPRESSION','conceptual noise single', 2026, True, ["listen"]],
 	['/comeRestHere','come, rest here','hypercube ensemble', 2026, True, ["listen","perform"]],
+	['https://www.instagram.com/p/DVTkA5EDiC8/','FLAPO','laptop orchestra', 2026, True, []],
 	['/bothOurTears','(both our tears have run dry)','conversational duet', 2026, True, ["listen","perform"]],
 	['https://go.brianellissound.com/sept_30_field_recordings/index.html','sept_30','field_recordings', 2026, True, ["listen"]],
 	['/CloudsFromBothSides','clouds from both sides','violin duet', 2026, True, ["perform"]],
