@@ -50,7 +50,21 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 <br>
 A live improvisation broo.
-
+<br>
+<br>
+<a
+  href="https://go.brianellissound.com/res/After_Closeness_Lines.pdf"
+  target="_blank"
+  rel="noopener"
+  >Score download</a
+>
+<br />
+<embed
+  src="https://go.brianellissound.com/res/After_Closeness_Lines.pdf"
+  type="application/pdf"
+  width="100%"
+  height="800px"
+/>
 """)
 fd.close()
 
