@@ -901,3 +901,21 @@ angular.module('myApp.comeRestHere', ['ngRoute'])
   }])
   .controller('comeRestHereCtrl', [function() {}]);
 	
+angular.module('myApp.bothOurTears', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/bothOurTears', {
+      templateUrl: 'simplePages/bothOurTears.html',
+      controller: 'bothOurTearsCtrl'
+    });
+  }])
+  .controller('bothOurTearsCtrl', [function() {}]);
+	
+angular.module('myApp.CloudsFromBothSides', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/CloudsFromBothSides', {
+      templateUrl: 'simplePages/CloudsFromBothSides.html',
+      controller: 'CloudsFromBothSidesCtrl'
+    });
+  }])
+  .controller('CloudsFromBothSidesCtrl', [function() {}]);
+	

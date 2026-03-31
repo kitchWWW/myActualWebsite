@@ -7,7 +7,9 @@ cateogryNames = ["everything","listen","things you can perform","SKIP","SKIP","S
 data = [
 	['https://typedaw.com/','typeDAW','web-based audio editor', 2026, True, []],
 	['/comeRestHere','come, rest here','hypercube ensemble', 2026, True, ["listen","perform"]],
+	['/bothOurTears','(both our tears have run dry)','conversational duet', 2026, True, ["listen","perform"]],
 	['https://go.brianellissound.com/sept_30_field_recordings/index.html','sept_30','field_recordings', 2026, True, ["listen"]],
+	['/CloudsFromBothSides','clouds from both sides','violin duet', 2026, True, ["perform"]],
 	['/youCanLoseYour','You Can Lose Your Balance','show', 2025, True, ["listen",]],
 	['/patienceIsUnderstanding','Patience is Understanding','single', 2025, True, ["listen"]],
 	['https://brianellissound.bandcamp.com/album/waiting-being','waiting // being','soundscapes', 2025, True, ["listen"]],
