@@ -892,3 +892,12 @@ angular.module('myApp.AfterClosenessLines', ['ngRoute'])
   }])
   .controller('AfterClosenessLinesCtrl', [function() {}]);
 	
+angular.module('myApp.comeRestHere', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/comeRestHere', {
+      templateUrl: 'simplePages/comeRestHere.html',
+      controller: 'comeRestHereCtrl'
+    });
+  }])
+  .controller('comeRestHereCtrl', [function() {}]);
+	

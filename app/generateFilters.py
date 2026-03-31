@@ -5,7 +5,8 @@ cateogries = ["everything","listen", "perform", "music","coding","teaching","art
 cateogryNames = ["everything","listen","things you can perform","SKIP","SKIP","SKIP","SKIP","SKIP"]
 
 data = [
-	#['https://typedaw.com/','typeDAW','web-based audio editor', 2026, True, []],
+	['https://typedaw.com/','typeDAW','web-based audio editor', 2026, True, []],
+	['/comeRestHere','come, rest here','hypercube ensemble', 2026, True, ["listen","perform"]],
 	['https://go.brianellissound.com/sept_30_field_recordings/index.html','sept_30','field_recordings', 2026, True, ["listen"]],
 	['/youCanLoseYour','You Can Lose Your Balance','show', 2025, True, ["listen",]],
 	['/patienceIsUnderstanding','Patience is Understanding','single', 2025, True, ["listen"]],
