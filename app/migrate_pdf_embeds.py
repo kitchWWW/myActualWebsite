@@ -50,13 +50,18 @@ ATTR_HEIGHT = re.compile(r'\bheight=["\']([^"\']+)["\']', re.IGNORECASE)
 def make_iframe(src: str, width: str, height: str) -> str:
     encoded_src = src  # Google Viewer accepts plain URLs here; no manual encoding needed.
     viewer_url = f"https://docs.google.com/viewer?url={encoded_src}&embedded=true"
+    # Wrapper div prevents the iframe's internal content (which may be wider than
+    # the mobile viewport) from causing the browser to zoom out the whole page.
     return (
+        f'<div style="width: 100%; overflow: hidden;">\n'
         f'<iframe\n'
         f'  src="{viewer_url}"\n'
         f'  width="{width}"\n'
         f'  height="{height}"\n'
         f'  frameborder="0"\n'
-        f'></iframe>'
+        f'  style="max-width: 100%;"\n'
+        f'></iframe>\n'
+        f'</div>'
     )
 
 
