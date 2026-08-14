@@ -6,7 +6,7 @@ cateogryNames = ["everything","listen","things you can perform","SKIP","SKIP","S
 
 data = [
 	['https://typedaw.com/','typeDAW','web-based audio editor', 2026, True, []],
-	['https://go.brianellissound.com/SUPRESSION/index.html','SUPRESSION','conceptual noise single', 2026, True, ["listen"]],
+	['https://go.brianellissound.com/SUPPRESSION/index.html','SUPRESSION','conceptual noise single', 2026, True, ["listen"]],
 	['/comeRestHere','come, rest here','hypercube ensemble', 2026, True, ["listen","perform"]],
 	['https://www.instagram.com/p/DVTkA5EDiC8/','FLAPO','flash laptop and phone orchestra', 2026, True, []],
 	['https://go.brianellissound.com/informationDensity/index.html','Information Density','laptop orchestra', 2026, True, ["perform"]],

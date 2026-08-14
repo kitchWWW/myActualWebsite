@@ -50,16 +50,17 @@ ATTR_HEIGHT = re.compile(r'\bheight=["\']([^"\']+)["\']', re.IGNORECASE)
 def make_iframe(src: str, width: str, height: str) -> str:
     encoded_src = src  # Google Viewer accepts plain URLs here; no manual encoding needed.
     viewer_url = f"https://docs.google.com/viewer?url={encoded_src}&embedded=true"
-    # Wrapper div prevents the iframe's internal content (which may be wider than
-    # the mobile viewport) from causing the browser to zoom out the whole page.
+    # .pdf-embed-container is display:none below 600px (see webApp.css).
+    # iOS Safari ignores overflow:hidden on iframes — the iframe content's internal
+    # layout still affects the viewport and causes page zoom-out. Hiding on mobile
+    # is the correct fix; the download link above handles the mobile use case.
     return (
-        f'<div style="width: 100%; overflow: hidden;">\n'
+        f'<div class="pdf-embed-container">\n'
         f'<iframe\n'
         f'  src="{viewer_url}"\n'
         f'  width="{width}"\n'
         f'  height="{height}"\n'
         f'  frameborder="0"\n'
-        f'  style="max-width: 100%;"\n'
         f'></iframe>\n'
         f'</div>'
     )
