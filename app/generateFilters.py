@@ -12,6 +12,7 @@ data = [
 	['https://go.brianellissound.com/informationDensity/index.html','Information Density','laptop orchestra', 2026, True, ["perform"]],
 	['/bothOurTears','(both our tears have run dry)','conversational duet', 2026, True, ["listen","perform"]],
 	['https://go.brianellissound.com/sept_30_field_recordings/index.html','sept_30','field_recordings', 2026, True, ["listen"]],
+	['https://go.brianellissound.com/french_shuffle/index.html','french_shuffle','field_recordings', 2026, True, ["listen"]],
 	['/CloudsFromBothSides','clouds from both sides','violin duet', 2026, True, ["perform"]],
 	['/youCanLoseYour','You Can Lose Your Balance','show', 2025, True, ["listen",]],
 	['/patienceIsUnderstanding','Patience is Understanding','single', 2025, True, ["listen"]],
