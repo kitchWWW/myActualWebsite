@@ -7,8 +7,8 @@ cateogryNames = ["everything","listen","things you can perform","SKIP","SKIP","S
 data = [
 	['https://samply.app/p/5826a493-4e9b-49cc-ac7c-2540ea318f1b?token=bCwnkdFfucNHFvZ1dCH9&si=nAQcXDmFgGd0RX5ftoRuZrEj4992','HEARTBEAT','ep', 2026, True, ["listen"]],
 	['/wheretheyfall','where they fall','zine duet', 2026, True, ["listen","perform"]],
-	['https://songitude.com', 'Songitude', ' soundwalk app', '2026', True, []],
-	['https://typedaw.com/','typeDAW','web-based audio editor', '2026', True, []],
+	['https://songitude.com', 'Songitude', ' soundwalk app', 2026, True, []],
+	['https://typedaw.com/','typeDAW','web-based audio editor', 2026, True, []],
 	['https://go.brianellissound.com/SUPPRESSION/index.html','SUPRESSION','conceptual noise single', 2026, True, ["listen"]],
 	['/comeRestHere','come, rest here','hypercube ensemble', 2026, True, ["listen","perform"]],
 	['https://www.instagram.com/p/DVTkA5EDiC8/','FLAPO','flash laptop and phone orchestra', 2026, True, []],
