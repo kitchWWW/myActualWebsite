@@ -10,6 +10,7 @@ data = [
 	['https://www.unheard-ofensemble.com/events/06272026', 'Ebb and Flow', ' gowanus sound paddle', 2026, True, []],
 	['https://songitude.com', 'Songitude', ' soundwalk app and editor', 2026, True, []],
 	['https://apps.apple.com/us/app/doublehalf/id6796539356', 'DoubleHalf', ' ios camera app', 2026, True, []],
+	['https://apps.apple.com/us/app/plant-friend/id6763914271', 'plant.friend', ' cozy ios game', 2026, True, []],
 	['https://typedaw.com/','typeDAW','web-based audio editor', 2026, True, []],
 	['https://go.brianellissound.com/SUPPRESSION/index.html','SUPRESSION','conceptual noise single', 2026, True, ["listen"]],
 	['/comeRestHere','come, rest here','hypercube ensemble', 2026, True, ["listen","perform"]],
