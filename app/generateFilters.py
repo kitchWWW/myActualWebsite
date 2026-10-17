@@ -7,7 +7,7 @@ cateogryNames = ["everything","listen","things you can perform","SKIP","SKIP","S
 data = [
 	['https://samply.app/p/5826a493-4e9b-49cc-ac7c-2540ea318f1b?token=bCwnkdFfucNHFvZ1dCH9&si=nAQcXDmFgGd0RX5ftoRuZrEj4992','HEARTBEAT','ep', 2026, True, ["listen"]],
 	['/wheretheyfall','where they fall','zine duet', 2026, True, ["listen","perform"]],
-	['https://www.unheard-ofensemble.com/events/06272026', 'Ebb and Flow', ' sound paddle', 2026, True, []],
+	['https://www.unheard-ofensemble.com/events/06272026', 'Ebb and Flow', ' gowanus sound paddle', 2026, True, []],
 	['https://songitude.com', 'Songitude', ' soundwalk app and editor', 2026, True, []],
 	['https://apps.apple.com/us/app/doublehalf/id6796539356', 'DoubleHalf', ' ios camera app', 2026, True, []],
 	['https://typedaw.com/','typeDAW','web-based audio editor', 2026, True, []],
