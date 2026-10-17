@@ -919,3 +919,12 @@ angular.module('myApp.CloudsFromBothSides', ['ngRoute'])
   }])
   .controller('CloudsFromBothSidesCtrl', [function() {}]);
 	
+angular.module('myApp.wheretheyfall', ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/wheretheyfall', {
+      templateUrl: 'simplePages/wheretheyfall.html',
+      controller: 'wheretheyfallCtrl'
+    });
+  }])
+  .controller('wheretheyfallCtrl', [function() {}]);
+	

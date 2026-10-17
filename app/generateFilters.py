@@ -6,6 +6,8 @@ cateogryNames = ["everything","listen","things you can perform","SKIP","SKIP","S
 
 data = [
 	['https://samply.app/p/5826a493-4e9b-49cc-ac7c-2540ea318f1b?token=bCwnkdFfucNHFvZ1dCH9&si=nAQcXDmFgGd0RX5ftoRuZrEj4992','HEARTBEAT','ep', 2026, True, ["listen"]],
+	['/wheretheyfall','where they fall','zine duet', 2026, True, ["listen","perform"]],
+	['https://songitude.com', 'Songitude', ' location based sound installations', '2019', True, []],
 	['https://typedaw.com/','typeDAW','web-based audio editor', 2026, True, []],
 	['https://go.brianellissound.com/SUPPRESSION/index.html','SUPRESSION','conceptual noise single', 2026, True, ["listen"]],
 	['/comeRestHere','come, rest here','hypercube ensemble', 2026, True, ["listen","perform"]],
@@ -98,7 +100,7 @@ data = [
 	['/sansduoone', 'SANS; duo', ' first concert', '2020', True, ["listen",]],
 	['/eeg', 'Serene Music', ' soloist + live electronics', '2020', True, ["perform","music"]],
 	['/battery', 'My Battery Is Low...', ' percussion + electronics', '2019', True, ["perform","listen","music"]],
-	['https://songitude.com', 'Songitude', ' location based sound installations', '2019', True, []],
+	['https://songitude.com', 'Songitude', 'location based sound installations', '2019', True, []],
 	['/earTraining', 'Ear Training For Non-Human Ears', ' album', '2019', True, ["listen","music"]],
 	['/alabama', 'Divining Alabama', ' violin + electronics', '2019', True, ["perform","listen","music"]],
 	['/megsong', "Meg's Song", ' classical guitar + live electronics', '2019', True, ["perform","listen","music"]],
